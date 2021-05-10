@@ -62,7 +62,49 @@ const RequestPickup = ({
   } = formData;
 
   //Creating the list of the waste type selected by the user of the vendor
-  var options = [];
+  var options = [
+    {
+      value:"Newspaper",
+      label:"Newspaper",
+    },
+    {
+      value:"Cardboard<",
+      label:"Cardboard<",
+    },
+    {
+      value:"Paper ",
+      label:"Paper ",
+    },
+    {
+      value:"Packaging boxes",
+      label:"Packaging boxes",
+    },
+    {
+      value:" AC, Fridge, Home Appliances",
+      label:" AC, Fridge, Home Appliances",
+    },
+    {
+      value:"metals like Iron, Copper, Brass",
+      label:"metals like Iron, Copper, Brass",
+    },
+    {
+      value:"Food cans",
+      label:"Food cans",
+    },
+    {
+      value:"Beverage cans<",
+      label:"Beverage cans<",
+    },
+    {
+      value:" Plastic bottles<",
+      label: "Plastic bottles",
+    },
+    {
+      value:"Print Outs",
+      label:"Print Outs",
+    },
+
+  ];
   useEffect(() => {
     wasteType !== undefined
       ? wasteType.map((waste) => {
