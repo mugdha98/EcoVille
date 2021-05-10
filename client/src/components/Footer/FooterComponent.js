@@ -44,7 +44,6 @@ function Footer(props) {
               <li>
                 <Link to="/faqs">About Us</Link>
               </li>
-
             </ul>
           </div>
 

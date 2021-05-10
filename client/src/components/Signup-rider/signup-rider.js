@@ -144,7 +144,6 @@ const SignupRider = ({ setAlert, registerRider, isAuthenticated }) => {
                   />
                   <label for="floatingInput" className="floating-txt">
                     Name
-                  
                   </label>
                 </div>
                 <div class="form-floating mb-3">
