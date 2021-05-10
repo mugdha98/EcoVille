@@ -21,10 +21,10 @@ const SignupRider = ({ setAlert, registerRider, isAuthenticated }) => {
     phone: "",
     pincode: "",
     firstline: "",
-    //typeofvehicle: "cycle",
-    //regnumber: "",
+    typeofvehicle: "cycle",
+    regnumber: "",
     //landmark: "",
-    //aadhar: "",
+    aadhar: "",
     dob: "",
   });
 
@@ -79,6 +79,9 @@ const SignupRider = ({ setAlert, registerRider, isAuthenticated }) => {
   //redirect after successfull signup
   if (isAuthenticated) {
     return <Redirect to="/dashboard/rider" />;
+  }
+  function Req() {
+    return <span className="req">*</span>;
   }
   return (
     <div className="signup-Rider">
@@ -144,7 +147,7 @@ const SignupRider = ({ setAlert, registerRider, isAuthenticated }) => {
                   />
                   <label for="floatingInput" className="floating-txt">
                     Name
-                  
+                  <Req/>
                   </label>
                 </div>
                 <div class="form-floating mb-3">
@@ -159,7 +162,7 @@ const SignupRider = ({ setAlert, registerRider, isAuthenticated }) => {
                     required
                   />
                   <label for="floatingInput" className="floating-txt">
-                    Email address
+                    Email address <Req/>
                   </label>
                 </div>
                 <div class="form-floating mb-3">
@@ -174,7 +177,7 @@ const SignupRider = ({ setAlert, registerRider, isAuthenticated }) => {
                     required
                   />
                   <label for="floatingInput" className="floating-txt">
-                    Password
+                    Password <Req/>
                   </label>
                 </div>
                 <div class="form-floating mb-3">
@@ -189,7 +192,7 @@ const SignupRider = ({ setAlert, registerRider, isAuthenticated }) => {
                     required
                   />
                   <label for="floatingInput" className="floating-txt">
-                    Confirm Password
+                    Confirm Password <Req/>
                   </label>
                 </div>
                 <div class="form-floating mb-3">
@@ -204,7 +207,7 @@ const SignupRider = ({ setAlert, registerRider, isAuthenticated }) => {
                   />
                   <label for="floatingInput" className="floating-txt">
                     Phone No.
-                    
+                    <Req/>
                   </label>
                 </div>
                 <div class="form-floating mb-3">
@@ -218,7 +221,22 @@ const SignupRider = ({ setAlert, registerRider, isAuthenticated }) => {
                     onChange={(e) => onChange(e)}
                   />
                   <label for="floatingInput" className="floating-txt">
-                    Address
+                    Address <Req/>
+                  </label>
+                </div>
+
+                <div class="form-floating mb-3">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="floatingInput"
+                    placeholder="Aadhar No."
+                    name="aadhar"
+                    value={aadhar}
+                    onChange={(e) => onChange(e)}
+                  />
+                  <label for="floatingInput" className="floating-txt">
+                    Aadhar No.
                   </label>
                 </div>
                 
@@ -233,7 +251,7 @@ const SignupRider = ({ setAlert, registerRider, isAuthenticated }) => {
                       onChange={(e) => onChange(e)}
                     />
                     <label for="floatingInput" className="floating-txt">
-                      DOB
+                      DOB <Req/>
                     </label>
                   </div>
                 </div>
@@ -250,7 +268,7 @@ const SignupRider = ({ setAlert, registerRider, isAuthenticated }) => {
                       onChange={(e) => onChange(e)}
                     />
                     <label for="pincode" className="floating-txt">
-                      Pin Code
+                      Pin Code <Req/>
                     </label>
                   </div>
                 </div>
@@ -269,11 +287,30 @@ const SignupRider = ({ setAlert, registerRider, isAuthenticated }) => {
                       {/* <ReversedRadioButton value="melon">Melon</ReversedRadioButton> */}
                     </RadioGroup>
                   </div>
+
+                  <input type="checkbox" id="chkYes" name="typeofvehicle" />{" "}
+                <label for="chkYes">
+                  Do you use a vehicle other than bicycle?
+                </label>
+                <div class="form-floating mb-3 reg-pin-items2" id="dvtext">
+                  <input
+                    type="text"
+                    class="form-control form-control-sm"
+                    id="txtBox"
+                    placeholder="Registration no."
+                    name="regnumber"
+                    value={regnumber}
+                    onChange={(e) => onChange(e)}
+                  />
+                  <label for="txtBox" className="floating-txt">
+                    Registration no. of vehicle(other than bicycle)
+                  </label>
+                </div>
                               
                 
                 <div className="operation-radius">
                   <p>
-                    Select the radius in which you can operate: <br />
+                    Select the radius in which you can operate:  <Req/><br />
                   </p>
 
                   {/* RADIO BUTTONS FOR THE SELECTION OF OPERATION RADIUS */}
@@ -287,6 +324,21 @@ const SignupRider = ({ setAlert, registerRider, isAuthenticated }) => {
                       {/* <ReversedRadioButton value="melon">Melon</ReversedRadioButton> */}
                     </RadioGroup>
                   </div>
+                </div>
+                <div className="tnc">
+                  <input
+                    type="checkbox"
+                    id="TnC"
+                    required
+                    onChange={activate}
+                  />
+                  <label for="TnC">
+                    {" "}
+                    I agree to the{" "}
+                    <a href="/tnc" alt="terms and conditions" className="tnc">
+                      terms and conditions and the privacy policy
+                    </a>
+                  </label>
                 </div>
                 {/* TESTING AREA */}
                 {/* UPLOAD YOUR PHOTO SECTION */}
