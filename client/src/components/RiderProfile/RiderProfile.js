@@ -32,33 +32,33 @@ export const RiderProfile = () => {
         {/* CARD SECTION */}
 
         <div>
-          <div className={style.cardDiv}>
+          {/* <div className={style.cardDiv}>
             <Card
-              name="Chris Gayle"
+              name="Chris"
               email="cg@gmail.com"
               img="https://www.gstatic.com/tv/thumb/persons/528854/528854_v9_bb.jpg"
               tel="645342453"
               aadhar="123456789012"
             />
-          </div>
+          </div> */}
 
           {/* ADDRESS SECTION */}
-
+          <h1 className={style.setting}>Settings</h1>
           <hr className={style.division} />
           <div className={style.address}>
-            <h3 className={style.heading}>
+            <h4 className={style.heading}>
               {" "}
               Address
               <AiFillEdit className={style.editable} onClick={editAddress} />
-            </h3>
+            </h4>
             <div className={style.addressField}>
               <Form.Group controlId="Address">
                 <Form.Label></Form.Label>
                 <Form.Control
                   as="textarea"
-                  rows={3}
+                  rows={2}
                   className={style.addressField}
-                  placeholder="IR - 23/12 Renusagar"
+                  placeholder="Enter New Address"
                   readOnly
                 />
               </Form.Group>
@@ -73,14 +73,14 @@ export const RiderProfile = () => {
 
             <div className={style.regContainer}>
               <div className={style.flexItem}>
-                <h3 className={style.heading}>
+                <h4 className={style.heading}>
                   {" "}
                   Registration No.
                   <AiFillEdit
                     className={style.editable}
                     onClick={EnableWriteRegistration}
                   />
-                </h3>
+                </h4>
 
                 <Form.Group controlId="Registration">
                   <Form.Label></Form.Label>
@@ -103,17 +103,17 @@ export const RiderProfile = () => {
                 </Form.Group>
               </div>
 
-              {/* OPERSTION RADIUS FIELD */}
+              {/* OPERATION RADIUS FIELD */}
 
               <div className={style.flexItem}>
-                <h3 className={style.heading}>
+                <h4 className={style.heading}>
                   {" "}
                   Operation Radius
                   <AiFillEdit
                     className={style.editable}
                     onClick={EnableWriteRadius}
                   />
-                </h3>
+                </h4>
 
                 <Form.Group controlId="operationRadius">
                   <Form.Label></Form.Label>
@@ -137,7 +137,7 @@ export const RiderProfile = () => {
 
             {/* CHANGE YOUR PASSWORD SECTION*/}
 
-            <h2 className={style.heading}>Change Your Password</h2>
+            <h4 className={style.heading}>Change Your Password</h4>
             <div className={style.changePassword}>
               <Form.Group controlId="newPassword">
                 <Form.Label></Form.Label>
