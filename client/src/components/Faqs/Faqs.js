@@ -20,7 +20,7 @@ const customstyle={
     color:"black",
     fontFamily: "Joti one",
 }
-function Faq()
+function Faqs()
 {
     return(
         

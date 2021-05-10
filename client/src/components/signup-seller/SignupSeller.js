@@ -219,6 +219,21 @@ const Register = ({ setAlert, registerSeller, isAuthenticated }) => {
                   />
                   <label for="landmark">landmark <Req /></label>
                 </div>
+                <div className="tnc">
+                  <input
+                    type="checkbox"
+                    id="TnC"
+                    required
+                    onChange={activate}
+                  />
+                  <label for="TnC">
+                    {" "}
+                    I agree to the{" "}
+                    <a href="/tnc" alt="terms and conditions" className="tnc">
+                      terms and conditions and the privacy policy
+                    </a>
+                  </label>
+                </div>
                 {/* <button onClick={() => getArea(pincode)}>Get Area List</button>
                   <div class="form-floating mb-3">
                            <select id="cityList" name="city" value={city} onChange={(e) => onChange(e)}>

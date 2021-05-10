@@ -10,20 +10,20 @@ export const TnC = () => {
         </center>
         <p className={style.paragraph}>
           <p>
-            "PRECycle" is the brand name of the recyclable scrap pickup service
-            promoted by SapiensWorks Private Limited. Any mention of either of
+            "EcoVille" is the brand name of the recyclable scrap pickup service
+            promoted by EcoVille Private Limited. Any mention of either of
             the names in this document refer to the online recyclable scrap
-            pickup service provided by SapiensWorks Private Limited.
+            pickup service provided by EcoVille Private Limited.
           </p>
           <p>
             The terms and conditions mentioned here are subject to change at the
-            sole discretion of PRECycle, SapiensWorks Private Limited.
+            sole discretion of EcoVille Private Limited.
           </p>
           <p>
             These terms and conditions and all the policies mentioned below are
             binding and require that any conflict arising as a consequence of
             using our product or service, to be sorted in the court of law in
-            jurisdiction of Delhi only.
+            jurisdiction of Kolkata only.
           </p>
           <p>
             If you choose to proceed further, it will be taken as your consent
@@ -38,7 +38,7 @@ export const TnC = () => {
           </p>
           <p>
             Any person using our services with the intent of selling scrap via
-            PRECycle is treated as a 'seller'.
+            EcoVille is treated as a 'seller'.
           </p>
           <p>
             Any person using our services with the intent of purchasing scrap or
