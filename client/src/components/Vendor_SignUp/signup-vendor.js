@@ -49,7 +49,7 @@ const SignupVendor = ({ setAlert, registerVendor, isAuthenticated }) => {
   const onSubmit = async (e) => {
     e.preventDefault();
     if (password !== password2) {
-      setAlert("Password do not match", "danger");
+      setAlert("Passwords do not match", "danger");
     } else {
       registerVendor(
         name,
@@ -60,7 +60,7 @@ const SignupVendor = ({ setAlert, registerVendor, isAuthenticated }) => {
         pincode,
         firstline,
         landmark,
-        aadhar
+        //aadhar
       );
     }
   };
@@ -113,25 +113,14 @@ const SignupVendor = ({ setAlert, registerVendor, isAuthenticated }) => {
         <div class="vendor-flex-left">
           {/* <div className="greeting"> */}
           <h2 className="greet-text"> Welcome to</h2>
-          <h1 className="org-name">PRECycle</h1>
+          <h1 className="org-name">EcoVille</h1>
           {/* </div> */}
         </div>
         {/* SIGNUP SECTION */} {/* SIGN UP WITH GOOGLE */}
         <div class="vendor-flex-right">
           <div className="right-side">
             <div className="signup-area">
-              <div className="signup-with">
-                <h2 className="">
-                  <strong>Sign Up with</strong>
-                </h2>
-
-                <div className="google-button">
-                  <button type="button" class="btn btn-danger">
-                    <AiFillGoogleCircle className="google-icon" />
-                    <h4 className="google-name">Google</h4>
-                  </button>
-                </div>
-              </div>
+              
               {/* OR DIV */}
               <hr className="division" />
               {/* SIGNUP HERE DIV */} {/* SIGN UP WITHOUT GOOGLE */}
@@ -139,9 +128,6 @@ const SignupVendor = ({ setAlert, registerVendor, isAuthenticated }) => {
                 <h3>
                   <strong>Sign Up here</strong>
                 </h3>
-                <p>
-                  Fields marked with <Req /> represents the required fields.
-                </p>
                 <form onSubmit={(e) => onSubmit(e)}>
                   <div class="form-floating mb-3 ">
                     <input
@@ -173,6 +159,7 @@ const SignupVendor = ({ setAlert, registerVendor, isAuthenticated }) => {
                     <label for="email">
                       Email address
                       <Req />
+                  
                     </label>{" "}
                     {/* EMAIL */}
                   </div>
@@ -226,7 +213,6 @@ const SignupVendor = ({ setAlert, registerVendor, isAuthenticated }) => {
                     </label>{" "}
                     {/* PHONE NO. */}
                   </div>
-
                   <div class="form-floating mb-3">
                     <input
                       type="text"
@@ -244,9 +230,11 @@ const SignupVendor = ({ setAlert, registerVendor, isAuthenticated }) => {
                     {/* GSTI NO. */}
                   </div>
 
+
                   <div class="input-group mb-3">
                     <label class="input-group-text" for="waste_type">
                       Type of Waste
+                      <Req />
                     </label>
                     <Select
                       options={options}
@@ -293,16 +281,6 @@ const SignupVendor = ({ setAlert, registerVendor, isAuthenticated }) => {
                     {/* FIRST LINE OF ADDRESS */}
                   </div>
 
-                  <div class="form-floating mb-3">
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="secondline"
-                      placeholder="Second Line"
-                    />
-                    <label for="secondline">Additional Address here</label>{" "}
-                    {/* OPTIONAL SECOND LINE FOR ADDRESS */}
-                  </div>
 
                   <div class="form-floating mb-3">
                     <input
@@ -331,22 +309,7 @@ const SignupVendor = ({ setAlert, registerVendor, isAuthenticated }) => {
                       value={landmark}
                       onChange={(e) => onChange(e)}
                     />
-                    <label for="landmark">Landmark</label> {/* LANDMARK */}
-                  </div>
-                  <div className="tnc">
-                    <input
-                      type="checkbox"
-                      id="TnC"
-                      required
-                      onChange={activate}
-                    />
-                    <label for="TnC">
-                      {" "}
-                      I agree to the{" "}
-                      <a href=" " alt="terms and conditions" className="tnc">
-                        terms and conditions and the privacy policy
-                      </a>
-                    </label>
+                    <label for="landmark">Landmark <Req /></label> {/* LANDMARK */}
                   </div>
                   <div className="signup-key">
                     <button
@@ -355,7 +318,7 @@ const SignupVendor = ({ setAlert, registerVendor, isAuthenticated }) => {
                       class="btn btn-warning btn-lg"
                       disabled={disabled}
                     >
-                      Sign up {/* SIGN UP BUTTON */}
+                      Register {/* SIGN UP BUTTON */}
                     </button>
                   </div>
                 </form>

@@ -8,7 +8,9 @@ import { setAlert } from "../../actions/alert";
 import { registerRider } from "../../actions/auth";
 import { Input } from "reactstrap";
 import { Link } from "react-router-dom";
+import Select from "react-select";
 import { RadioGroup, RadioButton } from "react-radio-buttons";
+
 
 const SignupRider = ({ setAlert, registerRider, isAuthenticated }) => {
   const [formData, setFormData] = useState({
@@ -19,12 +21,14 @@ const SignupRider = ({ setAlert, registerRider, isAuthenticated }) => {
     phone: "",
     pincode: "",
     firstline: "",
-    typeofvehicle: "cycle",
-    regnumber: "",
-    landmark: "",
-    aadhar: "",
+    //typeofvehicle: "cycle",
+    //regnumber: "",
+    //landmark: "",
+    //aadhar: "",
     dob: "",
   });
+
+
 
   const {
     name,
@@ -34,17 +38,17 @@ const SignupRider = ({ setAlert, registerRider, isAuthenticated }) => {
     phone,
     pincode,
     firstline,
-    landmark,
+    /*landmark,
     typeofvehicle,
     regnumber,
-    aadhar,
+    aadhar,*/
     dob,
   } = formData;
 
   const onSubmit = async (e) => {
     e.preventDefault();
     if (password !== password2) {
-      setAlert("Password do not match", "danger");
+      setAlert("Passwords do not match", "danger");
     } else {
       registerRider(
         name,
@@ -54,10 +58,10 @@ const SignupRider = ({ setAlert, registerRider, isAuthenticated }) => {
         phone,
         pincode,
         firstline,
-        landmark,
+        /*landmark,
         typeofvehicle,
         regnumber,
-        aadhar,
+        aadhar,*/
         dob
       );
     }
@@ -103,7 +107,7 @@ const SignupRider = ({ setAlert, registerRider, isAuthenticated }) => {
 
           <h2 className="welcome-text-rider"> Welcome to</h2>
 
-          <h1 className="name-rider">PRECycle</h1>
+          <h1 className="name-rider">EcoVille</h1>
           {/* </div> */}
         </div>
 
@@ -113,17 +117,6 @@ const SignupRider = ({ setAlert, registerRider, isAuthenticated }) => {
           <div className="content">
             {/* SIGNUP USING GOOGLE SECTION */}
 
-            <div className="signup-with-rider">
-              <h2 className="">
-                <strong>Sign up with</strong>
-              </h2>
-              <div className="button-google-rider">
-                <button type="button" class="btn btn-danger">
-                  <AiFillGoogleCircle className="icon" />
-                  Google
-                </button>
-              </div>
-            </div>
 
             {/* OR DIV */}
 
@@ -151,6 +144,7 @@ const SignupRider = ({ setAlert, registerRider, isAuthenticated }) => {
                   />
                   <label for="floatingInput" className="floating-txt">
                     Name
+                  
                   </label>
                 </div>
                 <div class="form-floating mb-3">
@@ -210,6 +204,7 @@ const SignupRider = ({ setAlert, registerRider, isAuthenticated }) => {
                   />
                   <label for="floatingInput" className="floating-txt">
                     Phone No.
+                    
                   </label>
                 </div>
                 <div class="form-floating mb-3">
@@ -226,20 +221,7 @@ const SignupRider = ({ setAlert, registerRider, isAuthenticated }) => {
                     Address
                   </label>
                 </div>
-                <div class="form-floating mb-3">
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="floatingInput"
-                    placeholder="Aadhar No."
-                    name="aadhar"
-                    value={aadhar}
-                    onChange={(e) => onChange(e)}
-                  />
-                  <label for="floatingInput" className="floating-txt">
-                    Aadhar No.
-                  </label>
-                </div>
+                
                 <div className="age-radio">
                   <div class="form-floating mb-3 age">
                     <Input
@@ -254,36 +236,9 @@ const SignupRider = ({ setAlert, registerRider, isAuthenticated }) => {
                       DOB
                     </label>
                   </div>
-
-                  {/* RADIO BUTTONS FOR GENDER */}
-
-                  <div className="radios">
-                    <RadioGroup /*onChange={this.onChange}*/ horizontal>
-                      <RadioButton value="apple">Male</RadioButton>
-
-                      <RadioButton value="orange">Female</RadioButton>
-
-                      <RadioButton value="melon">Other</RadioButton>
-
-                      {/* <ReversedRadioButton value="melon">Melon</ReversedRadioButton> */}
-                    </RadioGroup>
-                  </div>
                 </div>
+
                 <div className="reg-pin">
-                  <div class="form-floating mb-3  reg-pin-items1">
-                    <input
-                      type="text"
-                      class="form-control form-control-sm"
-                      id="landmark"
-                      placeholder="Land Mark"
-                      name="landmark"
-                      value={landmark}
-                      onChange={(e) => onChange(e)}
-                    />
-                    <label for="pincode" className="floating-txt">
-                      Landmark
-                    </label>
-                  </div>
                   <div class="form-floating mb-3  reg-pin-items2">
                     <input
                       type="text"
@@ -299,28 +254,26 @@ const SignupRider = ({ setAlert, registerRider, isAuthenticated }) => {
                     </label>
                   </div>
                 </div>
-                <input type="checkbox" id="chkYes" name="typeofvehicle" />{" "}
-                <label for="chkYes">
-                  Do you use a vehicle other than bicycle?
-                </label>
-                <div class="form-floating mb-3 reg-pin-items2" id="dvtext">
-                  <input
-                    type="text"
-                    class="form-control form-control-sm"
-                    id="txtBox"
-                    placeholder="Registration no."
-                    name="regnumber"
-                    value={regnumber}
-                    onChange={(e) => onChange(e)}
-                  />
-                  <label for="txtBox" className="floating-txt">
-                    Registration no. of vehicle(other than bicycle)
-                  </label>
-                </div>
+
+
+                  {/* RADIO BUTTONS FOR GENDER */}
+
+                  <div className="radios">
+                    <RadioGroup /*onChange={this.onChange}*/ horizontal>
+                      <RadioButton value="apple">Male</RadioButton>
+
+                      <RadioButton value="orange">Female</RadioButton>
+
+                      <RadioButton value="melon">Other</RadioButton>
+
+                      {/* <ReversedRadioButton value="melon">Melon</ReversedRadioButton> */}
+                    </RadioGroup>
+                  </div>
+                              
+                
                 <div className="operation-radius">
                   <p>
                     Select the radius in which you can operate: <br />
-                    (regions near the pin code provided above)
                   </p>
 
                   {/* RADIO BUTTONS FOR THE SELECTION OF OPERATION RADIUS */}
@@ -337,31 +290,6 @@ const SignupRider = ({ setAlert, registerRider, isAuthenticated }) => {
                 </div>
                 {/* TESTING AREA */}
                 {/* UPLOAD YOUR PHOTO SECTION */}
-                <div class="mb-3">
-                  <label for="chooseFile" class="form-label upload-rider">
-                    Upload Photo(Passport size)
-                  </label>
-                  <input
-                    class="form-control form-control-sm"
-                    id="chooseFile"
-                    type="file"
-                  />
-                </div>
-                <div className="tnc">
-                  <input
-                    type="checkbox"
-                    id="TnC"
-                    required
-                    onChange={activate}
-                  />
-                  <label for="TnC">
-                    {" "}
-                    I agree to the{" "}
-                    <Link to="/tnc" target="_blank" className="tnc">
-                      terms and conditions and the privacy policy
-                    </Link>
-                  </label>
-                </div>
                 <div className="signup-button">
                   <button
                     type="button"

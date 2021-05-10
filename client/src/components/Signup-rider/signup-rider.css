@@ -75,7 +75,7 @@
 .flex-item-right {
   flex: 50%;
   margin: 0;
-  background-image: linear-gradient(to right, #008891, #70af85);
+  background-image: linear-gradient(to right, #0ec717, #078307);
   width: 100%;
   border: none;
   border-radius: 0 25px 25px 0;
@@ -87,7 +87,7 @@
 
 .radios {
   flex: 50%;
-  background-color: #4d4d4d;
+  background-color: #6262fd;
   margin-left: 5px;
 }
 
@@ -95,29 +95,7 @@
   margin-top: 10px;
 }
 
-.button-google-rider {
-  margin: 10px 0;
-}
 
-.icon {
-  color: white;
-  width: 20px;
-  height: 20px;
-  margin-right: 4px;
-  /* margin-top: 8px; */
-}
-.google {
-  display: inline;
-  font-size: 1.4rem;
-  color: white;
-  margin: 10px 0 10px 5px;
-}
-
-.hr1 {
-  width: 90%;
-  border-top: 2px solid rgb(102, 100, 100);
-  margin: 20px 0;
-}
 
 /* SIGNUP HERE SECTION */
 .signup-here {
@@ -132,7 +110,7 @@
 .radio-items {
   flex: 5%;
   align-items: flex-end;
-  background-color: rgb(44, 41, 41);
+  background-color: rgb(151, 117, 117);
 }
 
 .google-api {
@@ -142,12 +120,12 @@
   margin-bottom: 15px;
 }
 .signup-button {
-  margin-left: 75%;
+  margin-left: 0%;
 
   /* text-align: right; */
 }
 .signup-button-lg {
-  width: 150px;
+  width: 50px;
   margin: 10px 0;
 }
 .reg-pin-items1 {
@@ -155,12 +133,13 @@
 }
 .reg-pin-items2 {
   flex: 20%;
-  margin-left: 10px;
+  margin-left: 0px;
 }
 
 .operation-radius {
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 0px;
 }
 
 .upload-rider {

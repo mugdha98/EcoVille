@@ -35,7 +35,7 @@ const Register = ({ setAlert, registerSeller, isAuthenticated }) => {
   const onSubmit = async (e) => {
     e.preventDefault();
     if (password !== password2) {
-      setAlert("Password do not match", "danger");
+      setAlert("Passwords do not match", "danger");
     } else {
       registerSeller(
         name,
@@ -48,19 +48,6 @@ const Register = ({ setAlert, registerSeller, isAuthenticated }) => {
         avatar
       );
     }
-  };
-  //google login response
-  const responseGoogle = (response) => {
-    console.log(response);
-    setFormData({
-      ...formData,
-      name: response.profileObj.name,
-      email: response.profileObj.email,
-      avatar: response.profileObj.imageUrl,
-      password: response.profileObj.googleId,
-      password2: response.profileObj.googleId,
-    });
-    setAlert("Please enter your contact details!", "success");
   };
   const onChange = async (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -99,7 +86,7 @@ const Register = ({ setAlert, registerSeller, isAuthenticated }) => {
         <div class="flex-item-left-seller">
           {/* <div className="welcome"> */}
           <h2 className="welcome-text-seller"> Welcome to</h2>
-          <h1 className="name-seller">PRECycle</h1>
+          <h1 className="name-seller">EcoVille</h1>
           {/* </div> */}
         </div>
 
@@ -107,32 +94,13 @@ const Register = ({ setAlert, registerSeller, isAuthenticated }) => {
 
         <div class="flex-item-right-signupSeller">
           <div className="content">
-            <div className="signup-with">
-              <h2 className="">
-                <strong>Sign up with</strong>
-              </h2>
-              <div className="buttonsignupSeller">
-                <GoogleLogin
-                  clientId="266262352024-950s3j5a29gddj75l9oujmckk8u7rfub.apps.googleusercontent.com"
-                  buttonText="Sign Up"
-                  onSuccess={responseGoogle}
-                  onFailure={responseGoogle}
-                  cookiePolicy={"single_host_origin"}
-                />
-              </div>
-            </div>
-            {/* OR DIV */}
-            <hr className="division" />
-
+            
             {/* SIGNUP HERE DIV */}
 
             <div className="signup-here">
               <h3>
                 <strong>Signup here</strong>
               </h3>
-              <p>
-                Fields marked with <Req /> represents the required fields.
-              </p>
               <form onSubmit={(e) => onSubmit(e)}>
                 <div class="form-floating mb-3 ">
                   <input
@@ -177,7 +145,7 @@ const Register = ({ setAlert, registerSeller, isAuthenticated }) => {
                     required
                   />
                   <label for="password">
-                    Confirm
+                    Password
                     <Req />
                   </label>
                 </div>
@@ -207,7 +175,7 @@ const Register = ({ setAlert, registerSeller, isAuthenticated }) => {
                     value={phone}
                     onChange={(e) => onChange(e)}
                   />
-                  <label for="Contact">Phone No.</label>
+                  <label for="Contact">Phone No. <Req /></label>
                 </div>
                 <div class="form-floating mb-3">
                   <input
@@ -223,15 +191,6 @@ const Register = ({ setAlert, registerSeller, isAuthenticated }) => {
                     Address
                     <Req />
                   </label>
-                </div>
-                <div class="form-floating mb-3">
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="secondline"
-                    placeholder="Second Line"
-                  />
-                  <label for="secondline">Additional Address here</label>
                 </div>
                 <div class="form-floating mb-3">
                   <input
@@ -258,7 +217,7 @@ const Register = ({ setAlert, registerSeller, isAuthenticated }) => {
                     value={landmark}
                     onChange={(e) => onChange(e)}
                   />
-                  <label for="landmark">landmark</label>
+                  <label for="landmark">landmark <Req /></label>
                 </div>
                 {/* <button onClick={() => getArea(pincode)}>Get Area List</button>
                   <div class="form-floating mb-3">
@@ -269,21 +228,7 @@ const Register = ({ setAlert, registerSeller, isAuthenticated }) => {
                           </select>
                           <label for="cityList">Name Of Area</label>
                   </div> */}
-                <div className="tnc">
-                  <input
-                    type="checkbox"
-                    id="TnC"
-                    required
-                    onChange={activate}
-                  />
-                  <label for="TnC">
-                    {" "}
-                    I agree to the{" "}
-                    <a href="/tnc" alt="terms and conditions" className="tnc">
-                      terms and conditions and the privacy policy
-                    </a>
-                  </label>
-                </div>
+                
                 <input
                   type="submit"
                   className="btn btn-warning btn-lg"

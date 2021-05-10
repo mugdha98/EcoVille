@@ -71,7 +71,7 @@
 .vendor-flex-right {
   flex: 50%;
   margin: 0;
-  background-image: linear-gradient(to right, #008891, #70af85);
+  background-image: linear-gradient(to right, #0ec717, #078307);
   width: 100%;
   border: none;
   border-radius: 0 25px 25px 0;
@@ -139,7 +139,7 @@
 }
 
 .signup-key {
-  margin-left: 75%;
+  margin-left: 0%;
   margin-bottom: 5%;
 }
 
