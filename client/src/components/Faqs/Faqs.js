@@ -1,43 +1,42 @@
-import React, {useEffect } from 'react';
+import React, { useEffect } from 'react';
 import ReactDOM from 'react-dom';
-import { Container} from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import { Media} from 'react-bootstrap';
-import { Image} from 'react-bootstrap';
+import { Media } from 'react-bootstrap';
+import { Image } from 'react-bootstrap';
 import Card from "react-bootstrap/Card";
 import Accordion from "react-bootstrap/Accordion";
 import Button from "react-bootstrap/Button";
 import Workflow from "../Workflow/Workflow.js";
 import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    Link
-  } from "react-router-dom";
-  
-const customstyle={
-    color:"black",
-    fontFamily: "Joti one",
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+
+const customstyle = {
+  color: "black",
+  fontFamily: "Joti one",
 }
-function Faq()
-{
-    return(
-        
+function Faqs() {
+  return (
+
     <div className="container">
+      <br></br>
+      <h1 style={customstyle}>
+        <center> How it works?</center>
+      </h1>
+      <div>
         <br></br>
-        <h1 style={customstyle}>
-          <center> How it works?</center> 
-        </h1>
-        <div>
-            <br></br>
-        </div>
-        <div>
-            <br></br>
-            <Media>
-            <Row>
+      </div>
+      <div>
+        <br></br>
+        <Media>
+          <Row>
             <Col md={4}>
-               <Image
+              <Image
                 src="../assets/seller.png"
                 style={{ maxWidth: 300, maxHeight: 300 }}
                 alt="seller"
@@ -45,11 +44,11 @@ function Faq()
                 fluid
               />
             </Col>
-            <Col md={{offset:1, size:7}}>
-            <Media.Body>
+            <Col md={{ offset: 1, size: 7 }}>
+              <Media.Body>
                 <h2 style={customstyle}>Seller</h2>
                 <p>
-                A seller is anyone who has recyclable waste in a considerable
+                  A seller is anyone who has recyclable waste in a considerable
                   quantity and wants it to be recycled. All they have to do is
                   sign-in/sign-up on our website or App and fill a "Request to
                   Pick-up" form. After the vendor chosen by them accepts the
@@ -58,15 +57,15 @@ function Faq()
                   updated with the order status from the comfort of their abode.
                   So, they save time and earn money... sound like a win-win?
                 </p>
-            </Media.Body>
+              </Media.Body>
             </Col>
-            </Row>
-            </Media>
-        </div>
-        <div>
-            <br></br>
-            <Media>
-            <Row>
+          </Row>
+        </Media>
+      </div>
+      <div>
+        <br></br>
+        <Media>
+          <Row>
             <Col md={4}>
               <Image
                 src="../assets/rider.png"
@@ -76,11 +75,11 @@ function Faq()
                 fluid
               />
             </Col>
-            <Col md={{offset:1, size :7}}>
-            <Media.Body>
+            <Col md={{ offset: 1, size: 7 }}>
+              <Media.Body>
                 <h2 style={customstyle}>Rider</h2>
                 <p>
-                Riders are authentic volunteers who serve as local ragpickers.
+                  Riders are authentic volunteers who serve as local ragpickers.
                   People have a lot of recyclable waste but not that much time
                   to get it recycled. So, the riders provide the facility of
                   "pickup at the doorstep." Once they accept an order, they
@@ -89,17 +88,17 @@ function Faq()
                   riders then deliver this waste to the vendors. All of it while
                   giving regular status updates to both sellers and vendors.
                 </p>
-            </Media.Body>
+              </Media.Body>
             </Col>
-            </Row>
-            </Media>
-        </div>
-        <div>
-            <br></br>
-            <Media>
-            <Row>
+          </Row>
+        </Media>
+      </div>
+      <div>
+        <br></br>
+        <Media>
+          <Row>
             <Col md={4}>
-               <Image
+              <Image
                 src="../assets/vendor.png"
                 style={{ maxWidth: 350, maxHeight: 350 }}
                 alt="seller"
@@ -107,11 +106,11 @@ function Faq()
                 fluid
               />
             </Col>
-            <Col md={{offset: 1, size : 7}}>
-            <Media.Body>
+            <Col md={{ offset: 1, size: 7 }}>
+              <Media.Body>
                 <h2 style={customstyle}>Vendor</h2>
                 <p>
-                Vendors are verified recyclable waste collection centres that
+                  Vendors are verified recyclable waste collection centres that
                   regularly send waste to recycling units. Sellers can choose a
                   vendor depending on the type of waste they collect and its
                   rate. They coordinate with PRECycle riders to collect scrap at
@@ -119,36 +118,36 @@ function Faq()
                   collaboration helps them in becoming more noticeable so that a
                   larger population opts for recycling their waste.
                 </p>
-            </Media.Body>
+              </Media.Body>
             </Col>
-            </Row>
-            </Media>
-        </div>
-        <br />
-        <hr />
-        <br />
-        <div>
+          </Row>
+        </Media>
+      </div>
+      <br />
+      <hr />
+      <br />
+      <div>
         <Workflow />
-        </div>
-        <br />
-        <hr />
-        <h1 style={{ fontFamily: "Joti one", color: "black" }}>
+      </div>
+      <br />
+      <hr />
+      <h1 style={{ fontFamily: "Joti one", color: "black" }}>
         <center>Frequently asked Questions</center>
-         </h1>
-        <br />
-        <br />
-        <div>
-            <Accordion >
-            <Card>
+      </h1>
+      <br />
+      <br />
+      <div>
+        <Accordion >
+          <Card>
             <Card.Header>
-            <Accordion.Toggle as={Button} variant="link" eventKey="0">
+              <Accordion.Toggle as={Button} variant="link" eventKey="0">
                 <center>
                   What are the most common items that are recyclable?
                 </center>
-            </Accordion.Toggle>
+              </Accordion.Toggle>
             </Card.Header>
             <Accordion.Collapse eventKey="0">
-            <Card.Body>
+              <Card.Body>
                 <p>1. Cardboard</p>
                 <p>2. Paper</p>
                 <p>3. Packaging boxes</p>
@@ -160,17 +159,17 @@ function Faq()
                 <p>9. All types of metals like Iron, Copper, Brass, etc.</p>
                 <p>10. AC, Fridge, Home Appliances</p>
               </Card.Body>
-              </Accordion.Collapse>
-            </Card>
-            <br />
-            <Card>
+            </Accordion.Collapse>
+          </Card>
+          <br />
+          <Card>
             <Card.Header>
-                <Accordion.Toggle as={Button} variant="link" eventKey="1">
+              <Accordion.Toggle as={Button} variant="link" eventKey="1">
                 <center>How does recycling work?</center>
-                </Accordion.Toggle>
-             </Card.Header>
-             <Accordion.Collapse eventKey="1">
-             <Card.Body>
+              </Accordion.Toggle>
+            </Card.Header>
+            <Accordion.Collapse eventKey="1">
+              <Card.Body>
                 <p>
                   There are three parts to the recycling process: collection,
                   manufacturing and buying
@@ -195,10 +194,10 @@ function Faq()
                   them, and the whole system works.
                 </p>
               </Card.Body>
-              </Accordion.Collapse>
-            </Card>
+            </Accordion.Collapse>
+          </Card>
 
-            <Card>
+          <Card>
             <Card.Header>
               <Accordion.Toggle as={Button} variant="link" eventKey="2">
                 <center>
@@ -261,11 +260,11 @@ function Faq()
           </Card>
           <br />
         </Accordion>
-        </div>
+      </div>
     </div>
-    
-      
 
-    );
+
+
+  );
 }
-export default Faqs
+export default Faqs;

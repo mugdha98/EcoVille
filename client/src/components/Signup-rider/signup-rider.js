@@ -38,10 +38,10 @@ const SignupRider = ({ setAlert, registerRider, isAuthenticated }) => {
     phone,
     pincode,
     firstline,
-    /*landmark,
+    landmark,
     typeofvehicle,
     regnumber,
-    aadhar,*/
+    aadhar,
     dob,
   } = formData;
 
@@ -58,10 +58,10 @@ const SignupRider = ({ setAlert, registerRider, isAuthenticated }) => {
         phone,
         pincode,
         firstline,
-        /*landmark,
+        landmark,
         typeofvehicle,
         regnumber,
-        aadhar,*/
+        aadhar,
         dob
       );
     }
