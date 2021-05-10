@@ -287,7 +287,7 @@ const RiderDashboard = ({
             {/* RIDER IMAGE */}
           </div>
           <div className={RDstyles.rider_greeting_text}>
-            <h2>{user ? user.name : "<please refresh the page>"}</h2>{" "}
+            <h4>Hi! {user ? user.name : "Edit Profile"}</h4>{" "}
             {/* GREET RIDER */}
           </div>
         </Link>
@@ -300,7 +300,7 @@ const RiderDashboard = ({
           <div class="col-12 col-lg-6">
             <div>
               <div className={RDstyles.rider_board_heading}>
-                <h1>ALLOTTED ORDERS</h1>
+                <h3>ALLOTTED ORDERS</h3>
               </div>
 
               {acceptedRequest.length > 0 ? (
@@ -333,7 +333,7 @@ const RiderDashboard = ({
                   );
                 })
               ) : (
-                <h1>No Pending Request!</h1>
+                <center><h4>No Pending Request!</h4></center>
               )}
             </div>
           </div>
@@ -341,7 +341,7 @@ const RiderDashboard = ({
           <div class="col-12 col-lg-6">
             <div className="pending">
               <div className={RDstyles.rider_board_heading}>
-                <h1>PICKUP REQUESTS</h1>
+                <h3>PICKUP REQUESTS</h3>
               </div>
               {request.length > 0 ? (
                 request.map((req) => {
@@ -369,7 +369,7 @@ const RiderDashboard = ({
                   );
                 })
               ) : (
-                <h1>No Pending Request!</h1>
+                <center><h4>No Pending Request!</h4></center>
               )}
             </div>
           </div>

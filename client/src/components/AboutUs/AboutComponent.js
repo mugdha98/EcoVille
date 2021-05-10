@@ -20,7 +20,7 @@ function Team(props) {
         <Image
           src={props.src}
           style={{ maxWidth: 175, maxHeight: 175 }}
-          alt="Precycle"
+          alt="EcoVille"
           roundedCircle
           fluid
         />
@@ -62,12 +62,12 @@ function About(props) {
             <div className="container">
               <div className="row row-header">
                 <div className="col-12">
-                  <h1>Our Mission</h1>
+                  <h1>Our Vision</h1>
                   <p>
-                    PRECycle is a service which helps you to sell your old and
-                    throw away stuff in an organized manner. It is as easy as
-                    calling or dropping us a note and.. Kaboom! You get rid of
-                    your stuff just like that!
+                    EcoVille is a platform that always works for a sustainable tomorrow.
+                    It aims to <em>DO THE RIGHT THING</em> in <em>THE RIGHT WAY</em> for a better tomorrow.
+                    It is as easy as calling and dropping of the phone and <b>SKADOOSH!!!</b>
+                    Your old trash is now our treasure and you got freed of them with just a single click.
                   </p>
                 </div>
               </div>
@@ -76,101 +76,38 @@ function About(props) {
 
           <h2>About</h2>
           <p>
-            PRECycle started on 15th January 2021 as a web development project
-            based on Sustainable Development for HACKNITP Winter '21. We aim to
-            create greater awareness about recycling. Making people recognise
+            EcoVille started as a web development project
+            based on Waste Management as the Final Year Project. We aim to
+            create an understanding for the proper waste disposal. Making people recognise
             types of waste and the importance of processing them is a small step
             in that direction. We believe that this initiative will inspire more
-            people to opt for recycling waste instead of getting inappropriately
+            people to opt for proper disposing of waste instead of getting inappropriately
             rid of them. The concept of sustainability is something we need to
             incorporate into our daily lives. It is quintessential in ensuring
-            the wellness of future generations and, we at PRECycle are all about
+            the wellness of future generations and, we at EcoVille are all about
             it!
           </p>
           <p></p>
         </div>
-        <div className="col-12 col-md-5">
-          <Card>
-            <CardHeader className="bg-primary text-white">
-              Facts At a Glance
+        <div className="col-12 col-md-6">
+          <Card border-info mb-3 >
+            <CardHeader className="bg-info text-light" img>
+              <i class="fa fa-bullhorn"></i> Staggering Facts
             </CardHeader>
             <CardBody>
               <dl className="row p-1">
-                <dt className="col-6">Started</dt>
-                <dd className="col-6">15 Jan 2021</dd>
-                <dt className="col-6">Major Stake Holder</dt>
-                <dd className="col-6">CodoSapiens Inc.</dd>
-                <dt className="col-6">Last Year's Turnover</dt>
-                <dd className="col-6">$1,250,375</dd>
-                <dt className="col-6">Employees</dt>
-                <dd className="col-6">4</dd>
+                <dt className="col-5">Yearly Disposal</dt>
+                <dd className="col-7">Around <strong>50m</strong> tonnes</dd>
+                <dt className="col-5">Recycling Rates</dt>
+                <dd className="col-7">Only <strong>15-20 percent</strong> of all waste generated</dd>
+                <dt className="col-5">Job opportunities</dt>
+                <dd className="col-7">96 new jobs each year for every 10,000 tons of computer waste that gets processed</dd>
+                <dt className="col-5">Power of Recycling</dt>
+                <dd className="col-7">Recycling One Million Laptops saves the same amount of energy that it would take to power 3,657 homes each year</dd>
               </dl>
             </CardBody>
           </Card>
         </div>
-        <div className="col-12">
-          <div data-aos="fade-up">
-            <Card>
-              <CardBody className="bg-faded">
-                <blockquote className="blockquote">
-                  <p className="mb-0">
-                    Sustainable development is the pathway to the future we want
-                    for all. It offers a framework to generate economic growth,
-                    achieve social justice, exercise environmental stewardship
-                    and strengthen governance.
-                  </p>
-                  <footer className="blockquote-footer">
-                    Ban-Ki-Moon
-                    <cite title="Source Title">
-                      {" "}
-                      ,General Secratary, UN 2014
-                    </cite>
-                  </footer>
-                </blockquote>
-              </CardBody>
-            </Card>
-          </div>
-        </div>
-      </div>
-
-      <h2>Meet our team</h2>
-      <br />
-      <br />
-
-      <div data-aos="slide-left">
-        {" "}
-        <Team
-          src="./assets/fuhar.jpeg"
-          name="Fuhar Suman"
-          post="Team Captain"
-        />
-        <hr />
-      </div>
-      <div data-aos="slide-right">
-        <Team
-          src="./assets/palak.jpeg"
-          name="Palak Kumari"
-          post="Chief Managing Director"
-        />
-        <hr />
-      </div>
-      <div data-aos="slide-left">
-        {" "}
-        <Team
-          src="./assets/rishabh.jpeg"
-          name="Rishabh Mishra"
-          post="Chief Operating Officer"
-        />
-        <hr />
-      </div>
-      <div data-aos="slide-right">
-        {" "}
-        <Team
-          src="./assets/dig.png"
-          name="Digvijay Srivastava"
-          post="Chief Technology Officer"
-        />
-        <hr />
       </div>
     </div>
   );

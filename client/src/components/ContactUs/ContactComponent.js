@@ -11,7 +11,7 @@ import {
   FormFeedback,
 } from "reactstrap";
 import { Link } from "react-router-dom";
-import {submitFeedback} from '../../actions/auth'
+import { submitFeedback } from '../../actions/auth'
 
 class Contact extends Component {
   constructor(props) {
@@ -50,8 +50,8 @@ class Contact extends Component {
     event.preventDefault();
     console.log("Current State is: " + JSON.stringify(this.state));
     alert("Current State is: " + JSON.stringify(this.state));
-    
-    
+
+
   }
 
   handleBlur = (field) => (evt) => {
@@ -108,40 +108,38 @@ class Contact extends Component {
             <BreadcrumbItem active>Contact Us</BreadcrumbItem>
           </Breadcrumb>
           <div className="col-12">
-            <h3>We would love to hear from you</h3>
+            <h3>We value your feedback, so let us know what you think!</h3>
             <hr />
           </div>
         </div>
         <div className="row row-content">
           <div className="col-12">
-            <h3>Location Information</h3>
+            <h3>You Can Find Us Here</h3>
           </div>
           <div className="col-12 col-sm-4 offset-sm-1">
             <h5>Our Address</h5>
             <address>
-              Kosi, Kosi Ext., Ganga
+              Chowbaga Road,Anandapur
               <br />
-              NIT Patna
+              Heritage Institute Of Technology
               <br />
-              Patna
+              Kolkata
               <br />
-              <i className="fa fa-phone"></i>: +91 9455017625
-              <br />
-              <i className="fa fa-fax"></i>: +852 8765 4321
+              <i className="fa fa-phone"></i>: +917905043844
               <br />
               <i className="fa fa-envelope"></i>:{" "}
-              <a href="mailto:confusion@food.net">a9074yush@gmail.com</a>
+              <a href="mailto:confusion@food.net">agarwalmugdha1998@gmail.com</a>
             </address>
           </div>
           <div className="col-12 col-sm-6 offset-sm-1">
-            <h5>Map of our Location</h5>
+            <h5><i class="fa fa-map-marker"></i> Map of our Location</h5>
             <iframe
-              title="Map of NIT Patna"
+              title="Map of Heritage Institute of Technology"
               frameborder="0"
               style={{ border: 0 }}
               width="400"
               height="400"
-              src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJZyhz5txY7TkRBi_IGprzWUA&key=AIzaSyAAo6ldrpFU8SwYN_IErytfVs8f25hWopE"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3685.6708825521014!2d88.41528761479094!3d22.51652818521159!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a0273f58b9feec5%3A0x30f8067b73c45d8!2sHeritage%20Institute%20of%20Technology%2C%20Kolkata!5e0!3m2!1sen!2sin!4v1620413798889!5m2!1sen!2sin"
               allowfullscreen
             ></iframe>
           </div>
@@ -149,18 +147,15 @@ class Contact extends Component {
             <div className="btn-group" role="group">
               <Button
                 role="button"
-                className="btn btn-primary"
-                href="tel:+91 9455017625"
+                className="btn btn-success"
+                href="tel:+91 7905043844"
               >
                 <i className="fa fa-phone"></i> Call
               </Button>
-              <Button role="button" className="btn btn-info">
-                <i className="fa fa-skype"></i> Skype
-              </Button>
               <Button
                 role="button"
-                className="btn btn-success"
-                href="mailto:a9074vijay@gmail.com"
+                className="btn btn-primary"
+                href="mailto:agarwalmugdha1998@gmail.com"
               >
                 <i className="fa fa-envelope-o"></i> Email
               </Button>
@@ -169,7 +164,7 @@ class Contact extends Component {
         </div>
         <div className="row row-content">
           <div className="col-12">
-            <h3>Send us your Feedback</h3>
+            <h3>We'd love your feedback!</h3>
           </div>
           <div className="col-12 col-md-9">
             <Form onSubmit={submitFeedback(JSON.stringify(this.state))}>

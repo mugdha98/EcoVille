@@ -19,46 +19,22 @@ import {
   DropdownItem,
 } from "reactstrap";
 import { NavLink, Link } from "react-router-dom";
-// importing images
-import image1 from "../../assests/image 1.jpg";
-import image2 from "../../assests/image 1 (1).jpg";
-import image3 from "../../assests/image 1 (2).jpg";
-
-const CardItem = ({ image, header, para }) => (
-  <div className="box">
-    <div className="box-image">
-      <img src={image} alt="" />
-    </div>
-    <div className="box-content">
-      <h2 className="box-header">{header}</h2>
-      <p>{para}</p>
-    </div>
-  </div>
-);
 
 const Display = ({ onClick }) => {
-  const headers = ["Seller", "Rider", "Vendor"];
-
-  const paras = [
-    "The civilians willing to sell the waste",
-    "The local riders or ragpickers",
-    "The local scrap dealers",
-  ];
-
   return (
     <div className="container">
       <Link to="/signup/seller" onClick={onClick}>
-        <CardItem image={image1} header={headers[0]} para={paras[0]} />
+        Sign-Up as Seller
       </Link>
       <hr />
 
       <Link to="/signup/rider" onClick={onClick}>
-        <CardItem image={image2} header={headers[1]} para={paras[1]} />
+        Sign-Up as Rider
       </Link>
       <hr />
 
       <Link to="/signup/vendor" onClick={onClick}>
-        <CardItem image={image3} header={headers[2]} para={paras[2]} />
+        Sign-Up as Vendor
       </Link>
     </div>
   );
@@ -85,9 +61,9 @@ const Header = ({ logout, auth }) => {
               src="assets/logo.jpg"
               height="50"
               width="50"
-              alt="PRECycle"
+              alt="EcoVille_logo"
             ></img>{" "}
-            <b style={{ fontFamily: "Joti one", color: "white" }}>PRECycle</b>
+            <b style={{ fontFamily: "Joti one", color: "white" }}>EcoVille</b>
           </NavbarBrand>
           <Collapse isOpen={isNavOpen} navbar>
             <Nav className="ml-auto" navbar>
@@ -126,7 +102,7 @@ const Header = ({ logout, auth }) => {
                       {auth.typeofuser === "seller" ? (
                         <DropdownItem className="DropdownMenu">
                           <NavLink className="nav-link" to="/dashboard/seller">
-                            Seller Dashboard
+                            DashBoard
                           </NavLink>
                         </DropdownItem>
                       ) : (
@@ -138,7 +114,7 @@ const Header = ({ logout, auth }) => {
                             className="nav-link"
                             to="/sellerDashboardProgress"
                           >
-                            Seller Dashboard (Order Status)
+                            Order Status
                           </NavLink>
                         </DropdownItem>
                       ) : (
@@ -147,7 +123,7 @@ const Header = ({ logout, auth }) => {
                       {auth.typeofuser === "vendor" ? (
                         <DropdownItem className="DropdownMenu">
                           <NavLink className="nav-link" to="/dashboard/vendor">
-                            Vendor Dashboard
+                            DashBoard
                           </NavLink>
                         </DropdownItem>
                       ) : (
@@ -156,7 +132,7 @@ const Header = ({ logout, auth }) => {
                       {auth.typeofuser === "rider" ? (
                         <DropdownItem className="DropdownMenu">
                           <NavLink className="nav-link" to="/dashboard/rider">
-                            Rider Dashboard
+                            DashBoard
                           </NavLink>
                         </DropdownItem>
                       ) : (
@@ -206,7 +182,7 @@ const Header = ({ logout, auth }) => {
                   </NavItem>{" "}
                   <NavItem>
                     <Button outline onClick={() => toggleModal()}>
-                      <span className="fa fa-user-plus fa-lg"></span> Register
+                      <span className="fa fa-user-plus"></span> Sign-Up
                     </Button>
                   </NavItem>
                 </Fragment>

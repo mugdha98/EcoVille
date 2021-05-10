@@ -6,7 +6,7 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { Redirect } from "react-router-dom";
 import { Link } from "react-router-dom";
-import GoogleLogin from "react-google-login";
+//import GoogleLogin from "react-google-login";
 
 const Login = ({ login, isAuthenticated, setAlert }) => {
   const [formData, setFormData] = useState({
@@ -16,7 +16,7 @@ const Login = ({ login, isAuthenticated, setAlert }) => {
   });
   const { loginDetail, password, typeOfUser } = formData;
 
-  //google login response
+  /*google login response
   const responseGoogle = (response) => {
     console.log(response);
     setFormData({
@@ -24,7 +24,7 @@ const Login = ({ login, isAuthenticated, setAlert }) => {
       loginDetail: response.profileObj.email,
       password: response.profileObj.googleId,
     });
-  };
+  };*/
 
   useEffect(() => {
     login(loginDetail, password, typeOfUser);
@@ -60,7 +60,7 @@ const Login = ({ login, isAuthenticated, setAlert }) => {
 
           <h2 className={styles.welcomeText}> Welcome to</h2>
 
-          <h1 className={styles.name}>PRECycle</h1>
+          <h1 className={styles.name}>EcoVille</h1>
           {/* </div> */}
         </div>
 
@@ -109,15 +109,6 @@ const Login = ({ login, isAuthenticated, setAlert }) => {
               <button className={styles.signin_btn}>Sign In</button>
             </form>
             <center>
-              <p className={styles.or}>or</p>
-              <GoogleLogin
-                clientId="266262352024-950s3j5a29gddj75l9oujmckk8u7rfub.apps.googleusercontent.com"
-                buttonText="Login"
-                onSuccess={responseGoogle}
-                onFailure={responseGoogle}
-                cookiePolicy={"single_host_origin"}
-              />
-              ,
               <h4 className={styles.form_h4}>
                 {" "}
                 New User?{" "}

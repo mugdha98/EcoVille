@@ -54,7 +54,7 @@
 .flexRight {
   flex: 50%;
   margin: 0;
-  background-image: linear-gradient(to right, #008891, #70af85);
+  background-image: linear-gradient(to right, #0ec717, #078307);
   width: 100%;
   border: none;
   border-radius: 0 25px 25px 0;
@@ -71,7 +71,7 @@
   width: 50%;
 }
 
-.google_btn {
+/*.google_btn {
   background-color: #ea4335;
   color: white;
   border: none;
@@ -101,10 +101,10 @@
 .facebook_btn:focus {
   outline: none;
   color: yellow;
-}
+}*/
 
 .form_div {
-  background-color: #1c8ef8;
+  background-color: #2b0c9e;
   width: 50%;
   display: flex;
   flex-direction: column;

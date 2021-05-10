@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { Form, FormGroup, Label, Input, Button, Col } from "reactstrap";
+import { Form, FormGroup, Label, Input, Button, Col, DropdownToggle, DropdownItem } from "reactstrap";
 import Select from "react-select";
 import { Redirect } from "react-router-dom";
 import { FcBusinessman } from "react-icons/fc";
@@ -108,11 +108,11 @@ const RequestPickup = ({
   useEffect(() => {
     wasteType !== undefined
       ? wasteType.map((waste) => {
-          var data = { value: waste.name, label: waste.name };
-          options.push(data);
-          return 1;
-        })
-      : options.push({ value: "NewsPaper", label: "NewsPaper" });
+        var data = { label: waste.name, value: waste.name };
+        options.push(data);
+        return 1;
+      })
+      : options.push({ label: "Newspaper", value: "Newspaper" })
   }, [wasteType, orderList]);
 
   const [selectedOption, setState] = useState({
@@ -186,7 +186,7 @@ const RequestPickup = ({
                   {user ? (
                     <span>{user.name}</span>
                   ) : (
-                    <span>User Not Loaded Please Refresh The Page!</span>
+                    <span>Please Login again!</span>
                   )}
                 </h5>
               </div>
@@ -287,7 +287,7 @@ const RequestPickup = ({
               <Label htmlFor="wasteType" md={{ size: 3, offset: 1 }}>
                 Waste Quantity (Kg or piece)
               </Label>
-              <Col md={{ size: 1 }}>
+              <Col md={{ size: 3 }}>
                 <Input
                   type="number"
                   id="quantity"
