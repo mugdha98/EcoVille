@@ -80,6 +80,9 @@ const SignupRider = ({ setAlert, registerRider, isAuthenticated }) => {
   if (isAuthenticated) {
     return <Redirect to="/dashboard/rider" />;
   }
+  function Req() {
+    return <span className="req">*</span>;
+  }
   return (
     <div className="signup-Rider">
       {/* GOOGLE FONTS */}
@@ -144,6 +147,7 @@ const SignupRider = ({ setAlert, registerRider, isAuthenticated }) => {
                   />
                   <label for="floatingInput" className="floating-txt">
                     Name
+                  <Req />
                   </label>
                 </div>
                 <div class="form-floating mb-3">
@@ -158,7 +162,7 @@ const SignupRider = ({ setAlert, registerRider, isAuthenticated }) => {
                     required
                   />
                   <label for="floatingInput" className="floating-txt">
-                    Email address
+                    Email address <Req />
                   </label>
                 </div>
                 <div class="form-floating mb-3">
@@ -173,7 +177,7 @@ const SignupRider = ({ setAlert, registerRider, isAuthenticated }) => {
                     required
                   />
                   <label for="floatingInput" className="floating-txt">
-                    Password
+                    Password <Req />
                   </label>
                 </div>
                 <div class="form-floating mb-3">
@@ -188,7 +192,7 @@ const SignupRider = ({ setAlert, registerRider, isAuthenticated }) => {
                     required
                   />
                   <label for="floatingInput" className="floating-txt">
-                    Confirm Password
+                    Confirm Password <Req />
                   </label>
                 </div>
                 <div class="form-floating mb-3">
@@ -203,7 +207,7 @@ const SignupRider = ({ setAlert, registerRider, isAuthenticated }) => {
                   />
                   <label for="floatingInput" className="floating-txt">
                     Phone No.
-                    
+                    <Req />
                   </label>
                 </div>
                 <div class="form-floating mb-3">
@@ -217,10 +221,10 @@ const SignupRider = ({ setAlert, registerRider, isAuthenticated }) => {
                     onChange={(e) => onChange(e)}
                   />
                   <label for="floatingInput" className="floating-txt">
-                    Address
+                    Address <Req />
                   </label>
                 </div>
-                
+
                 <div className="age-radio">
                   <div class="form-floating mb-3 age">
                     <Input
@@ -232,7 +236,7 @@ const SignupRider = ({ setAlert, registerRider, isAuthenticated }) => {
                       onChange={(e) => onChange(e)}
                     />
                     <label for="floatingInput" className="floating-txt">
-                      DOB
+                      DOB <Req />
                     </label>
                   </div>
                 </div>
@@ -249,30 +253,30 @@ const SignupRider = ({ setAlert, registerRider, isAuthenticated }) => {
                       onChange={(e) => onChange(e)}
                     />
                     <label for="pincode" className="floating-txt">
-                      Pin Code
+                      Pin Code <Req />
                     </label>
                   </div>
                 </div>
 
 
-                  {/* RADIO BUTTONS FOR GENDER */}
+                {/* RADIO BUTTONS FOR GENDER */}
 
-                  <div className="radios">
-                    <RadioGroup /*onChange={this.onChange}*/ horizontal>
-                      <RadioButton value="apple">Male</RadioButton>
+                <div className="radios">
+                  <RadioGroup /*onChange={this.onChange}*/ horizontal>
+                    <RadioButton value="apple">Male</RadioButton>
 
-                      <RadioButton value="orange">Female</RadioButton>
+                    <RadioButton value="orange">Female</RadioButton>
 
-                      <RadioButton value="melon">Other</RadioButton>
+                    <RadioButton value="melon">Other</RadioButton>
 
-                      {/* <ReversedRadioButton value="melon">Melon</ReversedRadioButton> */}
-                    </RadioGroup>
-                  </div>
-                              
-                
+                    {/* <ReversedRadioButton value="melon">Melon</ReversedRadioButton> */}
+                  </RadioGroup>
+                </div>
+
+
                 <div className="operation-radius">
                   <p>
-                    Select the radius in which you can operate: <br />
+                    Select the radius in which you can operate:  <Req /><br />
                   </p>
 
                   {/* RADIO BUTTONS FOR THE SELECTION OF OPERATION RADIUS */}
@@ -286,6 +290,21 @@ const SignupRider = ({ setAlert, registerRider, isAuthenticated }) => {
                       {/* <ReversedRadioButton value="melon">Melon</ReversedRadioButton> */}
                     </RadioGroup>
                   </div>
+                </div>
+                <div className="tnc">
+                  <input
+                    type="checkbox"
+                    id="TnC"
+                    required
+                    onChange={activate}
+                  />
+                  <label for="TnC">
+                    {" "}
+                    I agree to the{" "}
+                    <a href="/tnc" alt="terms and conditions" className="tnc">
+                      terms and conditions and the privacy policy
+                    </a>
+                  </label>
                 </div>
                 {/* TESTING AREA */}
                 {/* UPLOAD YOUR PHOTO SECTION */}

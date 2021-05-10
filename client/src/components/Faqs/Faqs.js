@@ -20,9 +20,10 @@ const customstyle = {
   color: "black",
   fontFamily: "Joti one",
 }
-function Faqs() {
-  return (
-
+function Faqs()
+{
+    return(
+        
     <div className="container">
       <br></br>
       <h1 style={customstyle}>

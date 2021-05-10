@@ -311,6 +311,21 @@ const SignupVendor = ({ setAlert, registerVendor, isAuthenticated }) => {
                     />
                     <label for="landmark">Landmark <Req /></label> {/* LANDMARK */}
                   </div>
+                  <div className="tnc">
+                  <input
+                    type="checkbox"
+                    id="TnC"
+                    required
+                    onChange={activate}
+                  />
+                  <label for="TnC">
+                    {" "}
+                    I agree to the{" "}
+                    <a href="/tnc" alt="terms and conditions" className="tnc">
+                      terms and conditions and the privacy policy
+                    </a>
+                  </label>
+                </div>
                   <div className="signup-key">
                     <button
                       onClick={(e) => onSubmit(e)}
