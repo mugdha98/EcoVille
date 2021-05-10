@@ -18,14 +18,8 @@ app.use("/seller", require("./routes/seller"));
 app.use("/rider", require("./routes/rider"));
 app.use("/vendor", require("./routes/vendor"));
 
-//Heroku deploy code
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static("client/build"));
-  const path = require("path");
-  app.get("*", (req, res) => {
-    res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
-  });
-}
+//can add heroku deploy changes
+
 //run the server
 const port = process.env.PORT || 1210;
 app.listen(port, () => console.log(`Server started on port ${port}`));
