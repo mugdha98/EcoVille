@@ -46,9 +46,8 @@ function Footer(props) {
               </li>
             </ul>
           </div>
-
         </div>
-        <hr />
+        {/* <hr /> */}
         <div className="row justify-content-center">
           <div className="col-auto">
             <p>© Copyright 2021 EcoVille All rights reserved</p>

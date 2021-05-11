@@ -1,12 +1,12 @@
 import React from "react";
 import style from "./SellerProfile.module.css";
-
+import profile from "./user.png";
 function Card(props) {
   return (
     <div className={style.card}>
       <div className={style.top}>
         <h2 className={style.name}>{props.name}</h2>
-        <img className={style.circleImg} src={props.img} alt="avatar_img" />
+        <img className={style.circleImg} src={profile} alt="avatar_img" />
       </div>
       <div className={style.bottom}>
         <p className={style.info}>{props.tel}</p>

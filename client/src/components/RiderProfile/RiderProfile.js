@@ -4,12 +4,12 @@ import style from "./RiderProfile.module.css";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import { AiFillEdit } from "react-icons/ai";
-import Card from "../SellerProfile/Card.js";
-import { connect } from "react-redux";
-import AddressForm from "../SellerProfile/EditAddress";
 import PropTypes from "prop-types";
+import { connect } from "react-redux";
+import Card from "../SellerProfile/Card.js";
+import AddressForm from "../SellerProfile/EditAddress";
 
-export const RiderProfile = ({ rider }) => {
+const RiderProfile = ({ user }) => {
   // EDITABLE FIELD CODE
 
   const [isClicked, setIsClicked] = useState(false);
@@ -36,16 +36,15 @@ export const RiderProfile = ({ rider }) => {
         <div>
           <div className={style.cardDiv}>
             <Card
-              name={rider ? rider.name : ""}
-              email={rider ? rider.email : ""}
-              img={rider ? rider.avatar : ""}
-              tel={rider ? rider.contact : ""}
-              aadhar={rider ? rider.aadhar: ""}
+              name={user ? user.name : ""}
+              email={user ? user.email : ""}
+              img={user ? user.avatar : ""}
+              tel={user ? user.contact : ""}
+              aadhar={user ? user.aadhar : ""}
             />
           </div>
-
           {/* ADDRESS SECTION */}
-          <h1 className={style.setting}>Settings</h1>
+          <h1 className={style.setting}>Edit Profile</h1>
           <hr className={style.division} />
           <div className={style.address}>
             <h4 className={style.heading}>
@@ -58,20 +57,20 @@ export const RiderProfile = ({ rider }) => {
                 <Form.Label></Form.Label>
                 <Form.Control
                   as="textarea"
-                  rows={3}
+                  rows={2}
                   className={style.addressField}
                   placeholder={
-                    rider
-                        ? rider.address.firstLine +
-                        ", " +
-                        rider.address.landmark +
-                        ", " +
-                        rider.address.city +
-                        ", " +
-                        rider.address.state +
-                        " P.O: " +
-                        rider.address.pin
-                        : ""
+                    user
+                      ? user.address.firstLine +
+                      ", " +
+                      user.address.landmark +
+                      ", " +
+                      user.address.city +
+                      ", " +
+                      user.address.state +
+                      " P.O: " +
+                      user.address.pin
+                      : ""
                   }
                   readOnly
                 />
@@ -190,14 +189,12 @@ export const RiderProfile = ({ rider }) => {
     </div>
   );
 };
-
-RiderProfile.prototype = {
-  rider: PropTypes.object.isRequired,
+RiderProfile.propTypes = {
+  user: PropTypes.object.isRequired,
 };
 
 const mapStateToProps = (state) => ({
-  rider: state.auth.rider,
+  user: state.auth.user,
 });
 
 export default connect(mapStateToProps, {})(RiderProfile);
-
