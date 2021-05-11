@@ -12,12 +12,13 @@ const SellerDashboard2 = ({ user, requests, pickup }) => {
   var address = "";
   var waste = "";
   var vendorDetail = "";
+  var dateOfPickup ="";
   var timeOfPickup = "";
   var qty = "";
   var vendorAccepted = "";
   var orderAccepted = "";
   var onMyWay = "";
-  var riderName = "rider not alloted";
+  var riderName = "Rider not alloted";
   var wasteCollected = "";
   var paidTheSeller = "";
   var droppedAtVendors = "";
@@ -42,13 +43,15 @@ const SellerDashboard2 = ({ user, requests, pickup }) => {
           address += " ";
           if (request.timeOfPickup !== undefined)
             timeOfPickup = request.timeOfPickup;
+          if (request.dateOfPickup !== undefined)
+            dateOfPickup = request.dateOfPickup;
           if (request.orderList !== undefined)
             waste = request.orderList.map((waste) => {
-              return waste.nameOfWaste;
+              return waste.nameOfWaste+",";
             });
           if (request.orderList !== undefined)
             qty = request.orderList.map((waste) => {
-              return waste.qty + "Kg";
+              return waste.qty + "Kg ";
             });
           if (request.vendorAccepted !== undefined)
             vendorAccepted = request.vendorAccepted;
@@ -132,6 +135,7 @@ const SellerDashboard2 = ({ user, requests, pickup }) => {
           <KeyValue
             info="Slot Details "
             value={<Moment>{timeOfPickup}</Moment>}
+           // value={timeOfPickup}
           ></KeyValue>
 
           {/* RIDER'S NAME */}
@@ -140,7 +144,7 @@ const SellerDashboard2 = ({ user, requests, pickup }) => {
 
           {/* WASTE TYPE */}
 
-          <KeyValue info="Waste Type" value={waste} />
+          <KeyValue info="Waste Type" value={waste}  />
 
           {/* WASTE QUANTITY */}
 

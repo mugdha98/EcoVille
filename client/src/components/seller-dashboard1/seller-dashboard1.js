@@ -73,7 +73,7 @@ const SellerDashboard1 = ({
           {/* SEARCH FOR VENDORS NEAR YOU SECTION */}
           <h4 className="search-inst">Search for vendors near you</h4>
           <Form>
-            <div className="form-container">
+            <div className="form-container" >
               {/* ADDRESS INPUT */}
 
               <div className="address-input">
