@@ -23,7 +23,7 @@ const SignupRider = ({ setAlert, registerRider, isAuthenticated }) => {
     firstline: "",
     typeofvehicle: "cycle",
     regnumber: "",
-    //landmark: "",
+    landmark: "",
     aadhar: "",
     dob: "",
   });
@@ -257,6 +257,20 @@ const SignupRider = ({ setAlert, registerRider, isAuthenticated }) => {
                 </div>
 
                 <div className="reg-pin">
+                  <div class="form-floating mb-3  reg-pin-items1">
+                    <input
+                      type="text"
+                      class="form-control form-control-sm"
+                      id="landmark"
+                      placeholder="Land Mark"
+                      name="landmark"
+                      value={landmark}
+                      onChange={(e) => onChange(e)}
+                    />
+                    <label for="pincode" className="floating-txt">
+                      Landmark
+                    </label>
+                  </div>
                   <div class="form-floating mb-3  reg-pin-items2">
                     <input
                       type="text"
@@ -268,7 +282,7 @@ const SignupRider = ({ setAlert, registerRider, isAuthenticated }) => {
                       onChange={(e) => onChange(e)}
                     />
                     <label for="pincode" className="floating-txt">
-                      Pin Code <Req/>
+                      Pin Code
                     </label>
                   </div>
                 </div>

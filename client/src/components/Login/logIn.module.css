@@ -23,7 +23,7 @@
 .SignIN {
   flex: 50%;
   justify-content: center;
-  background-image: url("./background6.webp");
+  background-image: url("./background666.webp");
   background-repeat: no-repeat;
   background-size: 100% 100%;
   border: none;
@@ -40,7 +40,7 @@
   width: fit-content;
 
   font-size: 3rem;
-  margin: 20% auto 0;
+  margin: 65% auto 0;
 }
 
 .name {
@@ -48,7 +48,7 @@
   width: fit-content;
   font-size: 6rem;
   font-weight: bolder;
-  margin: 10% auto 0;
+  margin: 0% auto 0;
 }
 
 .flexRight {
