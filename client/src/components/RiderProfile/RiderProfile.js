@@ -4,10 +4,12 @@ import style from "./RiderProfile.module.css";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import { AiFillEdit } from "react-icons/ai";
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
 import Card from "../SellerProfile/Card.js";
 import AddressForm from "../SellerProfile/EditAddress";
 
-export const RiderProfile = () => {
+const RiderProfile = ({ user }) => {
   // EDITABLE FIELD CODE
 
   const [isClicked, setIsClicked] = useState(false);
@@ -32,18 +34,17 @@ export const RiderProfile = () => {
         {/* CARD SECTION */}
 
         <div>
-          {/* <div className={style.cardDiv}>
+          <div className={style.cardDiv}>
             <Card
-              name="Chris"
-              email="cg@gmail.com"
-              img="https://www.gstatic.com/tv/thumb/persons/528854/528854_v9_bb.jpg"
-              tel="645342453"
-              aadhar="123456789012"
+              name={user ? user.name : ""}
+              email={user ? user.email : ""}
+              img={user ? user.avatar : ""}
+              tel={user ? user.contact : ""}
+              aadhar={user ? user.aadhar : ""}
             />
-          </div> */}
-
+          </div>
           {/* ADDRESS SECTION */}
-          <h1 className={style.setting}>Settings</h1>
+          <h1 className={style.setting}>Edit Profile</h1>
           <hr className={style.division} />
           <div className={style.address}>
             <h4 className={style.heading}>
@@ -58,7 +59,19 @@ export const RiderProfile = () => {
                   as="textarea"
                   rows={2}
                   className={style.addressField}
-                  placeholder="Enter New Address"
+                  placeholder={
+                    user
+                      ? user.address.firstLine +
+                      ", " +
+                      user.address.landmark +
+                      ", " +
+                      user.address.city +
+                      ", " +
+                      user.address.state +
+                      " P.O: " +
+                      user.address.pin
+                      : ""
+                  }
                   readOnly
                 />
               </Form.Group>
@@ -176,3 +189,12 @@ export const RiderProfile = () => {
     </div>
   );
 };
+RiderProfile.propTypes = {
+  user: PropTypes.object.isRequired,
+};
+
+const mapStateToProps = (state) => ({
+  user: state.auth.user,
+});
+
+export default connect(mapStateToProps, {})(RiderProfile);

@@ -14,7 +14,7 @@ import "aos/dist/aos.css";
 
 const items = [
   {
-    src: "./assets/Home.png",
+    src: "./assets/Home1.jpg",
     altText: "",
     caption: "",
   }

@@ -34,7 +34,7 @@ const SellerProfile = ({ user }) => {
           </div>
 
           {/* ADDRESS SECTION */}
-
+          <h1 className={style.setting}>Edit Profile</h1>
           <hr className={style.division} />
           <div className={style.address}>
             <h3 className={style.heading}>
@@ -52,14 +52,14 @@ const SellerProfile = ({ user }) => {
                   placeholder={
                     user
                       ? user.address.firstLine +
-                        ", " +
-                        user.address.landmark +
-                        ", " +
-                        user.address.city +
-                        ", " +
-                        user.address.state +
-                        " P.O: " +
-                        user.address.pin
+                      ", " +
+                      user.address.landmark +
+                      ", " +
+                      user.address.city +
+                      ", " +
+                      user.address.state +
+                      " P.O: " +
+                      user.address.pin
                       : ""
                   }
                   readOnly
