@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import PHstyles from "./pickup_history.module.css";
 import Button from "react-bootstrap/Button";
 import Table from "react-bootstrap/Table";
-import seller_ic from "./seller.jpg";
+// import seller_ic from "./seller.jpg";
 import { connect } from "react-redux";
 import Moment from "react-moment";
 
@@ -26,16 +26,16 @@ const PickupHistory = ({ requests, user }) => {
       <div>
         <div className={PHstyles.greet_seller}>
           {/* GRADIENT BAR */}
-          <div className="seller-image">
+          {/* <div className="seller-image">
             <img
               src={user ? user.avatar : seller_ic}
               alt="profile_img"
               className={PHstyles.seller_img}
-            ></img>
-            {/* SELLER IMAGE */}
-          </div>
+            ></img> */}
+          {/* SELLER IMAGE */}
+          {/* </div> */}
           <div className={PHstyles.seller_greeting_text}>
-            <h2>{user ? user.name : ""}</h2>
+            <h2>Welcome {user ? user.name : ""}</h2>
             {/* GREET SELLER */}
           </div>
         </div>
