@@ -47,71 +47,73 @@ const Login = ({ login, isAuthenticated, setAlert }) => {
   }
 
   return (
-    <div className="signup-Rider">
-      {/* GOOGLE FONTS */}
+    <center>
+      <div className="signup-Rider">
+        {/* GOOGLE FONTS */}
 
-      {/* MAIN CONTENT SECTION */}
+        {/* MAIN CONTENT SECTION */}
 
-      <div className="flex-container-rider">
-        {/* SIGNIN SECTION */}
+        <div className="flex-container-rider">
+          {/* SIGNIN SECTION */}
 
-        <div className={styles.flexRight}>
-          <div className="content">
-            <h2 className={styles.form_h2}>
-              <center>LOGIN</center>
-            </h2>
-            <center>
-              <form
-                onSubmit={(e) => onSubmit(e)}
-                className={styles.form_component}
-              >
-                <input
-                  type="text"
-                  id="loginDetail"
-                  name="loginDetail"
-                  placeholder="Email / Phone Number"
-                  onChange={(e) => onChange(e)}
-                  value={loginDetail}
-                  required
-                ></input>
-
-                <input
-                  type="password"
-                  name="password"
-                  placeholder="Password"
-                  onChange={(e) => onChange(e)}
-                  value={password}
-                  required
-                ></input>
-                <select
-                  name="typeOfUser"
-                  value={typeOfUser}
-                  className={styles.select}
-                  onChange={(e) => onChange(e)}
+          <div className={styles.flexRight}>
+            <div className="content">
+              <h2 className={styles.form_h2}>
+                <center>LOGIN</center>
+              </h2>
+              <center>
+                <form
+                  onSubmit={(e) => onSubmit(e)}
+                  className={styles.form_component}
                 >
-                  <option>*Select Type of User!</option>
-                  <option value="seller">Seller</option>
-                  <option value="rider">Rider</option>
-                  <option value="vendor">Vendor</option>
-                </select>
+                  <input
+                    type="text"
+                    id="loginDetail"
+                    name="loginDetail"
+                    placeholder="Email / Phone Number"
+                    onChange={(e) => onChange(e)}
+                    value={loginDetail}
+                    required
+                  ></input>
 
-                <button className={styles.signin_btn}>Sign In</button>
-              </form>
-            </center>
-            <center>
-              <h4 className={styles.form_h4}>
-                {" "}
-                New User?{" "}
-                <Link to="/signup/seller" className={styles.form_link}>
+                  <input
+                    type="password"
+                    name="password"
+                    placeholder="Password"
+                    onChange={(e) => onChange(e)}
+                    value={password}
+                    required
+                  ></input>
+                  <select
+                    name="typeOfUser"
+                    value={typeOfUser}
+                    className={styles.select}
+                    onChange={(e) => onChange(e)}
+                  >
+                    <option>*Select Type of User!</option>
+                    <option value="seller">Seller</option>
+                    <option value="rider">Rider</option>
+                    <option value="vendor">Vendor</option>
+                  </select>
+
+                  <button className={styles.signin_btn}>Sign In</button>
+                </form>
+              </center>
+              <center>
+                <h4 className={styles.form_h4}>
                   {" "}
+                New User?{" "}
+                  <Link to="/signup/seller" className={styles.form_link}>
+                    {" "}
                   Sign Up Here
                 </Link>
-              </h4>
-            </center>
+                </h4>
+              </center>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </center>
   );
 };
 
