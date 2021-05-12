@@ -93,7 +93,7 @@ const Register = ({ setAlert, registerSeller, isAuthenticated }) => {
 
               <div className="signup-here">
                 <h3>
-                  <strong>Signup here</strong>
+                  <strong>Sign Up Here</strong>
                 </h3>
                 <form onSubmit={(e) => onSubmit(e)}>
                   <div class="form-floating mb-3 ">

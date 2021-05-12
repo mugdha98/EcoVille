@@ -114,7 +114,7 @@ const SignupRider = ({ setAlert, registerRider, isAuthenticated }) => {
 
               <div className="signup-here">
                 <h3>
-                  <strong>Signup here</strong>
+                  <strong>Sign Up Here</strong>
                 </h3>
 
                 {/* FORM SECTION */}
