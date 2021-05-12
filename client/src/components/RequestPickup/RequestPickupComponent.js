@@ -68,8 +68,8 @@ const RequestPickup = ({
       label:"Newspaper",
     },
     {
-      value:"Cardboard<",
-      label:"Cardboard<",
+      value:"Cardboard",
+      label:"Cardboard",
     },
     {
       value:"Paper ",
@@ -121,7 +121,8 @@ const RequestPickup = ({
   });
 
   const { qty } = selectedOption;
-
+  const {type}=selectedOption;
+  
   const handleChange = (selectedOption) => {
     setState({ selectedOption });
   };
@@ -129,7 +130,7 @@ const RequestPickup = ({
   const handleQtyChange = (e) => {
     setState({ ...selectedOption, [e.target.name]: e.target.value });
   };
-
+ 
   const onAdd = (e) => {
     e.preventDefault();
     const dataToPush = {
@@ -217,6 +218,7 @@ const RequestPickup = ({
                 name="firstLine"
                 rows="8"
                 placeholder={firstLine}
+                disabled={true}
                 onChange={(e) => onChange(e)}
               />
               <Input
@@ -224,6 +226,7 @@ const RequestPickup = ({
                 id="landmark"
                 name="landmark"
                 placeholder={landmark}
+                disabled={true}
                 onChange={(e) => {
                   loadNearbyVendors(pincode, city);
                   onChange(e);
@@ -270,6 +273,7 @@ const RequestPickup = ({
             <hr />
             <h3>Enter Waste Details</h3>
             <br />
+            
             <FormGroup row>
               <Label htmlFor="wasteType" md={2}>
                 Type of waste
@@ -278,7 +282,7 @@ const RequestPickup = ({
                 <Select
                   options={options}
                   name="wasteType"
-                  value={selectedOption}
+                  value={type}
                   className="basic-single"
                   classNamePrefix="select"
                   onChange={handleChange}
@@ -330,10 +334,11 @@ const RequestPickup = ({
               </table>
             </div>
             <hr />
-            <h3>Select Slot</h3>
+            
+            {/* <h3>Select Slot</h3>
             <br />
             {/* Checkbox for recent request selection */}
-            <p>
+            {/* <p>
               <input
                 type="checkbox"
                 name="current"
@@ -344,10 +349,13 @@ const RequestPickup = ({
                   toggleDisabled(!toDateDisabled);
                 }}
               />{" "}
-              Create A Recent Request
-            </p>
+              Create A Recent Request 
+            </p>  */}
+            {/*
             {toDateDisabled ? (
+              
               <div>
+                
                 <FormGroup row>
                   <Label htmlFor="date" md={2}>
                     Date of Pickup
@@ -359,7 +367,8 @@ const RequestPickup = ({
                       name="dateOfPickup"
                       placeholder="ENTER PICKUP DATE"
                       value={dateOfPickup}
-                      onChange={(e) => onChange(e)}
+                     onChange={(e) => onChange(e)}
+                     
                     />
                   </Col>
                   <Label htmlFor="time" md={{ size: 2, offset: 1 }}>
@@ -367,12 +376,13 @@ const RequestPickup = ({
                   </Label>
                   <Col md={3}>
                     <input
-                      type="date"
+                      type="time"
                       id="time"
                       name="timeOfPickup"
                       placeholder="ENTER PICKUP TIME"
                       value={timeOfPickup}
-                      onChange={(e) => onChange(e)}
+                     onChange={(e) => onChange(e)}
+                     
                     />
                   </Col>
                 </FormGroup>
@@ -383,7 +393,7 @@ const RequestPickup = ({
               </div>
             ) : (
               <span></span>
-            )}
+            )}*/}
             <center>
               <Button type="submit" color="warning" onClick={(e) => request(e)}>
                 Submit Request

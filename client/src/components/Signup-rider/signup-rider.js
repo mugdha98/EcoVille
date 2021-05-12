@@ -23,7 +23,7 @@ const SignupRider = ({ setAlert, registerRider, isAuthenticated }) => {
     firstline: "",
     typeofvehicle: "cycle",
     regnumber: "",
-    //landmark: "",
+    landmark: "",
     aadhar: "",
     dob: "",
   });
@@ -237,6 +237,7 @@ const SignupRider = ({ setAlert, registerRider, isAuthenticated }) => {
                   />
                   <label for="floatingInput" className="floating-txt">
                     Aadhar No.
+                    <Req/>
                   </label>
                 </div>
                 
@@ -257,6 +258,21 @@ const SignupRider = ({ setAlert, registerRider, isAuthenticated }) => {
                 </div>
 
                 <div className="reg-pin">
+                  <div class="form-floating mb-3  reg-pin-items1">
+                    <input
+                      type="text"
+                      class="form-control form-control-sm"
+                      id="landmark"
+                      placeholder="Land Mark"
+                      name="landmark"
+                      value={landmark}
+                      onChange={(e) => onChange(e)}
+                    />
+                    <label for="pincode" className="floating-txt">
+                      Landmark
+                      <Req/>
+                    </label>
+                  </div>
                   <div class="form-floating mb-3  reg-pin-items2">
                     <input
                       type="text"
@@ -268,7 +284,7 @@ const SignupRider = ({ setAlert, registerRider, isAuthenticated }) => {
                       onChange={(e) => onChange(e)}
                     />
                     <label for="pincode" className="floating-txt">
-                      Pin Code <Req/>
+                      Pin Code<Req/>
                     </label>
                   </div>
                 </div>
@@ -304,13 +320,14 @@ const SignupRider = ({ setAlert, registerRider, isAuthenticated }) => {
                   />
                   <label for="txtBox" className="floating-txt">
                     Registration no. of vehicle(other than bicycle)
+                    <Req/>
                   </label>
                 </div>
                               
                 
                 <div className="operation-radius">
                   <p>
-                    Select the radius in which you can operate:  <Req/><br />
+                    Select the radius in which you can operate:  <br />
                   </p>
 
                   {/* RADIO BUTTONS FOR THE SELECTION OF OPERATION RADIUS */}
