@@ -20,7 +20,7 @@
 }
 
 /* WELCOME SECTION */
-.SignIN {
+/* .SignIN {
   flex: 50%;
   justify-content: center;
   background-image: url("./background666.webp");
@@ -28,20 +28,20 @@
   background-size: 100% 100%;
   border: none;
   border-radius: 25px 0 0 25px;
-}
+} */
 
-.welcomeText,
+/* .welcomeText,
 .name {
   text-align: center;
   color: white;
-}
+} */
 
-.welcomeText {
+/* .welcomeText {
   width: fit-content;
 
   font-size: 3rem;
   margin: 65% auto 0;
-}
+} */
 
 .name {
   font-family: "Joti one";
@@ -54,10 +54,11 @@
 .flexRight {
   flex: 50%;
   margin: 0;
-  background-image: linear-gradient(to right, #0ec717, #078307);
+  background-image:linear-gradient(to right, #ff7171,#f0e4d7);
   width: 100%;
   border: none;
-  border-radius: 0 25px 25px 0;
+  border-radius:  25px;
+  text-align: center;
 }
 
 .parent_div {
@@ -70,38 +71,6 @@
 .button_div {
   width: 50%;
 }
-
-/*.google_btn {
-  background-color: #ea4335;
-  color: white;
-  border: none;
-  width: 300px;
-  padding: 8px 0 8px 0;
-  font-size: 18px;
-  border-radius: 50px;
-  margin-bottom: 20px;
-}
-
-.google_btn:focus {
-  outline: none;
-  color: yellow;
-}
-
-.facebook_btn {
-  background-color: #3b5998;
-  color: white;
-  border: none;
-  width: 300px;
-  padding: 8px 0 8px 0;
-  font-size: 18px;
-  border-radius: 50px;
-  margin-top: 20px;
-}
-
-.facebook_btn:focus {
-  outline: none;
-  color: yellow;
-}*/
 
 .form_div {
   background-color: #2b0c9e;
@@ -121,7 +90,7 @@
 
 .form_h2 {
   padding: 40px 0 40px 0;
-  color: white;
+  color: black;
 }
 
 .form_component {
@@ -142,11 +111,11 @@
   margin: 20px 0;
   padding-bottom: 2px;
   font-size: 20px;
-  color: white;
+  color: black;
 }
 
 .form_component input::placeholder {
-  color: white;
+  color: black;
   font-size: 20px;
   padding: 10px 10px;
 }
@@ -156,7 +125,7 @@
   border: none;
   border-radius: 50px;
   background-color: #ffffff;
-  color: #1c8ef8;
+  color: #124370;
   font-size: 20px;
   padding: 8px 0 8px 0;
   margin-top: 40px;
@@ -170,25 +139,25 @@
 .form_h4 {
   margin-top: 60px;
   margin-bottom: 20px;
-  color: white;
+  color: black;
 }
 
 .or {
-  color: #fff;
+  color:black;
   margin-top: 10px;
 }
 
 .form_link {
-  color: white;
+  color: black;
   cursor: pointer;
 }
 
 @media only screen and (max-width: 768px) {
-  .google_btn {
+  /* .google_btn {
     width: 75%;
     font-size: 14px;
     padding: 10px;
-  }
+  } */
   .mainFlex {
     height: 100vh;
   }
@@ -197,11 +166,11 @@
   .flexRight {
     border-radius: 0;
   }
-  .facebook_btn {
+  /* .facebook_btn {
     width: 75%;
     font-size: 14px;
     padding: 10px;
-  }
+  } */
 
   .form_h2 {
     font-size: 28px;
