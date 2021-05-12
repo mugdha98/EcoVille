@@ -6,7 +6,3 @@
 ### Tech Stacks Required:
 
 - Website(MERN Stack)
-
-### Limitations (if any):
-
-The fact that local ragpickers still are not comfortable with using apps and websites.
