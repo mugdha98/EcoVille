@@ -1,3 +1,7 @@
+.setting{
+  text-align: center;
+  color:crimson;
+}
 .container {
   width: 90%;
   margin: 10px auto;
@@ -114,12 +118,13 @@
   }
 }
 
-/* 
-SELECT TYPE OF WASTE */
-/* .SelectType {
+
+/* SELECT TYPE OF WASTE  */
+.SelectType {
   display: none;
   width: 90%;
-} */
+  padding-top: 10px;
+}
 
 .button123 {
   margin-left: 62%;

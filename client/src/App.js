@@ -25,7 +25,7 @@ import { OrderHistory } from "./components/Vendor_OrderHistory/order_history";
 import { DeliveryHistory } from "./components/Rider_DeliveryHistory/delivery_history";
 import PickupHistory from "./components/Seller_PickupHistory/pickup_history";
 import Faqs from "./components/Faqs/Faqs";
-import { VendorProfile } from "./components/VendorProfile/VendorProfile";
+import VendorProfile from "./components/VendorProfile/VendorProfile";
 import { TnC } from "./components/TnC/TnC";
 import { updateRequest, viewRequest } from "./actions/pickup";
 //redux tools
