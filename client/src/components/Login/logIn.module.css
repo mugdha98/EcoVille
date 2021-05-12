@@ -19,30 +19,6 @@
   margin: 50px auto 50px auto;
 }
 
-/* WELCOME SECTION */
-/* .SignIN {
-  flex: 50%;
-  justify-content: center;
-  background-image: url("./background666.webp");
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  border: none;
-  border-radius: 25px 0 0 25px;
-} */
-
-/* .welcomeText,
-.name {
-  text-align: center;
-  color: white;
-} */
-
-/* .welcomeText {
-  width: fit-content;
-
-  font-size: 3rem;
-  margin: 65% auto 0;
-} */
-
 .name {
   font-family: "Joti one";
   width: fit-content;

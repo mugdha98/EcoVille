@@ -1,9 +1,9 @@
 /* MAIN CONTAINER */
 .signup-Rider {
   font-family: "Roboto", sans-serif;
-
-  width: 100%;
+  width: 50%;
   height: 100%;
+  text-align: left;
 }
 
 /* FLEXING BOX */
@@ -26,7 +26,7 @@
 }
 
 /* WELCOME SECTION */
-.flex-item-left-rider {
+/* .flex-item-left-rider {
   flex: 50%;
   justify-content: center;
   background-image: url("./bg2.jpg");
@@ -34,7 +34,7 @@
   background-size: 100% 100%;
   border: none;
   border-radius: 25px 0 0 25px;
-}
+} */
 
 /* .welcome {
   /* background-image: url("./blobby.png"); */
@@ -75,10 +75,10 @@
 .flex-item-right {
   flex: 50%;
   margin: 0;
-  background-image: linear-gradient(to right, #0ec717, #078307);
-  width: 100%;
+  background-image: linear-gradient(to right, #ff7171,#f0e4d7);
+  /* width: 100%; */
   border: none;
-  border-radius: 0 25px 25px 0;
+  border-radius: 25px;
 }
 
 .content {
@@ -86,8 +86,8 @@
 }
 
 .radios {
-  flex: 50%;
-  background-color: #6262fd;
+  flex: 25%;
+  background-color: #126e82;
   margin-left: 5px;
 }
 
@@ -185,5 +185,5 @@ input[type="radio"] {
 
 .req {
   color: red;
-  /* font-weight: bold; */
+  font-weight: bold;
 }
