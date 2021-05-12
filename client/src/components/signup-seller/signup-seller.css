@@ -1,8 +1,9 @@
 /* MAIN CONTAINER */
 .signup-seller {
   font-family: "Roboto", sans-serif;
-  width: 100%;
+  width: 50%;
   height: 100%;
+  text-align: left;
 }
 .flex-container-signupSeller {
   display: flex;
@@ -12,25 +13,6 @@
   border-radius: 25px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   margin: 50px auto 50px auto;
-}
-/* WELCOME SECTION */
-.flex-item-left-seller {
-  flex: 50%;
-  justify-content: center;
-  background-image: url("./bg2.jpg");
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  border: none;
-  border-radius: 25px 0 0 25px;
-}
-
-.welcome-text-seller,
-.name-seller {
-  text-align: center;
-  color: white;
-  /* background-color: rgba(224, 220, 210, 0.56); */
-
-  /* font-size: 4rem; */
 }
 
 .welcome-text-seller {
@@ -50,10 +32,10 @@
 /* SIGNUP USING GOOGLE SECTION */
 
 .flex-item-right-signupSeller {
-  background-image: linear-gradient(to right, #0ec717, #078307);
+  background-image: linear-gradient(to right, #ff7171,#f0e4d7);
   flex: 50%;
   border: none;
-  border-radius: 0 25px 25px 0;
+  border-radius: 25px;
 }
 .content {
   margin-left: 50px;
@@ -68,12 +50,6 @@
   width: 30px;
   height: 30px;
   /* margin-top: 8px; */
-}
-.google {
-  display: inline;
-  font-size: 1.4rem;
-  color: white;
-  margin: 10px 0 10px 5px;
 }
 .division {
   width: 90%;
@@ -96,7 +72,7 @@
   margin-bottom: 15px;
 }
 .signup-button {
-  margin-left: 75%;
+  margin-left: 0%;
 
   /* text-align: right; */
 }

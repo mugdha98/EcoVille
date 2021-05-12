@@ -24,29 +24,6 @@
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   margin: 50px auto 50px auto;
 }
-
-/* WELCOME SECTION */
-/* .flex-item-left-rider {
-  flex: 50%;
-  justify-content: center;
-  background-image: url("./bg2.jpg");
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  border: none;
-  border-radius: 25px 0 0 25px;
-} */
-
-/* .welcome {
-  /* background-image: url("./blobby.png"); */
-/* background-repeat: no-repeat;
-  background-size: 100% 100%;
-  width: 100%;
-  height: 100%;
-
-  position: relative;
-  margin: 0;
-} */
-
 .welcome-text-rider,
 .name-rider {
   text-align: center;
@@ -121,8 +98,6 @@
 }
 .signup-button {
   margin-left: 0%;
-
-  /* text-align: right; */
 }
 .signup-button-lg {
   width: 50px;
