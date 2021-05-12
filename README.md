@@ -1,7 +1,7 @@
 
 ### Get rid of the recyclable waste!!
 
-> WebApp for Recyclable Waste Management.
+> Website for Recyclable Waste Management.
 
 ### Tech Stacks Required:
 
