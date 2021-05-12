@@ -5,7 +5,8 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import { AiFillEdit } from "react-icons/ai";
 import Card from "../SellerProfile/Card.js";
-import pic from "./digvijay.jpeg";
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
 import MultiSelect from "react-multi-select-component";
 import AddressForm from "../SellerProfile/EditAddress";
 
@@ -17,7 +18,7 @@ const options = [
   { value: "others", label: "Others" },
 ];
 
-export const VendorProfile = () => {
+export const VendorProfile = ({ user }) => {
   const [isClicked, setIsClicked] = useState(false);
   const [readOnlyAbout, setReadOnlyAbout] = useState(true);
   const [WasteType, setWasteType] = useState(false);
@@ -42,16 +43,16 @@ export const VendorProfile = () => {
         <div>
           <div className={style.cardDiv}>
             <Card
-              name="ABC Recyclers"
-              email="abcr@gmail.com"
-              img={pic}
-              tel="645342453"
-              gsti="5H4DRR465"
+              name={user ? user.name : ""}
+              email={user ? user.email : ""}
+              img={user ? user.avatar : ""}
+              tel={user ? user.contact : ""}
+              gsti={user ? user.gstin : ""}
             />
           </div>
 
           {/* ADDRESS SECTION */}
-
+          <h1 className={style.setting}>Edit Profile</h1>
           <hr className={style.division} />
           <div className={style.address}>
             <h3 className={style.heading}>
@@ -66,7 +67,19 @@ export const VendorProfile = () => {
                   as="textarea"
                   rows={3}
                   className={style.addressField}
-                  placeholder="N- 8/2,  Renusagar"
+                  placeholder={
+                    user
+                      ? user.address.firstLine +
+                      ", " +
+                      user.address.landmark +
+                      ", " +
+                      user.address.city +
+                      ", " +
+                      user.address.state +
+                      " P.O: " +
+                      user.address.pin
+                      : ""
+                  }
                   readOnly
                 />
               </Form.Group>
@@ -80,10 +93,7 @@ export const VendorProfile = () => {
             <h3 className={style.heading}>
               {" "}
               About You
-              <AiFillEdit
-                className={style.editable}
-                onClick={EnableWriteAbout}
-              />
+              <AiFillEdit className={style.editable} onClick={EnableWriteAbout} />
             </h3>
             <div className={style.addressField}>
               <Form.Group controlId="bio">
@@ -109,7 +119,6 @@ export const VendorProfile = () => {
             </div>
 
             {/* TYPES OF WASTE SECTION */}
-
             <h3 className={style.heading}>
               {" "}
               Types of waste you collect
@@ -122,18 +131,21 @@ export const VendorProfile = () => {
                   as="textarea"
                   rows={3}
                   className={style.addressField}
-                  placeholder="Paper, Plastics"
+                  placeholder={
+                    user
+                      ? user.wasteType.name +
+                      ", " +
+                      user.wasteType.rate +
+                      "," +
+                      user.wasteType.unit
+                      : ""
+                  }
                   readOnly
                 />
               </Form.Group>
             </div>
-
             {/* SELECT TYPE OF WASTE HIDDEN COMPONENT */}
-
-            <div
-              style={{ display: !WasteType ? "block" : "none" }}
-              className={style.SelectType}
-            >
+            <div style={{ display: !isClicked ? "block" : "none" }} className={style.SelectType} >
               <label class="input-group-text" for="waste_type">
                 Type of Waste
               </label>
@@ -196,3 +208,12 @@ export const VendorProfile = () => {
     </div>
   );
 };
+VendorProfile.propTypes = {
+  user: PropTypes.object.isRequired,
+};
+
+const mapStateToProps = (state) => ({
+  user: state.auth.user,
+});
+
+export default connect(mapStateToProps, {})(VendorProfile);
