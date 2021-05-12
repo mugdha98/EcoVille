@@ -5,7 +5,7 @@
 
 ### Tech Stacks Required:
 
-- Website(Mern Stack)
+- Website(MERN Stack)
 
 ### Limitations (if any):
 
