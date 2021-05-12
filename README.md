@@ -10,5 +10,3 @@
 ### Limitations (if any):
 
 The fact that local ragpickers still are not comfortable with using apps and websites.
-
-# Setting up project in your local machine:
