@@ -378,7 +378,9 @@ const RiderDashboard = ({
 
       <div className={RDstyles.delivery_hist_button}>
         <Link to="/history/delivery">
-          <Button variant="info">DELIVERY HISTORY</Button>
+          <Button variant="info">
+            <span className="request-text">Delivery History</span>
+          </Button>
         </Link>
       </div>
     </div>
@@ -410,3 +412,4 @@ export default connect(mapStateToProps, {
   acceptRequest,
   viewAcceptedRequestRider,
 })(RiderDashboard);
+// export default connect(mapStateToProps, {})(RiderDashboard);

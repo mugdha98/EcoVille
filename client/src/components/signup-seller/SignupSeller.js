@@ -6,7 +6,6 @@ import { connect } from "react-redux";
 import { setAlert } from "../../actions/alert";
 import { registerSeller } from "../../actions/auth";
 import PropTypes from "prop-types";
-import GoogleLogin from "react-google-login";
 
 const Register = ({ setAlert, registerSeller, isAuthenticated }) => {
   const [formData, setFormData] = useState({
@@ -49,6 +48,7 @@ const Register = ({ setAlert, registerSeller, isAuthenticated }) => {
       );
     }
   };
+
   const onChange = async (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
@@ -61,8 +61,9 @@ const Register = ({ setAlert, registerSeller, isAuthenticated }) => {
 
   //redirect after successfull signup
   if (isAuthenticated) {
-    return <Redirect to="/dashboard" />;
+    return <Redirect to="/dashboard/seller" />;
   }
+
   function Req() {
     return <span className="req">*</span>;
   }

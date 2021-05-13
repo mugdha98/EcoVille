@@ -64,7 +64,7 @@ router.post(
           errors: [
             {
               msg:
-                "Rider already exists as seller so please use diff email as a rider",
+                "Rider already exists as seller so please use diff email or phone number as a rider",
             },
           ],
         });
@@ -198,7 +198,7 @@ router.post(
           errors: [
             {
               msg:
-                "Rider already exists as seller so please use diff email as a rider",
+                "Rider already exists as seller so please use diff email or phone number as a rider",
             },
           ],
         });
@@ -335,7 +335,7 @@ router.post(
           errors: [
             {
               msg:
-                "Rider already exists as seller or vendor so please use diff email as a rider",
+                "Rider already exists as seller or vendor so please use diff email or phone number as a rider",
             },
           ],
         });

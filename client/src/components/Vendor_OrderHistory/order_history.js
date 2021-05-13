@@ -3,9 +3,10 @@ import { Link } from "react-router-dom";
 import OHstyles from "./order_history.module.css";
 import Button from "react-bootstrap/Button";
 import Table from "react-bootstrap/Table";
-import vendor_ic from "../Dashboard_Vendor/vendor.jpg";
+import { connect } from "react-redux";
+import Moment from "react-moment";
 
-export const OrderHistory = () => {
+export const OrderHistory = ({ requests, user }) => {
   function OrderDetails(props) {
     return (
       <tr>
@@ -24,16 +25,8 @@ export const OrderHistory = () => {
         <div className={OHstyles.greet_vendor}>
           <Link to="/profile/vendor">
             {/* GRADIENT BAR */}
-            <div className="vendor-image">
-              <img
-                src={vendor_ic}
-                alt="profile_img"
-                className={OHstyles.vendor_img}
-              ></img>
-              {/* VENDOR IMAGE */}
-            </div>
             <div className={OHstyles.vendor_greeting_text}>
-              <h2>Welcome, ABC Recyclers!</h2>
+              <h2>Welcome {user ? user.name : ""}!</h2>
               {/* GREET VENDOR */}
             </div>
           </Link>
@@ -41,7 +34,7 @@ export const OrderHistory = () => {
 
         <div className={OHstyles.vendor_order_history}>
           <div className={OHstyles.list_heading}>
-            <h2>ORDER HISTORY</h2>
+            <h2 style={{ color: "white" }}>ORDER HISTORY</h2>
           </div>
 
           <div className={OHstyles.bgeffect}>
@@ -57,7 +50,7 @@ export const OrderHistory = () => {
               </thead>
 
               <tbody>
-                <OrderDetails
+                {/* <OrderDetails
                   OrderNo="#1234"
                   PickupSlot="16/01/2021 19:00"
                   SellerName="Amy"
@@ -79,14 +72,14 @@ export const OrderHistory = () => {
                   SellerName="Charles"
                   DropSlot="17/01/2021 17:00"
                   Invoice="1357Charles.pdf"
-                />
+                /> */}
               </tbody>
             </Table>
           </div>
 
           <div className={OHstyles.return_btn}>
             <Link to="/dashboard/vendor">
-              <Button variant="primary">RETURN TO DASHBOARD</Button>
+              <Button variant="secondary">RETURN TO DASHBOARD</Button>
             </Link>
           </div>
         </div>
@@ -94,3 +87,9 @@ export const OrderHistory = () => {
     </div>
   );
 };
+const mapStateToProps = (state) => ({
+  requests: state.pickup.request,
+  user: state.auth.user,
+});
+
+export default connect(mapStateToProps, {})(OrderHistory);

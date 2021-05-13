@@ -8,7 +8,7 @@
   border: none;
   border-radius: 25px 25px 0px 0px;
   position: relative;
-  background-image: linear-gradient(to right, #003366, #1a1a1a);
+  background-image: linear-gradient(to right, #fc4a1a, #f7b733);
   background-repeat: no-repeat;
   background-size: 100% 100%;
   width: 100%;
@@ -30,7 +30,7 @@
 
 .rider_board_heading {
   color: white;
-  background-color: #0f1f3d;
+  background-color: #ff5e62;
   text-align: center;
   border: 4px solid white;
 }

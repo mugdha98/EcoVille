@@ -16,16 +16,6 @@ const Login = ({ login, isAuthenticated, setAlert }) => {
   });
   const { loginDetail, password, typeOfUser } = formData;
 
-  /*google login response
-  const responseGoogle = (response) => {
-    console.log(response);
-    setFormData({
-      ...formData,
-      loginDetail: response.profileObj.email,
-      password: response.profileObj.googleId,
-    });
-  };*/
-
   useEffect(() => {
     login(loginDetail, password, typeOfUser);
   }, [password]);

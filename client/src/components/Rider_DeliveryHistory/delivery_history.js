@@ -6,7 +6,7 @@ import Table from "react-bootstrap/Table";
 import { connect } from "react-redux";
 import Moment from "react-moment";
 
-export const DeliveryHistory = ({ user, requests }) => {
+export const DeliveryHistory = ({ user, request }) => {
   function DeliveryDetails(props) {
     return (
       <tr>
@@ -48,7 +48,7 @@ export const DeliveryHistory = ({ user, requests }) => {
               </thead>
 
               <tbody>
-                {/* {requests.map((request) => {
+                {/* {request.map((request) => {
                   if (request.cancelled || request.completed) {
                     return (
                       <DeliveryDetails
@@ -99,7 +99,7 @@ export const DeliveryHistory = ({ user, requests }) => {
   );
 };
 const mapStateToProps = (state) => ({
-  requests: state.pickup.request,
+  request: state.pickup.request,
   user: state.auth.user,
   auth: state.auth,
 });

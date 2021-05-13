@@ -116,7 +116,7 @@ const SignupVendor = ({ setAlert, registerVendor, isAuthenticated }) => {
 
                 {/* OR DIV */}
                 <hr className="division" />
-                {/* SIGNUP HERE DIV */} {/* SIGN UP WITHOUT GOOGLE */}
+                {/* SIGNUP HERE DIV */}
                 <div className="signup">
                   <h3>
                     <strong>Sign Up Here</strong>
@@ -217,19 +217,22 @@ const SignupVendor = ({ setAlert, registerVendor, isAuthenticated }) => {
                         onChange={(e) => onChange(e)}
                       />
                       <label for="gsti">
-                        GSTI No.
+                        Company Registration Number
                       <Req />
                       </label>{" "}
                       {/* GSTI NO. */}
                     </div>
 
-
                     <div class="input-group mb-3">
                       <label class="input-group-text" for="waste_type">
                         Type of Waste
-                      <Req />
                       </label>
-                      <Select
+                      <input
+                        type="text"
+                        placeholder="E-Waste"
+                        disabled
+                      />
+                      {/* <Select
                         options={options}
                         isMulti
                         closeMenuOnSelect={false}
@@ -237,26 +240,8 @@ const SignupVendor = ({ setAlert, registerVendor, isAuthenticated }) => {
                         name="waste_type"
                         className="basic-multi-select form-select"
                         classNamePrefix="select"
-                      />
+                      /> */}
                     </div>
-                    {/* <DatePicker selected={dob} onChange={dob => setStartDate(dob)} /> */}
-
-                    {/* TO SELECT MULTIPLE OPTIONS FROM DROP-DOWN -- CODE TO BE RESOLVED -- PLS LOOK INTO IT 
-                  <form id="multiForm">
-                    <select id="multiSelect">
-                        <option>Paper</option>
-                        <option>Cardboard</option>
-                        <option>Garden Waste</option>
-                    </select>
-                    <input type="button" onclick="multipleFunc()" value="Select multiple options"/>
-                  </form>
-                  <p>Press CTRL and click above button to select multiple options at once.</p>
-                  <script>
-                    function multipleFunc() {
-                      document.getElementById("multiSelect").multiple = true};
-                  </script>
-                    */}
-
                     <div class="form-floating mb-3">
                       <input
                         type="text"
