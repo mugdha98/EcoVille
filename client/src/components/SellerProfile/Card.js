@@ -13,6 +13,7 @@ function Card(props) {
         <p className={style.info}>{props.email}</p>
         <p className={style.info}>{props.aadhar}</p>
         <p className={style.info}>{props.gsti}</p>
+        <p className={style.info}>{props.address}</p>
       </div>
     </div>
   );

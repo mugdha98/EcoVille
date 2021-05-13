@@ -44,24 +44,35 @@ export const VendorProfile = ({ user }) => {
           <div className={style.cardDiv}>
             <Card
               name={user ? user.name : ""}
-              email={user ? user.email : ""}
-              img={user ? user.avatar : ""}
-              tel={user ? user.contact : ""}
-              gsti={user ? user.gstin : ""}
+              email={user ? "Email: " + user.email : ""}
+              // img={user ? user.avatar : ""}
+              tel={user ? "Contact: " + user.contact : ""}
+              gsti={user ? "Registration Number: " + user.gstin : ""}
+              address={user ? "Address: " + user.address.firstLine +
+                ", " +
+                user.address.landmark +
+                ", " +
+                user.address.city +
+                ", " +
+                user.address.state +
+                " P.O: " +
+                user.address.pin
+                : ""
+              }
             />
           </div>
 
           {/* ADDRESS SECTION */}
-          <h1 className={style.setting}>Edit Profile</h1>
+          <h1 className={style.setting}>Settings</h1>
           <hr className={style.division} />
           <div className={style.address}>
-            <h3 className={style.heading}>
+            {/* <h3 className={style.heading}>
               {" "}
               Address
               <AiFillEdit className={style.editable} onClick={editAddress} />
-            </h3>
-            <div className={style.addressField}>
-              <Form.Group controlId="address">
+            </h3> */}
+            {/* <div className={style.addressField}> */}
+            {/* <Form.Group controlId="address">
                 <Form.Label></Form.Label>
                 <Form.Control
                   as="textarea"
@@ -82,15 +93,15 @@ export const VendorProfile = ({ user }) => {
                   }
                   readOnly
                 />
-              </Form.Group>
-            </div>
+              </Form.Group> */}
+            {/* </div> */}
             {/* HIDDEN ADDRESS FORM */}
-            <div style={{ display: isClicked ? "block" : "none" }}>
+            {/* <div style={{ display: isClicked ? "block" : "none" }}>
               <AddressForm />
-            </div>
+            </div> */}
 
             {/* ABOUT YOU SECTION*/}
-            <h3 className={style.heading}>
+            {/* <h3 className={style.heading}>
               {" "}
               About You
               <AiFillEdit className={style.editable} onClick={EnableWriteAbout} />
@@ -104,9 +115,9 @@ export const VendorProfile = ({ user }) => {
                   className={style.addressField}
                   placeholder="You sell, We buy!"
                   readOnly={readOnlyAbout}
-                />
-                {/* HIDDEN SAVE BUTTON */}
-                <Button
+                /> */}
+            {/* HIDDEN SAVE BUTTON */}
+            {/* <Button
                   variant="primary"
                   style={{
                     display: !readOnlyAbout ? "block" : "none",
@@ -115,57 +126,8 @@ export const VendorProfile = ({ user }) => {
                 >
                   Save
                 </Button>{" "}
-              </Form.Group>
-            </div>
-
-            {/* TYPES OF WASTE SECTION */}
-            <h3 className={style.heading}>
-              {" "}
-              Types of waste you collect
-              <AiFillEdit className={style.editable} onClick={selectWaste} />
-            </h3>
-            <div className={style.addressField}>
-              <Form.Group controlId="wasteType">
-                <Form.Label></Form.Label>
-                <Form.Control
-                  as="textarea"
-                  rows={3}
-                  className={style.addressField}
-                  placeholder={
-                    user
-                      ? user.wasteType.name +
-                      ", " +
-                      user.wasteType.rate +
-                      "," +
-                      user.wasteType.unit
-                      : ""
-                  }
-                  readOnly
-                />
-              </Form.Group>
-            </div>
-            {/* SELECT TYPE OF WASTE HIDDEN COMPONENT */}
-            <div style={{ display: !isClicked ? "block" : "none" }} className={style.SelectType} >
-              <label class="input-group-text" for="waste_type">
-                Type of Waste
-              </label>
-              {/*} <Select
-                  options={options}
-                  isMulti
-                  closeMenuOnSelect={false}
-                  components={animatedComponents}
-                  name="waste_type"
-                  className="basic-multi-select form-select"
-                  classNamePrefix="select"
-                />  */}
-
-              <MultiSelect
-                options={options}
-                value={selected}
-                onChange={setSelected}
-                labelledBy={"Select"}
-              />
-            </div>
+              </Form.Group> */}
+            {/* </div> */}
 
             {/* CHANGE YOUR PASSWORD SECTION*/}
 
@@ -205,7 +167,7 @@ export const VendorProfile = ({ user }) => {
           </div>
         </div>
       </div>
-    </div>
+    </div >
   );
 };
 VendorProfile.propTypes = {
