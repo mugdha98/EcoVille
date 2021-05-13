@@ -55,7 +55,7 @@ export const DeliveryHistory = () => {
               </thead>
 
               <tbody>
-                <DeliveryDetails
+                {/* <DeliveryDetails
                   OrderNo="#1234"
                   Slot="16/01/2021 19:00"
                   SellerName="Amy"
@@ -77,7 +77,7 @@ export const DeliveryHistory = () => {
                   SellerName="Charles"
                   VendorName="GHJ Recyclers"
                   Invoice="1357Charles.pdf"
-                />
+                /> */}
               </tbody>
             </Table>
           </div>

@@ -42,7 +42,7 @@ const PickupHistory = ({ requests, user }) => {
 
         <div className={PHstyles.seller_pickup_history}>
           <div className={PHstyles.list_heading}>
-            <h2>PICKUP HISTORY</h2>
+            <h2 style={{ color: "white" }}>ORDER HISTORY</h2>
           </div>
 
           <div className={PHstyles.bgeffect}>
@@ -102,7 +102,7 @@ const PickupHistory = ({ requests, user }) => {
 
           <div className={PHstyles.return_btn}>
             <Link to="/dashboard/seller">
-              <Button variant="primary">RETURN TO DASHBOARD</Button>
+              <Button variant="secondary">RETURN TO DASHBOARD</Button>
             </Link>
           </div>
         </div>

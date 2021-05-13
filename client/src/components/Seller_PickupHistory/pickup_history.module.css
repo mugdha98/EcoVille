@@ -1,16 +1,16 @@
 .parent_container{
-    margin: 50px 25px 50px 25px;
+    margin: 50px 25px;
     border: none;
     border-radius: 25px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    background-image: linear-gradient(to right, #008891, #70af85);
+    background-image: linear-gradient(to left, #c31432,#240b36);
   }
   
   .greet_seller{
     border: none;
-    border-radius: 25px 25px 0px 0px;
+    border-radius: 25px;
     position: relative;
-    background-image: linear-gradient(to right, #fecd1a, #fd3a69);
+    background-image: linear-gradient(to left, #c31432,#240b36);
     background-repeat: no-repeat;
     background-size: 100% 100%;
     width: 100%;
@@ -41,7 +41,8 @@
   }
   
   .bgeffect{
-    background-color: #ffa62b;
+    background-image: linear-gradient(to right,#FF416C,#FF4B2B);
+    /* background-color: #ffa62b; */
     border: none;
     display: inline-block;  
     width: 80%;
