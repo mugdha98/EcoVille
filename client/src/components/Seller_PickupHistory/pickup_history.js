@@ -26,14 +26,6 @@ const PickupHistory = ({ requests, user }) => {
       <div>
         <div className={PHstyles.greet_seller}>
           {/* GRADIENT BAR */}
-          {/* <div className="seller-image">
-            <img
-              src={user ? user.avatar : seller_ic}
-              alt="profile_img"
-              className={PHstyles.seller_img}
-            ></img> */}
-          {/* SELLER IMAGE */}
-          {/* </div> */}
           <div className={PHstyles.seller_greeting_text}>
             <h2>Welcome {user ? user.name : ""}</h2>
             {/* GREET SELLER */}

@@ -3,9 +3,10 @@ import { Link } from "react-router-dom";
 import DHstyles from "./delivery_history.module.css";
 import Button from "react-bootstrap/Button";
 import Table from "react-bootstrap/Table";
-import rider_ic from "../Dashboard_Rider/rider.png";
+import { connect } from "react-redux";
+import Moment from "react-moment";
 
-export const DeliveryHistory = () => {
+export const DeliveryHistory = ({ user, requests }) => {
   function DeliveryDetails(props) {
     return (
       <tr>
@@ -23,23 +24,15 @@ export const DeliveryHistory = () => {
       <div>
         <div className={DHstyles.greet_rider}>
           {/* GRADIENT BAR */}
-          <div className="rider-image">
-            <img
-              src={rider_ic}
-              alt="profile_img"
-              className={DHstyles.rider_img}
-            ></img>
-            {/* RIDER IMAGE */}
-          </div>
           <div className={DHstyles.rider_greeting_text}>
-            <h2>Hi, Chris Gayle!</h2>
+            <h2>Welcome {user ? user.name : ""}</h2>
             {/* GREET RIDER */}
           </div>
         </div>
 
         <div className={DHstyles.rider_delivery_history}>
           <div className={DHstyles.list_heading}>
-            <h2>DELIVERY HISTORY</h2>
+            <h2 style={{ color: "white" }}>DELIVERY HISTORY</h2>
           </div>
 
           <div className={DHstyles.bgeffect}>
@@ -55,6 +48,19 @@ export const DeliveryHistory = () => {
               </thead>
 
               <tbody>
+                {/* {requests.map((request) => {
+                  if (request.cancelled || request.completed) {
+                    return (
+                      <DeliveryDetails
+                        OrderNo={request._id}
+                        Slot={<Moment>{request.timeOfPickup}</Moment>}
+                        SellerName={request.sellerDetail.name}
+                        VendorName={request.vendorDetail.name}
+                        Invoice={"1234Amy.pdf"}
+                      />
+                    );
+                  }
+                })} */}
                 {/* <DeliveryDetails
                   OrderNo="#1234"
                   Slot="16/01/2021 19:00"
@@ -84,7 +90,7 @@ export const DeliveryHistory = () => {
 
           <div className={DHstyles.return_btn}>
             <Link to="/dashboard/rider">
-              <Button variant="primary">RETURN TO DASHBOARD</Button>
+              <Button variant="secondary">RETURN TO DASHBOARD</Button>
             </Link>
           </div>
         </div>
@@ -92,3 +98,10 @@ export const DeliveryHistory = () => {
     </div>
   );
 };
+const mapStateToProps = (state) => ({
+  requests: state.pickup.request,
+  user: state.auth.user,
+  auth: state.auth,
+});
+
+export default connect(mapStateToProps, {})(DeliveryHistory);
