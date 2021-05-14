@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import "./home.module.css";
 import {
   Carousel,
   CarouselItem,
@@ -65,12 +66,22 @@ const Home = (props) => {
 
   return (
     <React.Fragment>
-      <div>
-        <img src="./assets/Home1.jpg" style={{
+      {/* <div className="banner_image">
+        <div className="content" >
+          <center>
+            <div className="banner_content">
+              <h3>CLEAN ENERGY IS GREEN ENERGY</h3>
+            </div>
+          </center>
+        </div>
+      </div> */}
+      <div class="banner-image">
+        <img src="./assets/trial.png" style={{
           flex: 1,
           width: '100%',
           height: '100 %',
           resizeMode: 'contain',
+          // backgroundSize: 'cover',
         }} />
       </div>
       {/* <Carousel activeIndex={activeIndex} next={next} previous={previous}>
@@ -93,7 +104,7 @@ const Home = (props) => {
       </Carousel> */}
       {/* <div data-aos="fade-up">
       </div> */}
-    </React.Fragment>
+    </React.Fragment >
   );
 };
 

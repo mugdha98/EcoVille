@@ -81,7 +81,7 @@ const Header = ({ logout, auth }) => {
               {auth.typeofuser === "vendor" ? (
                 <NavItem>
                   <NavLink className="nav-link" to="/ratelist">
-                    Rate List
+                    Item's Price Tag
                   </NavLink>
                 </NavItem>
               ) : (

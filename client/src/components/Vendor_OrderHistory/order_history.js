@@ -22,15 +22,15 @@ export const OrderHistory = ({ requests, user }) => {
   return (
     <div className={OHstyles.out_container}>
       <div>
-        <div className={OHstyles.greet_vendor}>
+        {/* <div className={OHstyles.greet_vendor}>
           <Link to="/profile/vendor">
-            {/* GRADIENT BAR */}
+            GRADIENT BAR
             <div className={OHstyles.vendor_greeting_text}>
               <h2>Welcome {user ? user.name : ""}!</h2>
-              {/* GREET VENDOR */}
+              GREET VENDOR
             </div>
           </Link>
-        </div>
+        </div> */}
 
         <div className={OHstyles.vendor_order_history}>
           <div className={OHstyles.list_heading}>
