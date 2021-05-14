@@ -63,7 +63,9 @@
   margin-right: auto;
 }
 .changeButton {
-  margin-left: 35%;
+  margin-left: auto;
+  margin-right: 10%;
+  align-items: center;
 }
 
 .lastButton {

@@ -37,17 +37,28 @@ const RiderProfile = ({ user }) => {
           <div className={style.cardDiv}>
             <Card
               name={user ? user.name : ""}
-              email={user ? user.email : ""}
-              img={user ? user.avatar : ""}
-              tel={user ? user.contact : ""}
-              aadhar={user ? user.aadhar : ""}
+              email={user ? "Email: " + user.email : ""}
+              // img={user ? user.avatar : ""}
+              tel={user ? "Contact: " + user.contact : ""}
+              aadhar={user ? "Aadhar No: " + user.aadhar : ""}
+              address={user ? "Address: " + user.address.firstLine +
+                ", " +
+                user.address.landmark +
+                ", " +
+                user.address.city +
+                ", " +
+                user.address.state +
+                " P.O: " +
+                user.address.pin
+                : ""
+              }
             />
           </div>
           {/* ADDRESS SECTION */}
-          <h1 className={style.setting}>Edit Profile</h1>
+          <h1 className={style.setting}>Settings</h1>
           <hr className={style.division} />
           <div className={style.address}>
-            <h4 className={style.heading}>
+            {/* <h4 className={style.heading}>
               {" "}
               Address
               <AiFillEdit className={style.editable} onClick={editAddress} />
@@ -75,16 +86,16 @@ const RiderProfile = ({ user }) => {
                   readOnly
                 />
               </Form.Group>
-            </div>
+            </div> */}
             {/* HIDDEN ADDRESS FORM */}
 
-            <div style={{ display: isClicked ? "block" : "none" }}>
+            {/* <div style={{ display: isClicked ? "block" : "none" }}>
               <AddressForm />
-            </div>
+            </div> */}
 
             {/* REGISTRATION NO AND RADIUS SECTION */}
 
-            <div className={style.regContainer}>
+            {/* <div className={style.regContainer}>
               <div className={style.flexItem}>
                 <h4 className={style.heading}>
                   {" "}
@@ -103,7 +114,7 @@ const RiderProfile = ({ user }) => {
                     className=""
                     readOnly={readOnlyRegistration}
                   />
-                  {/* HIDDEN SAVE BUTTON */}
+                  HIDDEN SAVE BUTTON
                   <Button
                     variant="primary"
                     style={{
@@ -116,7 +127,7 @@ const RiderProfile = ({ user }) => {
                 </Form.Group>
               </div>
 
-              {/* OPERATION RADIUS FIELD */}
+              OPERATION RADIUS FIELD
 
               <div className={style.flexItem}>
                 <h4 className={style.heading}>
@@ -136,7 +147,7 @@ const RiderProfile = ({ user }) => {
                     className=""
                     readOnly={readOnlyRadius}
                   />
-                  {/* HIDDEN SAVE BUTTON */}
+                  HIDDEN SAVE BUTTON
                   <Button
                     variant="primary"
                     style={{ display: !readOnlyRadius ? "block" : "none" }}
@@ -146,7 +157,7 @@ const RiderProfile = ({ user }) => {
                   </Button>{" "}
                 </Form.Group>
               </div>
-            </div>
+            </div> */}
 
             {/* CHANGE YOUR PASSWORD SECTION*/}
 
@@ -177,7 +188,7 @@ const RiderProfile = ({ user }) => {
 
           {/* BACK TO DASHBOARD */}
 
-          <div cla>
+          <div className={style.changeButton}>
             <Link to="/dashboard/rider">
               <Button variant="warning" size="lg" className={style.lastButton}>
                 Return to Dashboard
