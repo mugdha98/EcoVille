@@ -79,7 +79,7 @@ const Home = (props) => {
         <center><img src="./assets/trial.png" style={{
           flex: 1,
           width: '100%',
-          height: '516px',
+          height: "32.4em",
           resizeMode: 'contain',
           // backgroundSize: 'cover',
         }} /></center>
