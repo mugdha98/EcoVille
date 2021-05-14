@@ -64,44 +64,44 @@ const RequestPickup = ({
   //Creating the list of the waste type selected by the user of the vendor
   var options = [
     {
-      value:"Newspaper",
-      label:"Newspaper",
+      value: "Newspaper",
+      label: "Newspaper",
     },
     {
-      value:"Cardboard",
-      label:"Cardboard",
+      value: "Cardboard",
+      label: "Cardboard",
     },
     {
-      value:"Paper ",
-      label:"Paper ",
+      value: "Paper ",
+      label: "Paper ",
     },
     {
-      value:"Packaging boxes",
-      label:"Packaging boxes",
+      value: "Packaging boxes",
+      label: "Packaging boxes",
     },
     {
-      value:" AC, Fridge, Home Appliances",
-      label:" AC, Fridge, Home Appliances",
+      value: " AC, Fridge, Home Appliances",
+      label: " AC, Fridge, Home Appliances",
     },
     {
-      value:"metals like Iron, Copper, Brass",
-      label:"metals like Iron, Copper, Brass",
+      value: "metals like Iron, Copper, Brass",
+      label: "metals like Iron, Copper, Brass",
     },
     {
-      value:"Food cans",
-      label:"Food cans",
+      value: "Food cans",
+      label: "Food cans",
     },
     {
-      value:"Beverage cans<",
-      label:"Beverage cans<",
+      value: "Beverage cans<",
+      label: "Beverage cans<",
     },
     {
-      value:" Plastic bottles<",
+      value: " Plastic bottles<",
       label: "Plastic bottles",
     },
     {
-      value:"Print Outs",
-      label:"Print Outs",
+      value: "Print Outs",
+      label: "Print Outs",
     },
 
   ];
@@ -121,8 +121,8 @@ const RequestPickup = ({
   });
 
   const { qty } = selectedOption;
-  const {type}=selectedOption;
-  
+  const { type } = selectedOption;
+
   const handleChange = (selectedOption) => {
     setState({ selectedOption });
   };
@@ -130,7 +130,7 @@ const RequestPickup = ({
   const handleQtyChange = (e) => {
     setState({ ...selectedOption, [e.target.name]: e.target.value });
   };
- 
+
   const onAdd = (e) => {
     e.preventDefault();
     const dataToPush = {
@@ -182,41 +182,41 @@ const RequestPickup = ({
           <Link to="/profile/seller">
             <div className="Profile-image-container">
               <div className="intro">
-                <h5>
+                <h4 style={{ color: "crimson" }}>
                   Hi!{" "}
                   {user ? (
                     <span>{user.name}</span>
                   ) : (
                     <span>Please Login again!</span>
                   )}
-                </h5>
+                </h4>
               </div>
               {/* PROFILE IMAGE OF SELLER */}
-              <div className="profile-image">
+              {/* <div className="profile-image">
                 <FcBusinessman className="seller-profile-pic" />
-              </div>
+              </div> */}
             </div>
           </Link>
         </div>
         {/* REQUEST TO PICKUP SECTION */}
-        <br />
-        <h1>
-          <center>Request a Pickup</center>
-        </h1>{" "}
+        <hr className="division1" />
+        <h2>
+          <center>Generate PickUp Request</center>
+        </h2>{" "}
         <hr className="division1" />
         <div className="container">
           <Form>
             <FormGroup>
               <Label row htmlFor="address">
-                <h3>
+                <h4>
                   Address<span className="btn btn-large fa fa-edit"></span>
-                </h3>
+                </h4>
               </Label>
               <Input
                 type="textarea"
                 id="address"
                 name="firstLine"
-                rows="8"
+                rows="3"
                 placeholder={firstLine}
                 disabled={true}
                 onChange={(e) => onChange(e)}
@@ -231,6 +231,7 @@ const RequestPickup = ({
                   loadNearbyVendors(pincode, city);
                   onChange(e);
                 }}
+                hidden
               />
               <Input
                 type="text"
@@ -242,6 +243,7 @@ const RequestPickup = ({
                   loadNearbyVendors(pincode, city);
                   onChange(e);
                 }}
+                hidden
               />
               <Input
                 type="text"
@@ -252,10 +254,11 @@ const RequestPickup = ({
                 onChange={(e) => {
                   onChange(e);
                 }}
+                hidden
               />
 
               <hr />
-              <h3>Select Vendor</h3>
+              <h4>Choose Vendor</h4>
               <br />
               {/* DISPLAY THE VENDORS NEAR THE LOCATION */}
               {vendors ? (
@@ -271,9 +274,9 @@ const RequestPickup = ({
               )}
             </FormGroup>
             <hr />
-            <h3>Enter Waste Details</h3>
+            <h4>Enter Waste Details</h4>
             <br />
-            
+
             <FormGroup row>
               <Label htmlFor="wasteType" md={2}>
                 Type of waste
@@ -289,7 +292,7 @@ const RequestPickup = ({
                 />
               </Col>
               <Label htmlFor="wasteType" md={{ size: 3, offset: 1 }}>
-                Waste Quantity (Kg or piece)
+                Waste Quantity (Kg)
               </Label>
               <Col md={{ size: 3 }}>
                 <Input
@@ -302,7 +305,7 @@ const RequestPickup = ({
                 />
               </Col>
               <Col md={2}>
-                <Button outline color="warning" onClick={(e) => onAdd(e)}>
+                <Button color="dark" onClick={(e) => onAdd(e)}>
                   Add
                 </Button>
               </Col>
@@ -334,7 +337,7 @@ const RequestPickup = ({
               </table>
             </div>
             <hr />
-            
+
             {/* <h3>Select Slot</h3>
             <br />
             {/* Checkbox for recent request selection */}
@@ -395,8 +398,8 @@ const RequestPickup = ({
               <span></span>
             )}*/}
             <center>
-              <Button type="submit" color="warning" onClick={(e) => request(e)}>
-                Submit Request
+              <Button type="submit" color="warning" onClick={(e) => request(e)} style={{ marginBottom: "2%" }}>
+                Place Request
               </Button>
             </center>
           </Form>
