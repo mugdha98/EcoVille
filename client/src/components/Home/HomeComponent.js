@@ -76,13 +76,13 @@ const Home = (props) => {
         </div>
       </div> */}
       <div class="banner-image">
-        <img src="./assets/trial.png" style={{
+        <center><img src="./assets/trial.png" style={{
           flex: 1,
           width: '100%',
-          height: '100 %',
+          height: '516px',
           resizeMode: 'contain',
           // backgroundSize: 'cover',
-        }} />
+        }} /></center>
       </div>
       {/* <Carousel activeIndex={activeIndex} next={next} previous={previous}>
         <CarouselIndicators

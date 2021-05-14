@@ -45,7 +45,7 @@ const SellerDashboard1 = ({
             <div className="Profile-image-container">
               <div className="intro">
                 <h5>
-                  Hi! {user ? <span>{user.name}</span> : <span>Gadha</span>}{" "}
+                  Hi! {user ? <span>{user.name}</span> : <span>Please Login Again</span>}{" "}
                 </h5>
               </div>
               {/* PROFILE IMAGE OF SELLER */}
@@ -65,13 +65,13 @@ const SellerDashboard1 = ({
                   Watch Status of Your current Request
                 </span>
               ) : (
-                <span className="request-text">Request To Pickup</span>
+                <span className="request-text">Generate PickUp Request</span>
               )}
             </Button>
           </Link>{" "}
           <hr className="division1" />
           {/* SEARCH FOR VENDORS NEAR YOU SECTION */}
-          <h4 className="search-inst">Search for vendors near you</h4>
+          <h4 className="search-inst">Select from the given Vendors near you</h4>
           <Form>
             <div className="form-container" >
               {/* ADDRESS INPUT */}
@@ -81,8 +81,9 @@ const SellerDashboard1 = ({
                   <Form.Label></Form.Label>
                   <Form.Control
                     type="text"
-                    placeholder="Enter pickup address"
+                    placeholder={user ? user.address.firstLine : ""}
                     className="address-class"
+                    disabled
                   />
                 </Form.Group>
               </div>
@@ -95,6 +96,7 @@ const SellerDashboard1 = ({
                     type="text"
                     placeholder="City"
                     value={localStorage.city}
+                    disabled
                   />
                 </Form.Group>
               </div>
@@ -105,6 +107,7 @@ const SellerDashboard1 = ({
                     type="text"
                     placeholder="Pin Code"
                     value={localStorage.pincode}
+                    disabled
                   />
                 </Form.Group>
               </div>
@@ -131,7 +134,7 @@ const SellerDashboard1 = ({
               <Spinner />
             )
           ) : (
-            "No Vendor Found. Please Try Again after Some Time!"
+            <center>"No Vendor Found. Please Try Again after Some Time!"</center>
           )}
           <hr className="division1" />
           {/* PICKUP HISTORY SECTION */}
