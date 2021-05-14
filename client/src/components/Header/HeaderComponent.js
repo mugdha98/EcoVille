@@ -77,6 +77,11 @@ const Header = ({ logout, auth }) => {
                   <span className="fa fa-info fa-lg"></span> About Us
                 </NavLink>
               </NavItem>
+              <NavItem>
+                <NavLink className="nav-link" to="/faqs">
+                  <span className="fa fa-question-circle fa-lg"></span> How it Works
+                </NavLink>
+              </NavItem>
 
               {auth.typeofuser === "vendor" ? (
                 <NavItem>
