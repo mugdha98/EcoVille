@@ -111,12 +111,12 @@ const RateList = ({ auth, pickup, updateWasteList }) => {
                 <tr>
                   <th>ITEM NAME</th>
                   <th>SELLING PRICE</th>
-                  <th>EDIT</th>
+                  {/* <th>EDIT</th> */}
                 </tr>
               </thead>
 
               <tbody>
-                {formData.map((waste, index) => {
+                {/* {formData.map((waste, index) => {
                   return (
                     <WasteRate
                       waste={waste.name}
@@ -124,7 +124,88 @@ const RateList = ({ auth, pickup, updateWasteList }) => {
                       index={index}
                     />
                   );
-                })}
+                })} */}
+
+                <tr>
+                  <td>Computer</td>
+                   <td>2500</td>
+                </tr>
+                <tr>
+                   <td>TV Appliances</td>
+                   <td>2000</td>
+                </tr>
+                <tr>
+                  <td>Laptops</td>
+                   <td>2500</td>
+                </tr>
+                <tr>
+                  <td>Tablets</td>
+                   <td>1000</td>
+                </tr>
+                <tr>
+                  <td> Smart Mobile Phones</td>
+                   <td>900</td>
+                </tr>
+                <tr>
+                  <td>Home Refrigerator</td>
+                   <td>1850</td>
+                </tr>
+                <tr>
+                  <td>Washing Machine</td>
+                   <td>2350</td>
+                </tr>
+                <tr>
+                  <td>Home Theatre</td>
+                   <td>1200</td>
+                </tr>
+                <tr>
+                  <td>Stereo System</td>
+                   <td>850</td>
+                </tr>
+                <tr>
+                  <td>E-toys</td>
+                   <td>25/piece</td>
+                </tr>
+                <tr>
+                  <td>Electric Kettle</td>
+                   <td>1750</td>
+                </tr>
+                <tr>
+                  <td>Heat Pump</td>
+                   <td>3500</td>
+                </tr>
+                <tr>
+                  <td>Air Conditioner</td>
+                   <td>2000</td>
+                </tr>
+                <tr>
+                  <td>Toaster</td>
+                   <td>200</td>
+                </tr>
+                <tr>
+                  <td>Electric Stove</td>
+                   <td>250</td>
+                </tr>
+                <tr>
+                  <td>Printer</td>
+                   <td>1200</td>
+                </tr>
+                <tr>
+                  <td>Vaccum Cleaner</td>
+                   <td>900</td>
+                </tr>
+                <tr>
+                  <td>Microwave</td>
+                   <td>1700</td>
+                </tr>
+                <tr>
+                  <td>Camera</td>
+                   <td>1300</td>
+                </tr>
+                <tr>
+                  <td>Griller</td>
+                  <td>900</td>
+                </tr>
               </tbody>
             </Table>
 
@@ -157,7 +238,7 @@ const RateList = ({ auth, pickup, updateWasteList }) => {
             )}
           </div>
 
-          <div className={RLstyles.update_rate}>
+          {/* <div className={RLstyles.update_rate}>
             <Button
               variant="primary"
               onClick={(e) => {
@@ -167,7 +248,7 @@ const RateList = ({ auth, pickup, updateWasteList }) => {
             >
               Add New Item
             </Button>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

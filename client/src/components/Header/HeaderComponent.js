@@ -82,8 +82,13 @@ const Header = ({ logout, auth }) => {
                   <span className="fa fa-question-circle fa-lg"></span> How it Works
                 </NavLink>
               </NavItem>
+              <NavItem>
+                  <NavLink className="nav-link" to="/ratelist">
+                  <span className="fa fa-inr fa-lg"></span> Item's Price Tag
+                  </NavLink>
+                </NavItem>
 
-              {auth.typeofuser === "vendor" ? (
+              {/* {auth.typeofuser === "vendor" ? (
                 <NavItem>
                   <NavLink className="nav-link" to="/ratelist">
                     Item's Price Tag
@@ -91,7 +96,7 @@ const Header = ({ logout, auth }) => {
                 </NavItem>
               ) : (
                 <span></span>
-              )}
+              )} */}
 
               <NavItem>
                 <UncontrolledDropdown nav inNavbar>

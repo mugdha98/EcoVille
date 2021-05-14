@@ -165,6 +165,7 @@ const SellerDashboard2 = ({ user, requests, pickup }) => {
 
                 {orderAccepted ? (
                   <StatusUpdates status="Approved by rider" />
+                 
                 ) : (
                   ""
                 )}
