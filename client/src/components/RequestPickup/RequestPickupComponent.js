@@ -64,44 +64,84 @@ const RequestPickup = ({
   //Creating the list of the waste type selected by the user of the vendor
   var options = [
     {
-      value: "Newspaper",
-      label: "Newspaper",
+      value: "TV Appliance",
+      label: "TV Appliance",
     },
     {
-      value: "Cardboard",
-      label: "Cardboard",
+      value: "Computers",
+      label: "Computers",
     },
     {
-      value: "Paper ",
-      label: "Paper ",
+      value: "Laptops",
+      label: "Laptops",
     },
     {
-      value: "Packaging boxes",
-      label: "Packaging boxes",
+      value: "Tablets",
+      label: "Tablets",
     },
     {
-      value: " AC, Fridge, Home Appliances",
-      label: " AC, Fridge, Home Appliances",
+      value: "Mobile Phones",
+      label: "Mobile Phones",
     },
     {
-      value: "metals like Iron, Copper, Brass",
-      label: "metals like Iron, Copper, Brass",
+      value: "Fridge",
+      label: "Fridge",
     },
     {
-      value: "Food cans",
-      label: "Food cans",
+      value: "Washing Machine",
+      label: "Washing Machine",
     },
     {
-      value: "Beverage cans<",
-      label: "Beverage cans<",
+      value: "Home Theatre",
+      label: "Home Theatre",
     },
     {
-      value: " Plastic bottles<",
-      label: "Plastic bottles",
+      value: "Stereo System",
+      label: "Stereo System",
     },
     {
-      value: "Print Outs",
-      label: "Print Outs",
+      value: "E-toys",
+      label: "E-toys",
+    },
+    {
+      value: "Kettle",
+      label: "Kettle",
+    },
+    {
+      value: "Heat Pump",
+      label: "Heat Pump",
+    },
+    {
+      value: "Air Conditioner",
+      label: "Air Conditioner",
+    },
+    {
+      value: "Toaster",
+      label: "Toaster",
+    },
+    {
+      value: "Electric Stove",
+      label: "Electric Stove",
+    },
+    {
+      value: "Printer",
+      label: "Printer",
+    },
+    {
+      value: "Vaccum Cleaner",
+      label: "Vaccum Cleaner",
+    },
+    {
+      value: "Microwave",
+      label: "Microwave",
+    },
+    {
+      value: "Camera",
+      label: "Camera",
+    },
+    {
+      value: "Griller",
+      label: "Griller",
     },
 
   ];
