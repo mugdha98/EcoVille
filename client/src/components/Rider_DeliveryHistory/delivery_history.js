@@ -22,13 +22,13 @@ export const DeliveryHistory = ({ user, request }) => {
   return (
     <div className={DHstyles.p_container}>
       <div>
-        <div className={DHstyles.greet_rider}>
-          {/* GRADIENT BAR */}
+        {/* <div className={DHstyles.greet_rider}>
+          GRADIENT BAR
           <div className={DHstyles.rider_greeting_text}>
             <h2>Welcome {user ? user.name : ""}</h2>
-            {/* GREET RIDER */}
+            GREET RIDER
           </div>
-        </div>
+        </div> */}
 
         <div className={DHstyles.rider_delivery_history}>
           <div className={DHstyles.list_heading}>
