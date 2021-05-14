@@ -26,49 +26,28 @@ const SellerProfile = ({ user }) => {
         <div>
           <div className={style.cardDiv}>
             <Card
+              address={user ? "Address: " + user.address.firstLine +
+                ", " +
+                user.address.landmark +
+                ", " +
+                user.address.city +
+                ", " +
+                user.address.state +
+                " P.O: " +
+                user.address.pin
+                : ""
+              }
               name={user ? user.name : ""}
-              email={user ? user.email : ""}
-              img={user ? user.avatar : ""}
-              tel={user ? user.contact : ""}
+              // img={user ? user.avatar : ""}
+              tel={user ? "Contact: " + user.contact : ""}
+              email={user ? "Email: " + user.email : ""}
             />
           </div>
 
           {/* ADDRESS SECTION */}
-          <h1 className={style.setting}>Edit Profile</h1>
+          <h1 className={style.setting}>Settings</h1>
           <hr className={style.division} />
           <div className={style.address}>
-            <h3 className={style.heading}>
-              {" "}
-              Address
-              <AiFillEdit className={style.editable} onClick={editAddress} />
-            </h3>
-            <div className={style.addressField}>
-              <Form.Group controlId="Address">
-                <Form.Label></Form.Label>
-                <Form.Control
-                  as="textarea"
-                  rows={3}
-                  className={style.addressField}
-                  placeholder={
-                    user
-                      ? user.address.firstLine +
-                      ", " +
-                      user.address.landmark +
-                      ", " +
-                      user.address.city +
-                      ", " +
-                      user.address.state +
-                      " P.O: " +
-                      user.address.pin
-                      : ""
-                  }
-                  readOnly
-                />
-              </Form.Group>
-            </div>
-            <div style={{ display: isClicked ? "block" : "none" }}>
-              <AddressForm />
-            </div>
             {/* CHANGE YOUR PASSWORD SECTION*/}
 
             <h2 className={style.heading}>Change Your Password</h2>

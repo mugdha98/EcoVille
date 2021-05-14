@@ -86,32 +86,32 @@ const RateList = ({ auth, pickup, updateWasteList }) => {
       <div>
         <div className={RLstyles.greet_vendor}>
           {/* GRADIENT BAR */}
-          <div className="vendor-image">
+          {/* <div className="vendor-image">
             <img
               src={vendor_ic}
               alt="profile_img"
               className={RLstyles.vendor_img}
-            ></img>
-            {/* VENDOR IMAGE */}
-          </div>
+            ></img> */}
+          {/* VENDOR IMAGE */}
+          {/* </div> */}
           <div className={RLstyles.vendor_greeting_text}>
-            <h2>Welcome, {auth.user ? auth.user.name : ""}</h2>
+            <center><h2>Welcome {auth.user ? auth.user.name : ""} </h2></center>
             {/* GREET VENDOR */}
           </div>
         </div>
 
         <div className={RLstyles.vendor_rate_list}>
           <div className={RLstyles.list_heading}>
-            <h2>RATE LIST</h2>
+            <h2>MONETARY VALUE</h2>
           </div>
 
           <div className={RLstyles.bgeffect}>
             <Table striped bordered hover>
               <thead>
                 <tr>
-                  <th>WASTE ITEM</th>
-                  <th>RATE</th>
-                  <th>Edit</th>
+                  <th>ITEM NAME</th>
+                  <th>SELLING PRICE</th>
+                  <th>EDIT</th>
                 </tr>
               </thead>
 

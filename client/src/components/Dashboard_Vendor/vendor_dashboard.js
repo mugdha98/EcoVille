@@ -1,7 +1,7 @@
 import React, { useState, useEffect, Fragment } from "react";
 import { Link } from "react-router-dom";
 import VDstyles from "./vendor_dashboard.module.css";
-import vendorpic from "./vendor.jpg";
+import vendorpic from "./Vendor1.jpg";
 import Card from "react-bootstrap/Card";
 import Table from "react-bootstrap/Table";
 import Button from "react-bootstrap/Button";
@@ -172,7 +172,7 @@ const VendorDashboard = ({
           {/* GRADIENT BAR */}
           <div className="vendor-image">
             <img
-              src={user ? user.avatar : vendorpic}
+              src={vendorpic}
               alt="profile_img"
               className={VDstyles.vendor_img}
             ></img>{" "}
@@ -191,7 +191,7 @@ const VendorDashboard = ({
           <div class="col-12 col-lg-6">
             <div className="upcoming">
               <div className={VDstyles.vendor_heading}>
-                <h1>UPCOMING ORDERS</h1>
+                <h2>FORTHCOMING ORDERS</h2>
               </div>
               {request.length > 0 ? (
                 request.map((requests) => {
@@ -265,7 +265,7 @@ const VendorDashboard = ({
                   }
                 })
               ) : (
-                <h3>No Upcoming Request!</h3>
+                <center><h4>No Pending Request</h4></center>
               )}
             </div>
           </div>
