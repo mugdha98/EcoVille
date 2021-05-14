@@ -5,7 +5,7 @@
   border-radius: 25px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   margin: 50px auto 50px auto;
-  background-image: linear-gradient(to right, #008891, #70af85);
+  background-image: linear-gradient(to right, #cd2d3e, #ef473a);
 }
 
 /* BUTTONS DESIGN */
@@ -23,7 +23,7 @@
 /* UPPER GRADIENT SECTION */
 
 .gradient-section {
-  background-image: linear-gradient(to right, #003366, #1a1a1a);
+  background-image: linear-gradient(to right, #cb2d3e, #ef473a);
   width: 100%;
   height: 100px;
   border: none;
@@ -75,8 +75,9 @@
 
 .Current-request,
 .status-container {
+  padding-top: 1%;
   width: 70%;
-  background-color: #b3ecff;
+  background-color: whitesmoke;
   border: none;
   border-radius: 10px;
   margin: 4% auto;

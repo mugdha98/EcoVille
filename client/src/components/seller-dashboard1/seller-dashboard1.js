@@ -44,14 +44,14 @@ const SellerDashboard1 = ({
           <Link to="/profile/seller">
             <div className="Profile-image-container">
               <div className="intro">
-                <h5>
+                <h3>
                   Hi! {user ? <span>{user.name}</span> : <span>Please Login Again</span>}{" "}
-                </h5>
+                </h3>
               </div>
               {/* PROFILE IMAGE OF SELLER */}
-              <div className="profile-image">
+              {/* <div className="profile-image">
                 <FcBusinessman className="seller-profile-pic" />
-              </div>
+              </div> */}
             </div>
           </Link>
         </div>

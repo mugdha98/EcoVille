@@ -12,7 +12,7 @@ const SellerDashboard2 = ({ user, requests, pickup }) => {
   var address = "";
   var waste = "";
   var vendorDetail = "";
-  var dateOfPickup ="";
+  var dateOfPickup = "";
   var timeOfPickup = "";
   var qty = "";
   var vendorAccepted = "";
@@ -47,7 +47,7 @@ const SellerDashboard2 = ({ user, requests, pickup }) => {
             dateOfPickup = request.dateOfPickup;
           if (request.orderList !== undefined)
             waste = request.orderList.map((waste) => {
-              return waste.nameOfWaste+",";
+              return waste.nameOfWaste + ",";
             });
           if (request.orderList !== undefined)
             qty = request.orderList.map((waste) => {
@@ -108,18 +108,18 @@ const SellerDashboard2 = ({ user, requests, pickup }) => {
           <Link to="/profile/seller">
             <div className="Profile-image-container">
               <div className="intro">
-                <h5>Hi! {user ? user.name : "User Not Loaded"}</h5>
+                <h3>Hi! {user ? user.name : "User Not Loaded"}</h3>
               </div>
               {/* PROFILE IMAGE OF SELLER */}
-              <div className="profile-image">
+              {/* <div className="profile-image">
                 <FcBusinessman className="seller-profile-pic" />
-              </div>
+              </div> */}
             </div>
           </Link>
         </div>
         {/* CURRENT REQUEST SECTION */}
         <div className="Current-request ">
-          <h2 className="current-text">Current Request</h2>
+          <h2 className="current-text">Order Details</h2>
 
           {/* INFORMATION DISPLAYED TO SELLER */}
 
@@ -135,7 +135,7 @@ const SellerDashboard2 = ({ user, requests, pickup }) => {
           <KeyValue
             info="Slot Details "
             value={<Moment>{timeOfPickup}</Moment>}
-           // value={timeOfPickup}
+          // value={timeOfPickup}
           ></KeyValue>
 
           {/* RIDER'S NAME */}
@@ -144,7 +144,7 @@ const SellerDashboard2 = ({ user, requests, pickup }) => {
 
           {/* WASTE TYPE */}
 
-          <KeyValue info="Waste Type" value={waste}  />
+          <KeyValue info="Waste Type" value={waste} />
 
           {/* WASTE QUANTITY */}
 
@@ -196,13 +196,13 @@ const SellerDashboard2 = ({ user, requests, pickup }) => {
 
         {/* PICKUP HISTORY SECTION */}
         <Link to="/history/pickup">
-          <Button variant="primary" className="pickup-button">
+          <Button variant="dark" className="pickup-button">
             <span className="request-text">Pickup History</span>
           </Button>{" "}
         </Link>
         <Link to="/cancel">
-          <Button variant="danger" className="pickup-button">
-            <span className="request-text">Cancel The Pickup Request!</span>
+          <Button variant="primary" className="pickup-button">
+            <span className="request-text">Cancel Your Request!</span>
           </Button>
         </Link>
       </div>
