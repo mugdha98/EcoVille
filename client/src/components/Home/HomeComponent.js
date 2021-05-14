@@ -11,14 +11,15 @@ import {
 } from "reactstrap";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { url } from "gravatar";
 
-const items = [
-  {
-    src: "./assets/Home1.jpg",
-    altText: "",
-    caption: "",
-  }
-];
+// const items = [
+//   {
+//     src: "./assets/trial.jpg",
+//     altText: "",
+//     caption: "CLEAN ENERGY IS GREEN ENERGY",
+//   }
+// ];
 
 const Home = (props) => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -27,44 +28,52 @@ const Home = (props) => {
     AOS.init({ duration: 2000 });
   }, []);
 
-  const next = () => {
-    if (animating) return;
-    const nextIndex = activeIndex === items.length - 1 ? 0 : activeIndex + 1;
-    setActiveIndex(nextIndex);
-  };
+  // const next = () => {
+  //   if (animating) return;
+  //   const nextIndex = activeIndex === items.length - 1 ? 0 : activeIndex + 1;
+  //   setActiveIndex(nextIndex);
+  // };
 
-  const previous = () => {
-    if (animating) return;
-    const nextIndex = activeIndex === 0 ? items.length - 1 : activeIndex - 1;
-    setActiveIndex(nextIndex);
-  };
+  // const previous = () => {
+  //   if (animating) return;
+  //   const nextIndex = activeIndex === 0 ? items.length - 1 : activeIndex - 1;
+  //   setActiveIndex(nextIndex);
+  // };
 
-  const goToIndex = (newIndex) => {
-    if (animating) return;
-    setActiveIndex(newIndex);
-  };
+  // const goToIndex = (newIndex) => {
+  //   if (animating) return;
+  //   setActiveIndex(newIndex);
+  // };
 
-  const slides = items.map((item) => {
-    return (
-      <CarouselItem
-        onExiting={() => setAnimating(true)}
-        onExited={() => setAnimating(false)}
-        key={item.src}
-      >
-        <center>
-          <img src={item.src} alt={item.altText} />
-          <CarouselCaption
-            captionText={item.caption}
-            captionHeader={item.caption}
-          />
-        </center>
-      </CarouselItem>
-    );
-  });
+  // const slides = items.map((item) => {
+  //   return (
+  //     <CarouselItem
+  //       onExiting={() => setAnimating(false)}
+  //       onExited={() => setAnimating(false)}
+  //       key={item.src}
+  //     >
+  //       {/* <center> */}
+  //       <img src={item.src} alt={item.altText} />
+  //       <CarouselCaption
+  //         // captionText={item.caption}
+  //         captionHeader={item.caption}
+  //       />
+  //       {/* </center> */}
+  //     </CarouselItem>
+  //   );
+  // });
 
   return (
     <React.Fragment>
-      <Carousel activeIndex={activeIndex} next={next} previous={previous}>
+      <div>
+        <img src="./assets/Home1.jpg" style={{
+          flex: 1,
+          width: '100%',
+          height: '100 %',
+          resizeMode: 'contain',
+        }} />
+      </div>
+      {/* <Carousel activeIndex={activeIndex} next={next} previous={previous}>
         <CarouselIndicators
           items={items}
           activeIndex={activeIndex}
@@ -81,9 +90,9 @@ const Home = (props) => {
           directionText="Next"
           onClickHandler={next}
         />
-      </Carousel>
-      <div data-aos="fade-up">
-      </div>
+      </Carousel> */}
+      {/* <div data-aos="fade-up">
+      </div> */}
     </React.Fragment>
   );
 };
