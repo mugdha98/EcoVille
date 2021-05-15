@@ -287,7 +287,7 @@ const RiderDashboard = ({
             {/* RIDER IMAGE */}
           </div>
           <div className={RDstyles.rider_greeting_text}>
-            <h4>Hi! {user ? user.name : "Edit Profile"}</h4>{" "}
+            <h4>Hi! {user ? user.name : "Please Login Again"}</h4>{" "}
             {/* GREET RIDER */}
           </div>
         </Link>
@@ -323,7 +323,7 @@ const RiderDashboard = ({
                         (waste) => waste.nameOfWaste
                       )}
                       WasteQuantity={
-                        req.orderList.map((waste) => waste.qty) + " Kg"
+                        req.orderList.map((waste) => waste.qty) + " pcs"
                       }
                       onMyWay={req.onMyWay.status}
                       wasteCollected={req.wasteCollected.status}
@@ -361,9 +361,9 @@ const RiderDashboard = ({
                       Slot={<Moment>{req.timeOfPickup}</Moment>}
                       WasteType={req.orderList.map(
                         (waste) => waste.nameOfWaste
-                      )}
+                      ) + " "}
                       WasteQuantity={
-                        req.orderList.map((waste) => waste.qty) + " Kg"
+                        req.orderList.map((waste) => waste.qty) + " pcs"
                       }
                     />
                   );

@@ -44,9 +44,9 @@ const SellerDashboard1 = ({
           <Link to="/profile/seller">
             <div className="Profile-image-container">
               <div className="intro">
-                <h3>
-                  Hi! {user ? <span>{user.name}</span> : <span>Please Login Again</span>}{" "}
-                </h3>
+                <h4 className="intro">
+                  Hi! {user ? user.name : <span>Please Login Again</span>}{" "}
+                </h4>
               </div>
               {/* PROFILE IMAGE OF SELLER */}
               {/* <div className="profile-image">

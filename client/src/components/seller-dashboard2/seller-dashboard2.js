@@ -47,11 +47,11 @@ const SellerDashboard2 = ({ user, requests, pickup }) => {
             dateOfPickup = request.dateOfPickup;
           if (request.orderList !== undefined)
             waste = request.orderList.map((waste) => {
-              return waste.nameOfWaste + ",";
+              return waste.nameOfWaste + " ";
             });
           if (request.orderList !== undefined)
             qty = request.orderList.map((waste) => {
-              return waste.qty + "Kg ";
+              return waste.qty + "pcs ";
             });
           if (request.vendorAccepted !== undefined)
             vendorAccepted = request.vendorAccepted;
@@ -108,7 +108,7 @@ const SellerDashboard2 = ({ user, requests, pickup }) => {
           <Link to="/profile/seller">
             <div className="Profile-image-container">
               <div className="intro">
-                <h3>Hi! {user ? user.name : "User Not Loaded"}</h3>
+                <h4>Hi! {user ? user.name : "Please Login Again"}</h4>
               </div>
               {/* PROFILE IMAGE OF SELLER */}
               {/* <div className="profile-image">
@@ -165,7 +165,7 @@ const SellerDashboard2 = ({ user, requests, pickup }) => {
 
                 {orderAccepted ? (
                   <StatusUpdates status="Approved by rider" />
-                 
+
                 ) : (
                   ""
                 )}

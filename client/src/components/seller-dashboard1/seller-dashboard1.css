@@ -69,7 +69,7 @@
 }
 
 .intro {
-  float: right;
+  /* float: right; */
   width: fit-content;
   color: antiquewhite;
 }

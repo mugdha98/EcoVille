@@ -332,7 +332,7 @@ const RequestPickup = ({
                 />
               </Col>
               <Label htmlFor="wasteType" md={{ size: 3, offset: 1 }}>
-                Waste Quantity (Kg)
+                Waste Quantity (Pcs)
               </Label>
               <Col md={{ size: 3 }}>
                 <Input

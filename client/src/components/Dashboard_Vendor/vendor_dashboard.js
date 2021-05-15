@@ -229,7 +229,7 @@ const VendorDashboard = ({
                                   <td>
                                     {requests.orderList.map(
                                       (waste) => waste.nameOfWaste
-                                    )}
+                                    ) + " "}
                                   </td>
                                 </tr>
                                 <tr>
@@ -237,7 +237,7 @@ const VendorDashboard = ({
                                   <td>
                                     {requests.orderList.map(
                                       (waste) => waste.qty
-                                    )}
+                                    ) + " "}
                                   </td>
                                 </tr>
                               </tbody>
@@ -289,10 +289,10 @@ const VendorDashboard = ({
                       Slot={<Moment>{request.timeOfPickup}</Moment>}
                       WasteType={request.orderList.map(
                         (waste) => waste.nameOfWaste
-                      )}
+                      ) + " "}
                       WasteQuantity={request.orderList.map(
                         (waste) => waste.qty
-                      )}
+                      ) + " "}
                     />
                   );
                 })}
