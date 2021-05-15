@@ -50,7 +50,7 @@ class Contact extends Component {
     event.preventDefault();
     console.log("Current State is: " + JSON.stringify(this.state));
     alert("Current State is: " + JSON.stringify(this.state));
-
+    // alert("Thank you for your valuable feedback!!");
 
   }
 
@@ -288,7 +288,7 @@ class Contact extends Component {
               <FormGroup row>
                 <Col md={{ size: 10, offset: 2 }}>
                   <Button type="submit" color="primary"
-                  //  onClick={this.handleSubmit}
+                  // onClick={this.handleSubmit}
                   >
                     Send Feedback
                   </Button>

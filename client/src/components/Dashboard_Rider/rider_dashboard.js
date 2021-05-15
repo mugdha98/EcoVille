@@ -172,7 +172,7 @@ const RiderDashboard = ({
                   type="checkbox"
                   name="status_update"
                   value=""
-                  checked={props.onMyWay}
+                  // checked={props.onMyWay}
                   disabled={props.onMyWay ? "true" : false}
                 />
                 On my Way
@@ -181,7 +181,7 @@ const RiderDashboard = ({
                   type="checkbox"
                   name="status_update"
                   value=""
-                  checked={props.wasteCollected}
+                  // checked={props.wasteCollected}
                   disabled={props.wasteCollected ? "true" : false}
                 />
                 Waste collected
@@ -190,7 +190,7 @@ const RiderDashboard = ({
                   type="checkbox"
                   name="status_update"
                   value=""
-                  checked={props.paidTheSeller}
+                  // checked={props.paidTheSeller}
                   disabled={props.paidTheSeller ? "true" : false}
                 />
                 Payment done by vendor to seller
@@ -199,7 +199,7 @@ const RiderDashboard = ({
                   type="checkbox"
                   name="status_update"
                   value=""
-                  checked={props.droppedAtVendors}
+                  // checked={props.droppedAtVendors}
                   disabled={props.droppedAtVendors ? "true" : false}
                 />
                 Dropped at vendor's
@@ -321,7 +321,7 @@ const RiderDashboard = ({
                       Slot={<Moment>{req.timeOfPickup}</Moment>}
                       WasteType={req.orderList.map(
                         (waste) => waste.nameOfWaste
-                      )}
+                      ) + " "}
                       WasteQuantity={
                         req.orderList.map((waste) => waste.qty) + " pcs"
                       }
