@@ -172,8 +172,8 @@ const RiderDashboard = ({
                   type="checkbox"
                   name="status_update"
                   value=""
-                // checked={props.onMyWay}
-                // disabled={props.onMyWay ? "true" : false}
+                  checked={props.onMyWay}
+                  disabled={props.onMyWay ? "true" : false}
                 />
                 On my Way
                 <br />
@@ -181,8 +181,8 @@ const RiderDashboard = ({
                   type="checkbox"
                   name="status_update"
                   value=""
-                // checked={props.wasteCollected}
-                // disabled={props.wasteCollected ? "true" : false}
+                  checked={props.wasteCollected}
+                  disabled={props.wasteCollected ? "true" : false}
                 />
                 Waste collected
                 <br />
@@ -190,8 +190,8 @@ const RiderDashboard = ({
                   type="checkbox"
                   name="status_update"
                   value=""
-                // checked={props.paidTheSeller}
-                // disabled={props.paidTheSeller ? "true" : false}
+                  checked={props.paidTheSeller}
+                  disabled={props.paidTheSeller ? "true" : false}
                 />
                 Payment done by vendor to seller
                 <br />

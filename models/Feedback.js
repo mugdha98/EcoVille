@@ -22,9 +22,9 @@ const feedbackSchema = new Schema({
   feedback: {
     type: String,
   },
-  stars: {
-    type: Number,
-  },
+  // stars: {
+  //   type: Number,
+  // },
   time: {
     type: Date,
     default: new Date(),

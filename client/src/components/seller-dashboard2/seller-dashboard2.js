@@ -144,11 +144,11 @@ const SellerDashboard2 = ({ user, requests, pickup }) => {
 
           {/* WASTE TYPE */}
 
-          <KeyValue info="Waste Type" value={waste} />
+          <KeyValue info="Waste Type" value={waste + " "} />
 
           {/* WASTE QUANTITY */}
 
-          <KeyValue info="Waste Quantity" value={qty} />
+          <KeyValue info="Waste Quantity" value={qty + " "} />
         </div>
         <hr className="division1" />
         {/* STATUS UPDATES SECTION */}
@@ -201,11 +201,11 @@ const SellerDashboard2 = ({ user, requests, pickup }) => {
             <span className="request-text">Pickup History</span>
           </Button>{" "}
         </Link>
-        <Link to="/cancel">
+        {/* <Link to="/cancel">
           <Button variant="primary" className="pickup-button">
             <span className="request-text">Cancel Your Request!</span>
           </Button>
-        </Link>
+        </Link> */}
       </div>
     </div>
   );

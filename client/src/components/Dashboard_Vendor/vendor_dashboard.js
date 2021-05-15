@@ -274,7 +274,7 @@ const VendorDashboard = ({
             <div class="col-12 col-lg-6">
               <div className="accepted">
                 <div className={VDstyles.vendor_heading}>
-                  <h1>ACCEPTED ORDERS</h1>
+                  <h2>ACCEPTED ORDERS</h2>
                 </div>
                 {acceptedRequest.map((request) => {
                   return (

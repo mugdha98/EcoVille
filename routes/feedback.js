@@ -10,7 +10,7 @@ router.post(
   "",
   [
     check("message", "Feedback is mandatory").not().isEmpty(),
-    check("stars", "Please select stars from 1 to 5").not().isEmpty(),
+    // check("stars", "Please select stars from 1 to 5").not().isEmpty(),
   ],
   async (req, res) => {
     const errors = validationResult(req);
@@ -28,23 +28,23 @@ router.post(
         agree,
         contactType,
       } = req.body;
-      let feedbackData = await Feedback.findOne({ tel: tel });
-    //   if (feedbackData)
-    //     return res.status(400).json({
-    //       errors: [
-    //         {
-    //           msg:
-    //             "Your feedback has already submitted. We are working day and night to get back to you ASAP! Thanks For your Paitence.",
-    //         },
-    //       ],
-    //     });
+      // let feedbackData = await Feedback.findOne({ tel: tel });
+      //   if (feedbackData)
+      //     return res.status(400).json({
+      //       errors: [
+      //         {
+      //           msg:
+      //             "Your feedback has already submitted. We are working day and night to get back to you ASAP! Thanks For your Paitence.",
+      //         },
+      //       ],
+      //     });
       feedbackData = new Feedback({
         name: firstname + " " + lastname,
         tel: telnum,
         email,
         feedback: message,
-        stars,
-        
+        stars: "4",
+
       });
       if (agree) {
         feedbackData.mayWeContact.mode = contactType;
@@ -73,14 +73,14 @@ router.post(
 //desc:     to see all the feedbacks
 //access:   Public
 router.get('', async (req, res) => {
-    try {
-        let feedbacks = await Feedback.find({});
-        if(!feedbacks) return res.status(400).json({errors: [{msg: "There is no feedback till the date"}]})
-        res.status(200).json(feedbacks)
-    } catch (err) {
-        console.log(err.message);
-      res.status(500).send("Server Error");
-    }
+  try {
+    let feedbacks = await Feedback.find({});
+    if (!feedbacks) return res.status(400).json({ errors: [{ msg: "There is no feedback till the date" }] })
+    res.status(200).json(feedbacks)
+  } catch (err) {
+    console.log(err.message);
+    res.status(500).send("Server Error");
+  }
 })
 
 module.exports = router;

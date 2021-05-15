@@ -61,7 +61,7 @@ const Header = ({ logout, auth }) => {
               src="assets/logo.jpg"
               height="50"
               width="50"
-              alt="EcoVille_logo"
+              alt="Logo"
             ></img>{" "}
             <b style={{ fontFamily: "Joti one", color: "white" }}>EcoVille</b>
           </NavbarBrand>
@@ -83,10 +83,10 @@ const Header = ({ logout, auth }) => {
                 </NavLink>
               </NavItem>
               <NavItem>
-                  <NavLink className="nav-link" to="/ratelist">
+                <NavLink className="nav-link" to="/ratelist">
                   <span className="fa fa-inr fa-lg"></span> Item's Price Tag
                   </NavLink>
-                </NavItem>
+              </NavItem>
 
               {/* {auth.typeofuser === "vendor" ? (
                 <NavItem>
@@ -172,7 +172,7 @@ const Header = ({ logout, auth }) => {
               {/* This Section has to be like depending upon the authenticated state of the user */}
 
               {auth.isAuthenticated ? (
-                <Fragment>
+                <Fragment >
                   <NavItem>
                     <NavLink to="/login" onClick={logout}>
                       <Button outline>
