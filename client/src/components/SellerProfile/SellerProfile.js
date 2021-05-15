@@ -45,12 +45,12 @@ const SellerProfile = ({ user }) => {
           </div>
 
           {/* ADDRESS SECTION */}
-          <h1 className={style.setting}>Settings</h1>
-          <hr className={style.division} />
-          <div className={style.address}>
-            {/* CHANGE YOUR PASSWORD SECTION*/}
+          {/* <h1 className={style.setting}>Settings</h1>
+          <hr className={style.division} /> */}
+          {/* <div className={style.address}> */}
+          {/* CHANGE YOUR PASSWORD SECTION*/}
 
-            <h2 className={style.heading}>Change Your Password</h2>
+          {/* <h2 className={style.heading}>Change Your Password</h2>
             <div className={style.changePassword}>
               <Form.Group controlId="newPassword">
                 <Form.Label></Form.Label>
@@ -72,12 +72,12 @@ const SellerProfile = ({ user }) => {
                 Change
               </Button>{" "}
             </div>
-          </div>
+          </div> */}
           <hr className={style.division} />
 
           {/* BACK TO DASHBOARD */}
 
-          <div>
+          <div style={{ marginTop: "2%" }}>
             <Link to="/dashboard/seller">
               <Button variant="warning" size="lg" className={style.lastButton}>
                 Return to Dashboard

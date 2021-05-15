@@ -63,8 +63,8 @@ export const VendorProfile = ({ user }) => {
           </div>
 
           {/* ADDRESS SECTION */}
-          <h1 className={style.setting}>Settings</h1>
-          <hr className={style.division} />
+          {/* <h1 className={style.setting}>Settings</h1>
+          <hr className={style.division} /> */}
           <div className={style.address}>
             {/* <h3 className={style.heading}>
               {" "}
@@ -131,7 +131,7 @@ export const VendorProfile = ({ user }) => {
 
             {/* CHANGE YOUR PASSWORD SECTION*/}
 
-            <h2 className={style.heading}>Change Your Password</h2>
+            {/* <h2 className={style.heading}>Change Your Password</h2>
             <div className={style.changePassword}>
               <Form.Group controlId="newPassword">
                 <Form.Label></Form.Label>
@@ -152,7 +152,7 @@ export const VendorProfile = ({ user }) => {
               <Button variant="dark" className={style.changeButton}>
                 Change
               </Button>{" "}
-            </div>
+            </div> */}
           </div>
           <hr className={style.division} />
 

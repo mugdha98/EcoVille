@@ -55,8 +55,8 @@ const RiderProfile = ({ user }) => {
             />
           </div>
           {/* ADDRESS SECTION */}
-          <h1 className={style.setting}>Settings</h1>
-          <hr className={style.division} />
+          {/* <h1 className={style.setting}>Settings</h1>
+          <hr className={style.division} /> */}
           <div className={style.address}>
             {/* <h4 className={style.heading}>
               {" "}
@@ -161,7 +161,7 @@ const RiderProfile = ({ user }) => {
 
             {/* CHANGE YOUR PASSWORD SECTION*/}
 
-            <h4 className={style.heading}>Change Your Password</h4>
+            {/* <h4 className={style.heading}>Change Your Password</h4>
             <div className={style.changePassword}>
               <Form.Group controlId="newPassword">
                 <Form.Label></Form.Label>
@@ -182,7 +182,7 @@ const RiderProfile = ({ user }) => {
               <Button variant="dark" className={style.changeButton}>
                 Change
               </Button>{" "}
-            </div>
+            </div> */}
           </div>
           <hr className={style.division} />
 
