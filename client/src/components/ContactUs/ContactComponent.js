@@ -48,9 +48,6 @@ class Contact extends Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    console.log("Current State is: " + JSON.stringify(this.state));
-    alert("Current State is: " + JSON.stringify(this.state));
-    // alert("Thank you for your valuable feedback!!");
 
   }
 
@@ -167,7 +164,7 @@ class Contact extends Component {
             <h3>We'd love your feedback!</h3>
           </div>
           <div className="col-12 col-md-9">
-            <Form onSubmit={submitFeedback(JSON.stringify(this.state))}>
+            <form onSubmit={submitFeedback(JSON.stringify(this.state))}>
               <FormGroup row>
                 <Label htmlFor="firstname" md={2}>
                   First Name
@@ -287,14 +284,12 @@ class Contact extends Component {
               </FormGroup>
               <FormGroup row>
                 <Col md={{ size: 10, offset: 2 }}>
-                  <Button type="submit" color="primary"
-                  // onClick={this.handleSubmit}
-                  >
+                  <Button type="submit" color="primary" onClick={submitFeedback(JSON.stringify(this.state))}>
                     Send Feedback
                   </Button>
                 </Col>
               </FormGroup>
-            </Form>
+            </form>
           </div>
         </div>
       </div>

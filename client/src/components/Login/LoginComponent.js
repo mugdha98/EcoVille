@@ -110,7 +110,6 @@ const Login = ({ login, isAuthenticated, setAlert }) => {
 Login.propTypes = {
   setAlert: PropTypes.func.isRequired,
   isAuthenticated: PropTypes.object.isRequired,
-  setAlert: PropTypes.object.isRequired,
 };
 
 const mapStateToProps = (state) => ({
