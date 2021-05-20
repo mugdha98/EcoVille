@@ -27,10 +27,13 @@ const Display = ({ onClick }) => {
         Sign-Up as Seller
       </Link>
       <hr />
-
-      <Link to="/signup/rider" onClick={onClick}>
+      <Link to="#" onClick={onClick}>
         Sign-Up as Rider
       </Link>
+
+      {/* <Link to="/signup/rider" onClick={onClick}>
+        Sign-Up as Rider
+      </Link> */}
       <hr />
 
       <Link to="/signup/vendor" onClick={onClick}>

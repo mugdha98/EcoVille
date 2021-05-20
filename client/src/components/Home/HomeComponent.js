@@ -166,7 +166,7 @@ const Home = (props) => {
           </Card.Header>
           <Accordion.Collapse eventKey="0">
             <Card.Body>
-              The local dealers who will process the waste properly.<br />
+              Vendors are the local dealers who will process the waste properly.<br />
               Recycling Companies now get a chance to deal with their customers directly through EcoVille.<br />
               All you have to do is to create an account on EcoVille and hence EcoVille will notify you your orders. <br />
               Now no need to spend your time and money for finding the mode of transportation as we have our Riders ready for your service.

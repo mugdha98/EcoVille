@@ -73,7 +73,6 @@ function About(props) {
               </div>
             </div>
           </Jumbotron>
-
           <h2>About</h2>
           <p>
             EcoVille started as a web development project
@@ -90,6 +89,22 @@ function About(props) {
           <p></p>
         </div>
         <div className="col-12 col-md-6">
+          <Card>
+            <CardHeader style={{ fontSize: "2em", backgroundColor: "#8fd9a8" }}>
+              <Image
+                src="./assets/logo.jpg"
+                style={{ maxWidth: 100, maxHeight: 100 }}
+                alt="Precycle" />
+              <span style={{ marginLeft: "10%" }}>Why EcoVille?</span></CardHeader>
+            <CardBody>
+              EcoVille briges the gaps between the seller and vendors, hence making diposal of recycling waste an easy process.
+              The Sellers can easily generate a "PickUp Request" and our Riders provide the "pick-up at doorstep" service,
+              so the sellers get chores done while saving time.
+              We provide you the facility to stay updated with the status of the pick-up request from the comfort of your home.
+              EcoVille Checks the autheticity of all the riders and vendors before collaborating with them.
+            </CardBody>
+          </Card>
+          <br />
           <Card border-info mb-3 >
             <CardHeader className="bg-info text-light" img>
               <i class="fa fa-bullhorn"></i> Staggering Facts
