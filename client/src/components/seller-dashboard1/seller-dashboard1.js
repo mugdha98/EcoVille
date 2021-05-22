@@ -138,7 +138,8 @@ const SellerDashboard1 = ({
           )}
           <hr className="division1" />
           {/* PICKUP HISTORY SECTION */}
-          <Link to="/history/pickup">
+          <Link to="#">
+            {/* <Link to="/history/pickup"> */}
             <Button variant="primary" className="pickup-button">
               <span className="request-text">Pickup History</span>
             </Button>{" "}

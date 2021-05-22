@@ -5,36 +5,40 @@ import {
   CarouselControl,
   CarouselIndicators,
   CarouselCaption,
+  Card,
+  CardHeader,
+  CardBody,
 } from "reactstrap";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import "./home.css";
 import Accordion from "react-bootstrap/Accordion";
-import Card from "react-bootstrap/Card";
+// import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 
 const items = [
   {
-    src: "./assets/add1.jpg",
+    src: "./assets/Slide_1.PNG",
     altText: "",
-    header: "If They can, so can we!!",
+    caption: "",
   },
   {
-    src: "./assets/seller_buyer.jpg",
+    src: "./assets/Slide_2.PNG",
     altText: "",
-    header: "SELLER",
-    caption: "People who want to sell the waste",
+    header: "",
+    caption: "",
   },
   {
-    src: "./assets/rider.PNG",
+    src: "./assets/Slide_3.PNG",
     altText: "",
-    header: "RIDER",
-    caption: "People who will collect the waste at the doorstep",
+    header: "",
+    caption: "",
   },
   {
-    src: "./assets/vendor1.jpg",
+    src: "./assets/Slide_4.PNG",
     altText: "",
-    header: "VENDOR",
-    caption: "The local dealers who will process the waste",
+    header: "",
+    caption: "",
   },
 ];
 
@@ -72,8 +76,8 @@ const Home = (props) => {
           <img src={item.src} alt={item.altText} />
           <div>
             <CarouselCaption
-              // captionText={<p style={{ color: "#801336", fontSize: "1.5em", paddingRight: "15%" }} > {item.caption}</p>}
-              captionHeader={<h1 style={{ color: "#07031a", fontSize: "2em", paddingRight: "7%" }}>{item.header}</h1>}
+              captionText={item.caption}
+              captionHeader={item.header}
             />
           </div>
         </center>
@@ -83,22 +87,24 @@ const Home = (props) => {
 
   return (
     <React.Fragment>
-      <div style={{
-        backgroundImage: 'url(./assets/1.jpg)',
-        resizeMode: 'contain',
-        backgroundSize: 'cover',
-        backgroundRepeat: "no-repeat",
-        height: "700px"
-      }}>
-        <div style={{ color: "white", paddingTop: "10%", paddingLeft: "5%", fontFamily: "cursive" }}>
-          <h1 style={{ fontSize: "4em", color: "#abbaab" }}><em> Welcome to EcoVille </em></h1>
-          <p>Better Recycling means better tomorrow</p>
-          <p>Be RICH be GREEN </p>
-          <p>Your Trash is Our Treasure</p>
+      <div className="background"
+        style={{
+          backgroundImage: 'url(./assets/home_6.png)',
+          resizeMode: 'contain',
+          backgroundSize: 'cover',
+          backgroundRepeat: "no-repeat",
+          height: "700px",
+        }}
+      >
+        <div >
+          <center>
+            <h1 className="title"><em> Welcome to EcoVille </em></h1>
+            <p className="subtitle">"Let’s bring together green revolution."</p>
+          </center>
         </div>
       </div>
       <hr />
-      <Carousel activeIndex={activeIndex} next={next} previous={previous}>
+      <Carousel activeIndex={activeIndex} next={next} previous={previous} className="background">
         <CarouselIndicators
           items={items}
           activeIndex={activeIndex}
@@ -118,7 +124,64 @@ const Home = (props) => {
       </Carousel>
       <div data-aos="fade-up">
       </div>
-      <Accordion defaultActiveKey="0">
+      <div className="container">
+        <div className="row">
+          <div className="row row-content">
+            <div className="col-md-4">
+              <div className="flip-card">
+                <div className="flip-card-inner">
+                  <div className="flip-card-front">
+                    <img src="./assets/seller1.png" style={{ width: "350px", height: "300px" }} />
+                  </div>
+                  <div className="flip-card-back">
+                    <h1>Who is Seller?</h1>
+                    <hr />
+                    <p style={{ fontFamily: "New Century Schoolbook, serif" }}>
+                      A seller is someone who has recyclable waste which they can sell and gets money in exchange.
+                      Seller has to sign up and make a pickup request to sell their waste .
+                        The seller can also stay updated with the order status by the same.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="col-md-4">
+              <div className="flip-card">
+                <div className="flip-card-inner">
+                  <div className="flip-card-front">
+                    <img src="./assets/rider_card.PNG" style={{ width: "350px", height: "300px" }} />
+                  </div>
+                  <div className="flip-card-back">
+                    <h1>Who is Rider?</h1>
+                    <hr />
+                    <p style={{ fontFamily: "New Century Schoolbook, serif" }} >Riders are volunteers who serve as local ragpickers.
+                    The riders provide the facility of pickup at the doorstep.
+                    The rider has to sign up and orders details will be shown to them.
+                    They approach the seller and collect the waste and also drop it at vendors place.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="col-md-4">
+              <div className="flip-card">
+                <div className="flip-card-inner">
+                  <div className="flip-card-front">
+                    <img src="./assets/vendor_card.PNG" style={{ width: "350px", height: "300px" }} />
+                  </div>
+                  <div className="flip-card-back">
+                    <h1>Who is Vendor?</h1>
+                    <hr />
+                    <p style={{ fontFamily: "New Century Schoolbook, serif" }}>Vendors are the local dealers who will process the waste properly.
+                    Vendor has to Sign up and EcoVille will notify you your orders.
+                    Now no need to spend your time and money for finding the mode of transportation as we have our Riders ready for your service.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* </div> */}
+      {/* <Accordion defaultActiveKey="1">
         <Card>
           <Card.Header>
             <Accordion.Toggle as={Button} variant="link" eventKey="0">
@@ -136,7 +199,7 @@ const Home = (props) => {
           </Accordion.Collapse>
         </Card>
       </Accordion>
-      <Accordion defaultActiveKey="0">
+      <Accordion defaultActiveKey="1">
         <Card>
           <Card.Header>
             <Accordion.Toggle as={Button} variant="link" eventKey="0">
@@ -155,7 +218,7 @@ const Home = (props) => {
           </Accordion.Collapse>
         </Card>
       </Accordion>
-      <Accordion defaultActiveKey="0">
+      <Accordion defaultActiveKey="1">
         <Card>
           <Card.Header>
             <Accordion.Toggle as={Button} variant="link" eventKey="0">
@@ -173,7 +236,7 @@ const Home = (props) => {
             </Card.Body>
           </Accordion.Collapse>
         </Card>
-      </Accordion>
+      </Accordion> */}
     </React.Fragment >
   );
 };

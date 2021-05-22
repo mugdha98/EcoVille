@@ -303,12 +303,14 @@ const VendorDashboard = ({
           )}
         </div>
       </div>
-
+      <br /><br />
       <div className={VDstyles.vendor_order_hist_button}>
-        <Link to="/history/order">
-          <Button variant="info">ORDER HISTORY</Button>
+        <Link to="#">
+          {/* <Link to="/history/order"> */}
+          <Button variant="dark">ORDER HISTORY</Button>
         </Link>
       </div>
+      <br /><br />
     </div>
   );
 };

@@ -5,8 +5,13 @@ import {
   Card,
 } from "reactstrap";
 import Image from "react-bootstrap/Image";
-const customstyle={
-  paddingLeft:"35%",
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+} from "reactstrap";
+import { Link } from "react-router-dom";
+const customstyle = {
+  paddingLeft: "35%",
   backgroundPosition: 'center',
   backgroundRepeat: 'norepeat',
   backgroundSize: 'cover',
@@ -22,15 +27,20 @@ const Workflow = () => {
     //   <hr />
     // </div>
 
-    <div>
+    <div className="container" >
+      <div className="row">
+        <Breadcrumb>
+          <BreadcrumbItem>
+            <Link to="/home">Home</Link>
+          </BreadcrumbItem>
+          <BreadcrumbItem active>How it Works</BreadcrumbItem>
+        </Breadcrumb>
+      </div>
       <div >
-         <img src={bg} style={customstyle}>
-         </img>
+        <img src={bg} style={customstyle}>
+        </img>
       </div>
     </div>
-      
-     
-  
   );
 };
 

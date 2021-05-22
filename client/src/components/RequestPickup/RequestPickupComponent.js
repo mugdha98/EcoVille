@@ -310,7 +310,7 @@ const RequestPickup = ({
                   <Spinner />
                 )
               ) : (
-                ""
+                <center>"No Vendor Found. Please Try Again after Some Time!"</center>
               )}
             </FormGroup>
             <hr />
