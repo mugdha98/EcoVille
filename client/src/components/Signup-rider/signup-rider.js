@@ -78,7 +78,7 @@ const SignupRider = ({ setAlert, registerRider, isAuthenticated }) => {
 
   //redirect after successfull signup
   if (isAuthenticated) {
-    return <Redirect to="/dashboard/rider" />;
+    return <Redirect to="/login" />;
   }
   function Req() {
     return <span className="req">*</span>;
@@ -132,7 +132,7 @@ const SignupRider = ({ setAlert, registerRider, isAuthenticated }) => {
                     />
                     <label for="floatingInput" className="floating-txt">
                       Name
-                  <Req />
+                      <Req />
                     </label>
                   </div>
                   <div class="form-floating mb-3">
@@ -192,7 +192,7 @@ const SignupRider = ({ setAlert, registerRider, isAuthenticated }) => {
                     />
                     <label for="floatingInput" className="floating-txt">
                       Phone No.
-                    <Req />
+                      <Req />
                     </label>
                   </div>
                   <div class="form-floating mb-3">
@@ -222,7 +222,7 @@ const SignupRider = ({ setAlert, registerRider, isAuthenticated }) => {
                     />
                     <label for="floatingInput" className="floating-txt">
                       Aadhar No.
-                    <Req />
+                      <Req />
                     </label>
                   </div>
 
@@ -255,7 +255,7 @@ const SignupRider = ({ setAlert, registerRider, isAuthenticated }) => {
                       />
                       <label for="pincode" className="floating-txt">
                         Landmark
-                      <Req />
+                        <Req />
                       </label>
                     </div>
                     <div class="form-floating mb-3  reg-pin-items2">
@@ -292,7 +292,7 @@ const SignupRider = ({ setAlert, registerRider, isAuthenticated }) => {
                   <input type="checkbox" id="chkYes" name="typeofvehicle" />{" "}
                   <label for="chkYes">
                     Do you use a vehicle other than bicycle?
-                </label>
+                  </label>
                   <div class="form-floating mb-3 reg-pin-items2" id="dvtext">
                     <input
                       type="text"
@@ -305,7 +305,7 @@ const SignupRider = ({ setAlert, registerRider, isAuthenticated }) => {
                     />
                     <label for="txtBox" className="floating-txt">
                       Registration no. of vehicle(other than bicycle)
-                    <Req />
+                      <Req />
                     </label>
                   </div>
 
@@ -336,10 +336,10 @@ const SignupRider = ({ setAlert, registerRider, isAuthenticated }) => {
                     />
                     <label for="TnC">
                       {" "}
-                    I agree to the{" "}
+                      I agree to the{" "}
                       <a href="/tnc" alt="terms and conditions" className="tnc">
                         terms and conditions and the privacy policy
-                    </a>
+                      </a>
                     </label>
                   </div>
                   {/* TESTING AREA */}
@@ -351,7 +351,7 @@ const SignupRider = ({ setAlert, registerRider, isAuthenticated }) => {
                       disabled={disabled}
                     >
                       Register
-                  </button>
+                    </button>
                   </div>
                 </form>
               </div>

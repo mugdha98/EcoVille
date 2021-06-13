@@ -44,14 +44,10 @@ const SellerDashboard1 = ({
           <Link to="/profile/seller">
             <div className="Profile-image-container">
               <div className="intro">
-                <h4 className="intro">
-                  Hi! {user ? user.name : <span>Please Login Again</span>}{" "}
+                <h4>
+                  Hi! {user ? user.name : "Please Login Again"}{" "}
                 </h4>
               </div>
-              {/* PROFILE IMAGE OF SELLER */}
-              {/* <div className="profile-image">
-                <FcBusinessman className="seller-profile-pic" />
-              </div> */}
             </div>
           </Link>
         </div>
@@ -71,7 +67,7 @@ const SellerDashboard1 = ({
           </Link>{" "}
           <hr className="division1" />
           {/* SEARCH FOR VENDORS NEAR YOU SECTION */}
-          <h4 className="search-inst">Select from the given Vendors near you</h4>
+          <h4 className="search-inst">Select from the listed Vendors</h4>
           <Form>
             <div className="form-container" >
               {/* ADDRESS INPUT */}
@@ -119,6 +115,7 @@ const SellerDashboard1 = ({
                   type="submit"
                   value="Find Nearby Vendors"
                   onClick={(e) => onSubmit(e)}
+                  hidden
                 ></input>
               </center>
               <br />

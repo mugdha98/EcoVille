@@ -92,11 +92,11 @@ const Login = ({ login, isAuthenticated, setAlert }) => {
               <center>
                 <h4 className={styles.form_h4}>
                   {" "}
-                New User?{" "}
+                  New User?{" "}
                   <Link to="/signup/seller" className={styles.form_link}>
                     {" "}
-                  Sign Up Here
-                </Link>
+                    Sign Up Here
+                  </Link>
                 </h4>
               </center>
             </div>

@@ -134,7 +134,7 @@ const Home = (props) => {
                     <img src="./assets/seller1.png" style={{ width: "350px", height: "300px" }} />
                   </div>
                   <div className="flip-card-back">
-                    <h1>Who is Seller?</h1>
+                    <h2>Who is Seller?</h2>
                     <hr />
                     <p style={{ fontFamily: "New Century Schoolbook, serif" }}>
                       A seller is someone who has recyclable waste which they can sell and gets money in exchange.
@@ -151,7 +151,7 @@ const Home = (props) => {
                     <img src="./assets/rider_card.PNG" style={{ width: "350px", height: "300px" }} />
                   </div>
                   <div className="flip-card-back">
-                    <h1>Who is Rider?</h1>
+                    <h2>Who is Rider?</h2>
                     <hr />
                     <p style={{ fontFamily: "New Century Schoolbook, serif" }} >Riders are volunteers who serve as local ragpickers.
                     The riders provide the facility of pickup at the doorstep.
@@ -168,7 +168,7 @@ const Home = (props) => {
                     <img src="./assets/vendor_card.PNG" style={{ width: "350px", height: "300px" }} />
                   </div>
                   <div className="flip-card-back">
-                    <h1>Who is Vendor?</h1>
+                    <h2>Who is Vendor?</h2>
                     <hr />
                     <p style={{ fontFamily: "New Century Schoolbook, serif" }}>Vendors are the local dealers who will process the waste properly.
                     Vendor has to Sign up and EcoVille will notify you your orders.

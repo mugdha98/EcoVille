@@ -196,7 +196,8 @@ const SellerDashboard2 = ({ user, requests, pickup }) => {
         )}
 
         {/* PICKUP HISTORY SECTION */}
-        <Link to="/history/pickup">
+        {/* <Link to="/history/pickup"> */}
+        <Link to="#">
           <Button variant="dark" className="pickup-button">
             <span className="request-text">Pickup History</span>
           </Button>{" "}

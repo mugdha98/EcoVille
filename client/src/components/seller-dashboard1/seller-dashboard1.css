@@ -63,13 +63,13 @@
   display: flex;
   flex-flow: row wrap;
   justify-content: right;
-  width: 200px;
+  width: fit-content;
   margin: 30px 3%;
   float: right;
 }
 
 .intro {
-  /* float: right; */
+  float: right;
   width: fit-content;
   color: antiquewhite;
 }
@@ -190,7 +190,8 @@
 
 /* When the radio button is checked, add a blue background */
 .container404 input:checked ~ .checkmark {
-  background-color: #2196f3;
+  background-color: #0a4270;
+  margin-top: 1%;
 }
 
 /* Create the indicator (the dot/circle - hidden when not checked) */

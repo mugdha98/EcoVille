@@ -76,7 +76,7 @@ const SignupVendor = ({ setAlert, registerVendor, isAuthenticated }) => {
 
   //redirect after successfull signup
   if (isAuthenticated) {
-    return <Redirect to="/dashboard/vendor" />;
+    return <Redirect to="/login" />;
   }
 
   function Req() {
@@ -134,7 +134,7 @@ const SignupVendor = ({ setAlert, registerVendor, isAuthenticated }) => {
                       />
                       <label for="organisation-name">
                         Organisation Name
-                      <Req />
+                        <Req />
                       </label>{" "}
                       {/* ORGANISATION NAME */}
                     </div>
@@ -151,7 +151,7 @@ const SignupVendor = ({ setAlert, registerVendor, isAuthenticated }) => {
                       />
                       <label for="email">
                         Email address
-                      <Req />
+                        <Req />
 
                       </label>{" "}
                       {/* EMAIL */}
@@ -169,7 +169,7 @@ const SignupVendor = ({ setAlert, registerVendor, isAuthenticated }) => {
                       />
                       <label for="password">
                         Password
-                      <Req />
+                        <Req />
                       </label>{" "}
                       {/* PASSWORD */}
                     </div>
@@ -185,7 +185,7 @@ const SignupVendor = ({ setAlert, registerVendor, isAuthenticated }) => {
                       />
                       <label for="password">
                         Confirm Password
-                      <Req />
+                        <Req />
                       </label>{" "}
                       {/* PASSWORD */}
                     </div>
@@ -202,7 +202,7 @@ const SignupVendor = ({ setAlert, registerVendor, isAuthenticated }) => {
                       />
                       <label for="Contact">
                         Phone No.
-                      <Req />
+                        <Req />
                       </label>{" "}
                       {/* PHONE NO. */}
                     </div>
@@ -218,7 +218,7 @@ const SignupVendor = ({ setAlert, registerVendor, isAuthenticated }) => {
                       />
                       <label for="gsti">
                         Company Registration Number
-                      <Req />
+                        <Req />
                       </label>{" "}
                       {/* GSTI NO. */}
                     </div>
@@ -254,7 +254,7 @@ const SignupVendor = ({ setAlert, registerVendor, isAuthenticated }) => {
                       />
                       <label for="firstline">
                         Address
-                      <Req />
+                        <Req />
                       </label>{" "}
                       {/* FIRST LINE OF ADDRESS */}
                     </div>
@@ -272,7 +272,7 @@ const SignupVendor = ({ setAlert, registerVendor, isAuthenticated }) => {
                       />
                       <label for="pincode">
                         Pincode
-                      <Req />
+                        <Req />
                       </label>{" "}
                       {/* PINCODE */}
                     </div>
@@ -298,10 +298,10 @@ const SignupVendor = ({ setAlert, registerVendor, isAuthenticated }) => {
                       />
                       <label for="TnC">
                         {" "}
-                    I agree to the{" "}
+                        I agree to the{" "}
                         <a href="/tnc" alt="terms and conditions" className="tnc">
                           terms and conditions and the privacy policy
-                    </a>
+                        </a>
                       </label>
                     </div>
                     <div className="signup-key">

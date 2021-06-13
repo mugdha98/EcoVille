@@ -122,10 +122,10 @@ class Contact extends Component {
               <br />
               Kolkata
               <br />
-              <i className="fa fa-phone"></i>: +917905043844
+              <i className="fa fa-phone"></i>: +91 977 7865 897
               <br />
               <i className="fa fa-envelope"></i>:{" "}
-              <a href="mailto:confusion@food.net">agarwalmugdha1998@gmail.com</a>
+              <a href="mailto:feedbackmail@ecoville.com">feedbackmail@ecoville.com</a>
             </address>
           </div>
           <div className="col-12 col-sm-6 offset-sm-1">
@@ -145,14 +145,14 @@ class Contact extends Component {
               <Button
                 role="button"
                 className="btn btn-success"
-                href="tel:+91 7905043844"
+                href="tel:+91 977 7865 897"
               >
                 <i className="fa fa-phone"></i> Call
               </Button>
               <Button
                 role="button"
                 className="btn btn-primary"
-                href="mailto:agarwalmugdha1998@gmail.com"
+                href="mailto:feedbackmail@ecoville.com"
               >
                 <i className="fa fa-envelope-o"></i> Email
               </Button>

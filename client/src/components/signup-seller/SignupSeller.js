@@ -61,7 +61,8 @@ const Register = ({ setAlert, registerSeller, isAuthenticated }) => {
 
   //redirect after successfull signup
   if (isAuthenticated) {
-    return <Redirect to="/dashboard/seller" />;
+    // return <Redirect to="/dashboard/seller" />;
+    return < Redirect to="/login" />
   }
 
   function Req() {
@@ -109,7 +110,7 @@ const Register = ({ setAlert, registerSeller, isAuthenticated }) => {
                     />
                     <label for="name">
                       Name
-                    <Req />
+                      <Req />
                     </label>
                   </div>
                   <div class="form-floating mb-3">
@@ -125,7 +126,7 @@ const Register = ({ setAlert, registerSeller, isAuthenticated }) => {
                     />
                     <label for="email">
                       Email address
-                    <Req />
+                      <Req />
                     </label>
                   </div>
                   <div class="form-floating mb-3">
@@ -141,7 +142,7 @@ const Register = ({ setAlert, registerSeller, isAuthenticated }) => {
                     />
                     <label for="password">
                       Password
-                    <Req />
+                      <Req />
                     </label>
                   </div>
                   <div class="form-floating mb-3">
@@ -157,7 +158,7 @@ const Register = ({ setAlert, registerSeller, isAuthenticated }) => {
                     />
                     <label for="password2">
                       Confirm Password
-                    <Req />
+                      <Req />
                     </label>
                   </div>
                   <div class="form-floating mb-3">
@@ -184,7 +185,7 @@ const Register = ({ setAlert, registerSeller, isAuthenticated }) => {
                     />
                     <label for="firstline">
                       Address
-                    <Req />
+                      <Req />
                     </label>
                   </div>
                   <div class="form-floating mb-3">
@@ -199,7 +200,7 @@ const Register = ({ setAlert, registerSeller, isAuthenticated }) => {
                     />
                     <label for="pincode">
                       Pincode
-                    <Req />
+                      <Req />
                     </label>
                   </div>
                   <div class="form-floating mb-3">
@@ -223,10 +224,10 @@ const Register = ({ setAlert, registerSeller, isAuthenticated }) => {
                     />
                     <label for="TnC">
                       {" "}
-                    I agree to the{" "}
+                      I agree to the{" "}
                       <a href="/tnc" alt="terms and conditions" className="tnc">
                         terms and conditions and the privacy policy
-                    </a>
+                      </a>
                     </label>
                   </div>
                   {/* <button onClick={() => getArea(pincode)}>Get Area List</button>
