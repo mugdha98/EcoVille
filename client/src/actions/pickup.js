@@ -212,3 +212,67 @@ export const viewAcceptedRequestRider = () => async (dispatch) => {
     });
   }
 };
+
+// TODO: add to update ststus
+// /rider.js : /request/:orderid/status/onmyway
+export const changeStatusToOnMyWay = (orderid) => async (dispatch) => {
+  console.log("changeStatusToOnMyWay is called " + orderid)
+  try {
+    const res = await axios.put(`/rider/request/${orderid}/status/onmyway`)
+    dispatch(setAlert("Status Changed to OnMyWay", "success"));
+  } catch (error) {
+    const errors = error.response.data.errors;
+    if (errors) {
+      errors.forEach((err) => dispatch(setAlert(err.msg, "danger")));
+    }
+    dispatch({
+      type: REQUEST_FAILED,
+    });
+  }
+}
+
+export const changeStatusToRecivedPayment = (orderid) => async (dispatch) => {
+  try {
+    const res = await axios.put(`/rider/request/${orderid}/status/recivedpayment`)
+    dispatch(setAlert("Status Changed to Received Payment", "success"));
+  } catch (error) {
+    const errors = error.response.data.errors;
+    if (errors) {
+      errors.forEach((err) => dispatch(setAlert(err.msg, "danger")));
+    }
+    dispatch({
+      type: REQUEST_FAILED,
+    });
+  }
+}
+
+export const changeStatusToWasteCollected = (orderid) => async (dispatch) => {
+  try {
+    const res = await axios.put(`/rider/request/${orderid}/status/wastecollected`)
+    dispatch(setAlert("Status Changed to Waste Collected", "success"));
+  } catch (error) {
+    const errors = error.response.data.errors;
+    if (errors) {
+      errors.forEach((err) => dispatch(setAlert(err.msg, "danger")));
+    }
+    dispatch({
+      type: REQUEST_FAILED,
+    });
+  }
+}
+
+export const changeStatusToDropAtVendor = (orderid) => async (dispatch) => {
+  try {
+    const res = await axios.put(`/rider/request/${orderid}/status/dropatvendor`)
+    dispatch(setAlert("Status Changed to Drop At Vendor", "success"));
+  } catch (error) {
+    const errors = error.response.data.errors;
+    if (errors) {
+      errors.forEach((err) => dispatch(setAlert(err.msg, "danger")));
+    }
+    dispatch({
+      type: REQUEST_FAILED,
+    });
+  }
+}
+

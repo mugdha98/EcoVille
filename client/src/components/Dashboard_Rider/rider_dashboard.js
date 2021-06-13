@@ -17,6 +17,10 @@ import {
   viewRequest,
   acceptRequest,
   viewAcceptedRequestRider,
+  changeStatusToOnMyWay,
+  changeStatusToWasteCollected,
+  changeStatusToRecivedPayment,
+  changeStatusToDropAtVendor,
 } from "../../actions/pickup";
 
 const RiderDashboard = ({
@@ -146,8 +150,25 @@ const RiderDashboard = ({
 
   function Update(props) {
     const [show, setShow] = useState(false);
+    const [onMyWay, setOnMyWay] = useState(props.onMyWay);
+    const [wasteCollected, setWasteCollected] = useState(props.wasteCollected);
+    const [paidTheSeller, setPaidTheSeller] = useState(props.paidTheSeller);
+    const [droppedAtVendors, setDropAtVendor] = useState(props.droppedAtVendors);
 
     const handleClose = () => setShow(false);
+
+    const changeOrderStatus = async () => {
+      if (onMyWay) {
+        console.log("HEre!!!!!!!")
+        await changeStatusToOnMyWay(props.OrderNo)
+        console.log("Done!!")
+      }
+      if (wasteCollected) changeStatusToWasteCollected(props.OrderNo)
+      if (paidTheSeller) changeStatusToRecivedPayment(props.OrderNo)
+      if (droppedAtVendors) changeStatusToDropAtVendor(props.OrderNo)
+      handleClose()
+    }
+
     const handleShow = () => setShow(true);
 
     return (
@@ -171,36 +192,43 @@ const RiderDashboard = ({
                 <input
                   type="checkbox"
                   name="status_update"
-                  value=""
-                  // checked={props.onMyWay}
-                  disabled={props.onMyWay ? "true" : false}
+                  value="onMyWay"
+                  onChange={() => {
+                    setOnMyWay(!onMyWay)
+                    console.log("onMyWay" + onMyWay + " " + props.onMyWay)
+                  }}
+                  // checked={onMyWay}
+                  // disabled={props.onMyWay ? "true" : false}
                 />
                 On my Way
                 <br />
                 <input
                   type="checkbox"
                   name="status_update"
-                  value=""
-                  // checked={props.wasteCollected}
-                  disabled={props.wasteCollected ? "true" : false}
+                  value="wasteCollected"
+                  onChange={() => setWasteCollected(!onMyWay)}
+                  // checked={wasteCollected}
+                  // disabled={props.wasteCollected ? "true" : false}
                 />
                 Waste collected
                 <br />
                 <input
                   type="checkbox"
                   name="status_update"
-                  value=""
+                  value="paidTheSeller"
+                  onChange={() => setPaidTheSeller(!paidTheSeller)}
                   // checked={props.paidTheSeller}
-                  disabled={props.paidTheSeller ? "true" : false}
+                  // disabled={props.paidTheSeller ? "true" : false}
                 />
                 Payment done by vendor to seller
                 <br />
                 <input
                   type="checkbox"
                   name="status_update"
-                  value=""
+                  value="droppedAtVendors"
+                  onChange={() => setDropAtVendor(!droppedAtVendors)}
                   // checked={props.droppedAtVendors}
-                  disabled={props.droppedAtVendors ? "true" : false}
+                  // disabled={props.droppedAtVendors ? "true" : false}
                 />
                 Dropped at vendor's
                 <br />
@@ -208,7 +236,9 @@ const RiderDashboard = ({
             </form>
           </Modal.Body>
           <Modal.Footer>
-            <Button variant="primary" onClick={handleClose}>
+            <Button variant="primary" onClick={() => {
+              changeOrderStatus()
+            }}>
               Save Changes
             </Button>
           </Modal.Footer>
@@ -396,6 +426,7 @@ RiderDashboard.propTypes = {
   auth: PropTypes.object.isRequired,
   acceptRequest: PropTypes.func.isRequired,
   viewAcceptedRequestRider: PropTypes.func.isRequired,
+  changeStatusToOnMyWay: PropTypes.func.isRequired
 };
 
 const mapStateToProps = (state) => ({
@@ -411,5 +442,6 @@ export default connect(mapStateToProps, {
   viewRequest,
   acceptRequest,
   viewAcceptedRequestRider,
+  changeStatusToOnMyWay
 })(RiderDashboard);
 // export default connect(mapStateToProps, {})(RiderDashboard);
