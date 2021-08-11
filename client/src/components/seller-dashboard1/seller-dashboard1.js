@@ -134,13 +134,14 @@ const SellerDashboard1 = ({
             <center>"No Vendor Found. Please Try Again after Some Time!"</center>
           )}
           <hr className="division1" />
+          <br /><br />
           {/* PICKUP HISTORY SECTION */}
-          <Link to="#">
-            {/* <Link to="/history/pickup"> */}
+          {/* <Link to="#">
+            <Link to="/history/pickup">
             <Button variant="primary" className="pickup-button">
               <span className="request-text">Pickup History</span>
             </Button>{" "}
-          </Link>
+          </Link> */}
         </div>
       </div>
     </div>

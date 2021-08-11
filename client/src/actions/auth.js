@@ -276,11 +276,17 @@ export const submitFeedback = (data) => async (dispatch) => {
   };
   try {
     const res = await axios.post('/feedback', data, config);
-    dispatch(setAlert(res.data.msg, "success"));
+    //dispatch(setAlert(res.data.msg, "success"));
     dispatch({
       type: FEEDBACK_SUBMITTED,
-      payload: res.data
-    })
+      payload: res.data,
+    });
+    dispatch(
+      setAlert(
+        "Feedback submitted successfully!!",
+        "success"
+      )
+    );
   } catch (err) {
     const errors = err.response.data.errors;
 
@@ -291,5 +297,5 @@ export const submitFeedback = (data) => async (dispatch) => {
       type: FEEDBACK_FAILED
     })
   }
-  
+
 }

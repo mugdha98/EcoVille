@@ -178,7 +178,7 @@ const SellerDashboard2 = ({ user, requests, pickup }) => {
                   ""
                 )}
                 {paidTheSeller ? (
-                  <StatusUpdates status="Recieved Payment" />
+                  <StatusUpdates status="Payment Recieved from Vendor" />
                 ) : (
                   ""
                 )}
@@ -194,14 +194,14 @@ const SellerDashboard2 = ({ user, requests, pickup }) => {
         ) : (
           ""
         )}
-
+        <br /><br />
         {/* PICKUP HISTORY SECTION */}
         {/* <Link to="/history/pickup"> */}
-        <Link to="#">
+        {/* <Link to="#">
           <Button variant="dark" className="pickup-button">
             <span className="request-text">Pickup History</span>
           </Button>{" "}
-        </Link>
+        </Link> */}
         {/* <Link to="/cancel">
           <Button variant="primary" className="pickup-button">
             <span className="request-text">Cancel Your Request!</span>

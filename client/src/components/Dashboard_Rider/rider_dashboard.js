@@ -158,11 +158,7 @@ const RiderDashboard = ({
     const handleClose = () => setShow(false);
 
     const changeOrderStatus = async () => {
-      if (onMyWay) {
-        console.log("HEre!!!!!!!")
-        await changeStatusToOnMyWay(props.OrderNo)
-        console.log("Done!!")
-      }
+      if (onMyWay) changeStatusToOnMyWay(props.OrderNo)
       if (wasteCollected) changeStatusToWasteCollected(props.OrderNo)
       if (paidTheSeller) changeStatusToRecivedPayment(props.OrderNo)
       if (droppedAtVendors) changeStatusToDropAtVendor(props.OrderNo)
@@ -195,10 +191,9 @@ const RiderDashboard = ({
                   value="onMyWay"
                   onChange={() => {
                     setOnMyWay(!onMyWay)
-                    console.log("onMyWay" + onMyWay + " " + props.onMyWay)
                   }}
                   // checked={onMyWay}
-                  // disabled={props.onMyWay ? "true" : false}
+                  disabled={props.onMyWay ? "true" : false}
                 />
                 On my Way
                 <br />
@@ -206,9 +201,9 @@ const RiderDashboard = ({
                   type="checkbox"
                   name="status_update"
                   value="wasteCollected"
-                  onChange={() => setWasteCollected(!onMyWay)}
-                  // checked={wasteCollected}
-                  // disabled={props.wasteCollected ? "true" : false}
+                  onChange={() => setWasteCollected(!wasteCollected)}
+                  checked={wasteCollected}
+                  disabled={props.wasteCollected ? "true" : false}
                 />
                 Waste collected
                 <br />
@@ -217,8 +212,8 @@ const RiderDashboard = ({
                   name="status_update"
                   value="paidTheSeller"
                   onChange={() => setPaidTheSeller(!paidTheSeller)}
-                  // checked={props.paidTheSeller}
-                  // disabled={props.paidTheSeller ? "true" : false}
+                // checked={props.paidTheSeller}
+                // disabled={props.paidTheSeller ? "true" : false}
                 />
                 Payment done by vendor to seller
                 <br />
@@ -227,8 +222,8 @@ const RiderDashboard = ({
                   name="status_update"
                   value="droppedAtVendors"
                   onChange={() => setDropAtVendor(!droppedAtVendors)}
-                  // checked={props.droppedAtVendors}
-                  // disabled={props.droppedAtVendors ? "true" : false}
+                  checked={props.droppedAtVendors}
+                  disabled={props.droppedAtVendors ? "true" : false}
                 />
                 Dropped at vendor's
                 <br />
@@ -255,13 +250,13 @@ const RiderDashboard = ({
 
     return (
       <>
-        <Button
+        {/* <Button
           variant="light"
           className={RDstyles.rider_invoice_button}
           onClick={handleShow}
         >
           GENERATE INVOICE
-        </Button>
+        </Button> */}
 
         <Modal show={show} onHide={handleClose}>
           <Modal.Header closeButton>
@@ -328,11 +323,45 @@ const RiderDashboard = ({
         {/* CONTAINS ALLOTTED AND PENDING CARDS*/}
         <div class="row">
           <div class="col-12 col-lg-6">
+            <div className="pending">
+              <div className={RDstyles.rider_board_heading}>
+                <h3>PICKUP REQUESTS</h3>
+              </div>
+              {request.length > 0 ? (
+                request.map((req) => {
+                  return (
+                    <PendingCard
+                      OrderNo={req._id}
+                      SellerName={req.seller.name}
+                      SellerAddress={
+                        req.address.firstLine +
+                        "," +
+                        req.address.city +
+                        "," +
+                        req.address.state +
+                        req.address.pin
+                      }
+                      VendorName={req.vendorDetail.name}
+                      Slot={<Moment>{req.timeOfPickup}</Moment>}
+                      WasteType={req.orderList.map(
+                        (waste) => waste.nameOfWaste
+                      ) + " "}
+                      WasteQuantity={
+                        req.orderList.map((waste) => waste.qty) + " pcs"
+                      }
+                    />
+                  );
+                })
+              ) : (
+                <center><h4>No Pending Request!</h4></center>
+              )}
+            </div>
+          </div>
+          <div class="col-12 col-lg-6">
             <div>
               <div className={RDstyles.rider_board_heading}>
                 <h3>ALLOTTED ORDERS</h3>
               </div>
-
               {acceptedRequest.length > 0 ? (
                 acceptedRequest.map((req) => {
                   return (
@@ -368,50 +397,20 @@ const RiderDashboard = ({
             </div>
           </div>
 
-          <div class="col-12 col-lg-6">
-            <div className="pending">
-              <div className={RDstyles.rider_board_heading}>
-                <h3>PICKUP REQUESTS</h3>
-              </div>
-              {request.length > 0 ? (
-                request.map((req) => {
-                  return (
-                    <PendingCard
-                      OrderNo={req._id}
-                      SellerName={req.seller.name}
-                      SellerAddress={
-                        req.address.firstLine +
-                        "," +
-                        req.address.city +
-                        "," +
-                        req.address.state +
-                        req.address.pin
-                      }
-                      VendorName={req.vendorDetail.name}
-                      Slot={<Moment>{req.timeOfPickup}</Moment>}
-                      WasteType={req.orderList.map(
-                        (waste) => waste.nameOfWaste
-                      ) + " "}
-                      WasteQuantity={
-                        req.orderList.map((waste) => waste.qty) + " pcs"
-                      }
-                    />
-                  );
-                })
-              ) : (
-                <center><h4>No Pending Request!</h4></center>
-              )}
-            </div>
-          </div>
         </div>
       </div>
 
       <div className={RDstyles.delivery_hist_button}>
-        <Link to="/history/delivery">
+        {/* <Link to="/history/delivery">
           <Button variant="info">
             <span className="request-text">Delivery History</span>
           </Button>
-        </Link>
+        </Link> */}
+        {/* <Link to="#">
+          <Button variant="info">
+            <span className="request-text">Delivery History</span>
+          </Button>
+        </Link> */}
       </div>
     </div>
   );

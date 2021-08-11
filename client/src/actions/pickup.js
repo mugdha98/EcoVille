@@ -218,7 +218,7 @@ export const viewAcceptedRequestRider = () => async (dispatch) => {
 export const changeStatusToOnMyWay = (orderid) => async (dispatch) => {
   console.log("changeStatusToOnMyWay is called " + orderid)
   try {
-    const res = await axios.put(`/rider/request/${orderid}/status/onmyway`)
+    const res = await axios.put(`/rider/request/${orderid}/onMyWay/status`)
     dispatch(setAlert("Status Changed to OnMyWay", "success"));
   } catch (error) {
     const errors = error.response.data.errors;
@@ -233,7 +233,7 @@ export const changeStatusToOnMyWay = (orderid) => async (dispatch) => {
 
 export const changeStatusToRecivedPayment = (orderid) => async (dispatch) => {
   try {
-    const res = await axios.put(`/rider/request/${orderid}/status/recivedpayment`)
+    const res = await axios.put(`/rider/request/${orderid}/recivedpayment/status`)
     dispatch(setAlert("Status Changed to Received Payment", "success"));
   } catch (error) {
     const errors = error.response.data.errors;
@@ -248,7 +248,7 @@ export const changeStatusToRecivedPayment = (orderid) => async (dispatch) => {
 
 export const changeStatusToWasteCollected = (orderid) => async (dispatch) => {
   try {
-    const res = await axios.put(`/rider/request/${orderid}/status/wastecollected`)
+    const res = await axios.put(`/rider/request/${orderid}/wastecollected/status`)
     dispatch(setAlert("Status Changed to Waste Collected", "success"));
   } catch (error) {
     const errors = error.response.data.errors;
@@ -263,7 +263,7 @@ export const changeStatusToWasteCollected = (orderid) => async (dispatch) => {
 
 export const changeStatusToDropAtVendor = (orderid) => async (dispatch) => {
   try {
-    const res = await axios.put(`/rider/request/${orderid}/status/dropatvendor`)
+    const res = await axios.put(`/rider/request/${orderid}/dropatvendor/status`)
     dispatch(setAlert("Status Changed to Drop At Vendor", "success"));
   } catch (error) {
     const errors = error.response.data.errors;
@@ -276,3 +276,17 @@ export const changeStatusToDropAtVendor = (orderid) => async (dispatch) => {
   }
 }
 
+export const changeStatusToCompleted = (orderid) => async (dispatch) => {
+  try {
+    const res = await axios.put(`/rider/request/${orderid}/completed`)
+    dispatch(setAlert("Status Changed to Completed", "success"));
+  } catch (error) {
+    const errors = error.response.data.errors;
+    if (errors) {
+      errors.forEach((err) => dispatch(setAlert(err.msg, "danger")));
+    }
+    dispatch({
+      type: REQUEST_FAILED,
+    });
+  }
+}

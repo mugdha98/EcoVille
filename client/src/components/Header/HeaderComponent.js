@@ -27,13 +27,13 @@ const Display = ({ onClick }) => {
         Sign-Up as Seller
       </Link>
       <hr />
-      <Link to="#" onClick={onClick}>
-        Sign-Up as Rider
-      </Link>
-
-      {/* <Link to="/signup/rider" onClick={onClick}>
+      {/* <Link to="#" onClick={onClick}>
         Sign-Up as Rider
       </Link> */}
+
+      <Link to="/signup/rider" onClick={onClick}>
+        Sign-Up as Rider
+      </Link>
       <hr />
 
       <Link to="/signup/vendor" onClick={onClick}>
@@ -61,7 +61,7 @@ const Header = ({ logout, auth }) => {
           <NavbarToggler onClick={() => toggleNav()} />
           <NavbarBrand className="mr-auto" href="/">
             <img
-              src="assets/logo.jpg"
+              src="assets/logo.png"
               height="50"
               width="50"
               alt="Logo"
@@ -88,7 +88,7 @@ const Header = ({ logout, auth }) => {
               <NavItem>
                 <NavLink className="nav-link" to="/ratelist">
                   <span className="fa fa-inr fa-lg"></span> Item's Price Tag
-                  </NavLink>
+                </NavLink>
               </NavItem>
 
               {/* {auth.typeofuser === "vendor" ? (

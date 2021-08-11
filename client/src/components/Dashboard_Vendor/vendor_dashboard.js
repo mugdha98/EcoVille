@@ -108,9 +108,9 @@ const VendorDashboard = ({
             <hr></hr>
           </div>
           <CheckStatus />
-          <Button variant="light" className={VDstyles.vendor_invoice_button}>
+          {/* <Button variant="light" className={VDstyles.vendor_invoice_button}>
             VIEW INVOICE
-          </Button>
+          </Button> */}
         </Card.Body>
       </Card>
     );
@@ -127,20 +127,19 @@ const VendorDashboard = ({
 
   function CheckStatus() {
     const [show, setShow] = useState(false);
-
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(false);
     // const handleShow = () => setShow(true);
 
     return (
       <>
-        <Button
+        {/* <Button
           variant="warning"
           className={VDstyles.vendor_update_button}
           onClick={handleShow}
         >
           CHECK STATUS
-        </Button>
+        </Button> */}
 
         <Modal show={show} onHide={handleClose}>
           <Modal.Header closeButton>
@@ -155,11 +154,11 @@ const VendorDashboard = ({
               <StatusUpdates status="Dropped at vendor" />{" "}
             </form>
           </Modal.Body>
-          <Modal.Footer>
+          {/* <Modal.Footer>
             <Button variant="primary" onClick={handleClose}>
               Save Changes
             </Button>
-          </Modal.Footer>
+          </Modal.Footer> */}
         </Modal>
       </>
     );
@@ -192,7 +191,7 @@ const VendorDashboard = ({
           <div class="col-12 col-lg-6">
             <div className="upcoming">
               <div className={VDstyles.vendor_heading}>
-                <h2>FORTHCOMING ORDERS</h2>
+                <h3>FORTHCOMING ORDERS</h3>
               </div>
               {request.length > 0 ? (
                 request.map((requests) => {
@@ -275,7 +274,7 @@ const VendorDashboard = ({
             <div class="col-12 col-lg-6">
               <div className="accepted">
                 <div className={VDstyles.vendor_heading}>
-                  <h2>ACCEPTED ORDERS</h2>
+                  <h3>ACCEPTED ORDERS</h3>
                 </div>
                 {acceptedRequest.map((request) => {
                   return (
@@ -306,10 +305,10 @@ const VendorDashboard = ({
       </div>
       <br /><br />
       <div className={VDstyles.vendor_order_hist_button}>
-        <Link to="#">
-          {/* <Link to="/history/order"> */}
+        {/* <Link to="#">
+          <Link to="/history/order">
           <Button variant="dark">ORDER HISTORY</Button>
-        </Link>
+        </Link> */}
       </div>
       <br /><br />
     </div>
